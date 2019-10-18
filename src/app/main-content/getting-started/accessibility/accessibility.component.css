@@ -1,0 +1,21 @@
+.accessibility-resources {
+    margin: 0;
+}
+
+.accessibility-resources .col-md-10 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 0;
+    border-radius: 0.5rem;
+}
+
+.accessibility-resources h4 {
+    background: #0071bc;
+    color: #fff;
+    font-weight: 400;
+    padding: 0.5rem;
+}
+
+.accessibility-resources li {
+    padding: 0.2rem 0;
+}
+

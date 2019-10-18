@@ -1,0 +1,129 @@
+<h1 #scroll> Inputs </h1>
+<hr>
+
+<div class="card col-md-10">
+  <div class="card-body">
+    <h4 class="pt-0 pb-3">INPUT INACTIVE</h4>
+  	<div class="row ml-0">
+    <div class="eqrs-input-container">
+        <label class="eqrs-label" for="input-inactive">Label</label>
+        <input class="eqrs-input" id="input-inactive" name="input-inactive" type="text" aria-describedby="input-inactive">
+      </div>
+</div> <!-- row ends here -->
+<p class="notes">eqrs-label<br>eqrs-input</p>
+
+
+<button class="btn code-button mt-2 pull-right" (click) = "inputInactiveShow = !inputInactiveShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+
+     <div class="col-md-12 code-block">
+          <div>
+          <div *ngIf="inputInactiveShow">
+            <ngx-prism [language]="cssLanguage">
+             {{inputInactiveContent}}
+            </ngx-prism>
+          </div>
+         </div>
+        </div>
+
+  </div>
+</div>  <!-- card ends here -->
+
+
+<div class="card col-md-10">
+  <div class="card-body">
+    <h4 class="pt-0 pb-3"> INPUT FOCUS </h4>
+  	<div class="row ml-0">
+    <div class="eqrs-input-container">
+        <label class="eqrs-label" for="input-inactive">Label</label>
+        <input class="input-focus focus" id="input-inactive" name="input-inactive" type="text" aria-describedby="input-inactive">
+      </div>
+</div> <!-- row ends here -->
+
+
+<button class="btn code-button mt-2 pull-right" (click) = "inputFocusShow = !inputFocusShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+
+     <div class="col-md-12 code-block">
+          <div>
+          <div *ngIf="inputFocusShow">
+            <ngx-prism [language]="cssLanguage">
+             {{inputFocusContent}}
+            </ngx-prism>
+          </div>
+         </div>
+        </div>
+
+  </div>
+</div>  <!-- card ends here -->
+
+
+
+<div class="card col-md-10">
+  <div class="card-body">
+    <h4 class="pt-0 pb-3"> INPUT SUCCESS </h4>
+  	<div class="row ml-0">
+    <div class="eqrs-input-container">
+        <label class="eqrs-label" for="input-inactive">Label</label>
+        <input class="eqrs-input" id="input-inactive" name="input-inactive" type="text" aria-describedby="input-inactive">
+      </div>
+</div> <!-- row ends here -->
+
+
+<button class="btn code-button mt-2 pull-right" (click) = "inputSuccessShow = !inputSuccessShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+
+     <div class="col-md-12 code-block">
+          <div>
+          <div *ngIf="inputSuccessShow">
+            <ngx-prism [language]="cssLanguage">
+             {{inputSuccessContent}}
+            </ngx-prism>
+          </div>
+         </div>
+        </div>
+
+  </div>
+</div>  <!-- card ends here -->
+
+
+
+<div class="card col-md-10">
+  <div class="card-body">
+    <h4 class="pt-0 pb-3"> INPUT ERROR </h4>
+    <label class="eqrs-label-error" for="input-error">Label</label>
+  	<div class="row">
+    <div class="eqrs-input-container d-flex">
+    	<div class="col-md-6">
+        <input class="eqrs-input-error-border" id="input-error-1" name="input-error-1" type="text" aria-describedby="input-error-message">
+    </div>
+    <div class="col-md-6">
+        <span class="eqrs-input-error-message" id="input-error-message" role="alert">This is a short helpful error message that should be approximately 66 characters per line.</span> </div>
+      </div>
+</div> <!-- row ends here -->
+
+
+<button class="btn code-button mt-2 pull-right" (click) = "inputErrorShow = !inputErrorShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+
+     <div class="col-md-12 code-block">
+          <div>
+          <div *ngIf="inputErrorShow">
+            <ngx-prism [language]="cssLanguage">
+             {{inputErrorContent}}
+            </ngx-prism>
+          </div>
+         </div>
+        </div>
+
+  </div>
+</div>  <!-- card ends here -->
+
+<!-- PREVIOUS NEXT -->
+
+<div class="row row-previous-next ml-0 mt-5">
+  <div class="col-lg-9">
+    <span [routerLink] = "['/dropdown']"> <i class="fa fa-chevron-left"></i> Previous: <b>Dropdown</b> </span>
+    <span [routerLink] = "['/labels']" class="pull-right"> Next: <b>Labels</b> <i class="fa fa-chevron-right"></i> </span>
+  </div>
+
+  <div class="col-lg-3 pull-right">
+    <button class="ml-5 scroll-to-top" (click)="scroll.scrollIntoView({behavior: 'smooth'})"> <span id="toTop" class="fa fa-chevron-circle-up fa-3x"></span> </button>
+  </div>
+</div>

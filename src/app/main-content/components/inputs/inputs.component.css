@@ -1,0 +1,85 @@
+.eqrs-label {
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    padding-left: 0;
+    font-size: 1rem;
+    margin-bottom: auto;
+    white-space: nowrap;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 10px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.eqrs-input {
+    height: 44px;
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 1rem;
+    border-radius: 3px;
+    border: 1px solid #d6d7d9;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.input-focus {
+    height: 44px;
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 1rem;
+    border-radius: 3px;
+    border: 1px solid #d6d7d9;
+    width: 100%;
+    margin-bottom: 1rem;
+    outline: 0px;
+    box-shadow: 0 0 3px #3e94cf, 0 0 7px #3e94cf;
+}
+
+.focus {
+    box-shadow: 0 0 3px 2px rgba(62, 148, 207, 0.5);
+    border-radius: 3px;
+}
+
+.eqrs-label-error {
+    padding-left: 0;
+    color: #cd2026;
+    margin-bottom: auto;
+}
+
+.eqrs-input-error-border {
+    border: 1px solid #cd2026 !important;
+}
+
+.eqrs-input-error-message {
+    color: #cd2026;
+    margin-left: -15px;
+    padding-left: 45px;
+    font-weight: 700;
+    max-width: 35em;
+    margin-top: auto;
+    background-image: url(assets/images/error.svg);
+    background-position: left 1.3rem center;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

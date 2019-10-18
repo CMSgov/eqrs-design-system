@@ -1,0 +1,49 @@
+<h1>Dropdown</h1>
+<hr>
+
+<div class="card col-md-10">
+  <div class="card-body">
+    <h4 class="pt-0 pb-3">Dropdown button</h4>
+    
+    
+    <div class="dropdown" ngbDropdown>
+      <button ngbDropdownToggle class="btn btn-secondary dropdown-toggle eqrs-button-dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Add new <i class="fa fa-chevron-down" aria-hidden="true"></i>
+      </button>
+      <div class="dropdown-menu eqrs-button-dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#"><i class="fa fa-plus" aria-hidden="true"></i>  Facility</a>
+      </div>
+    </div>
+
+
+
+
+
+<button class="btn code-button mt-2 pull-right" (click) = "dropdownButtonShow = !dropdownButtonShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+
+     <div class="col-md-12 code-block">
+          <div>
+          <div *ngIf="dropdownButtonShow">
+            <ngx-prism [language]="cssLanguage">
+             {{dropdownButtonContent}}
+            </ngx-prism>
+          </div>
+         </div>
+        </div>
+
+  </div>
+</div>  <!-- card ends here -->
+
+
+
+
+
+
+<!-- PREVIOUS NEXT -->
+
+<div class="row row-previous-next ml-0 mt-5">
+  <div class="col-lg-12">
+    <span [routerLink] = "['/datatable']"> <i class="fa fa-chevron-left"></i> Previous: <b>Datatable</b> </span>
+    <span [routerLink] = "['/inputs']" class="pull-right"> Next: <b>Inputs</b> <i class="fa fa-chevron-right"></i> </span>
+  </div>
+</div>

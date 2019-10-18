@@ -1,0 +1,41 @@
+.btn-content {
+    text-align: center;
+    background: #e7f4e4;
+    padding: 5rem 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    color: #0071bc;
+    border-radius: 35px;
+}
+
+.btn-content:hover {
+    background: #fff;
+}
+
+.row.principles-botton .btn-content:nth-child(odd) {
+    background: #fff;
+    color: #0071bc;
+}
+
+.row.principles-botton .btn-content:nth-child(odd):hover {
+    background: #e7f4e4;
+    color: #0071bc;
+}
+
+.row.principles-top .btn-content:nth-child(even) {
+    background: #fff;
+    color: #0071bc;
+    border-top: 1px solid #ccc;
+}
+
+.row.principles-top .btn-content:nth-child(even):hover {
+    background: #e7f4e4;
+    color: #0071bc;
+    border-top: 1px solid #ccc;
+}
+
+.row.principles-top, .row.principles-botton {
+    margin: 0;
+}
+
+
+

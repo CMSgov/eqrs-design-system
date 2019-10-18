@@ -1,0 +1,30 @@
+<h1 #scroll> Phone mask </h1>
+<hr>
+
+<p>Phone Mask Directive when applied to input element masks the value as (999)999-9999.</p>
+
+<div>
+  1. Import <b>PhoneMaskModule</b>.
+  <div class="col-md-12">
+    <ngx-prism [language]="htmlLanguage">
+      {{phoneMaskModule}}
+    </ngx-prism>
+  </div>
+</div>
+
+<div>
+  2. Add the directive to the html element.
+  <div class="col-md-12">
+    <ngx-prism [language]="htmlLanguage">
+      {{phoneMaskContent}}
+    </ngx-prism>
+  </div>
+</div>
+
+
+<div class="row row-previous-next ml-0 mt-5">
+  <div class="col-lg-10">
+    <span [routerLink] = "['/focusonload']"> <i class="fa fa-chevron-left"></i> Previous: <b>Focus on load</b> </span>
+    <span [routerLink] = "['/regex']" class="pull-right"> Next: <b>regex</b> <i class="fa fa-chevron-right"></i> </span>
+  </div>
+</div>

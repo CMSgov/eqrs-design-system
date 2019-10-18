@@ -1,0 +1,22 @@
+$eqrs-success-color: #009e51;
+$eqrs-accent-color: #fdb81e;
+
+@mixin eqrs-label-special {
+  padding: 2px 5px 2px 5px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.eqrs-label-success {
+  @include eqrs-label-special;
+  background-color: $eqrs-success-color;
+  color: #fff;
+}
+
+
+.eqrs-label-warning {
+  @include eqrs-label-special;
+  background-color: $eqrs-accent-color;
+  color: #000;
+}

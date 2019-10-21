@@ -1,128 +1,162 @@
-<h1 #scroll> Responsive Design </h1>
-<hr>
-
-
+<h1 #scroll>Responsive Design</h1>
+<hr />
 
 <nav class="sticky-top">
   <ul class="one-page-nav">
-    <li><a (click)="section1.scrollIntoView({behavior: 'smooth'})"> Summary </a></li>
-    <li><a (click)="section2.scrollIntoView({behavior: 'smooth'})"> Breakpoints </a></li>
-    <li><a (click)="section3.scrollIntoView({behavior: 'smooth'})"> Page Layout </a></li>
+    <li>
+      <a (click)="section1.scrollIntoView({ behavior: 'smooth' })"> Summary </a>
+    </li>
+    <li>
+      <a (click)="section2.scrollIntoView({ behavior: 'smooth' })">
+        Breakpoints
+      </a>
+    </li>
+    <li>
+      <a (click)="section3.scrollIntoView({ behavior: 'smooth' })">
+        Page Layout
+      </a>
+    </li>
   </ul>
 </nav>
 
-
 <div #section1 class="section1">
+  <div class="row pt-2 ml-0">
+    <h3 class="mt-5 pl-0 pb-3">What is Responsive Design</h3>
+    <p>
+      Responsive web design (RWD) is a web development approach that creates
+      dynamic changes to the appearance of a website, depending on the screen
+      size and orientation of the device being used to view it. RWD is one
+      approach to the problem of designing for the multitude of devices
+      available to customers, ranging from tiny phones to huge desktop monitors.
+    </p>
+  </div>
 
-   
-    <div class="row pt-2 ml-0">
-      <h3 class="mt-5 pl-0 pb-3"> What is Responsive Design</h3>
-    <p> Responsive web design (RWD) is a web development approach that creates dynamic changes to the
-      appearance of a website, depending on the screen size and orientation of the device being used to
-      view it. RWD is one approach to the problem of designing for the multitude of devices available to
-      customers, ranging from tiny phones to huge desktop monitors. </p>
-      </div>
-
-    <div class="row responsive-design mt-4 ml-0 mr-0">
-
+  <div class="row responsive-design mt-4 ml-0 mr-0">
     <div class="col-md-12">
-        <img src="/assets/images/responsive-devices.png" class="img-fluid">
+      <img src="assets/images/responsive-devices.png" class="img-fluid" />
     </div>
 
-      <p> The EQRS application is built using the <a href="https://getbootstrap.com/docs/4.0/layout/grid/" target="_blank">Bootstrap grid system</a> which provides a flexible, device-agnostic layout system. </p>
+    <p>
+      The EQRS application is built using the
+      <a href="https://getbootstrap.com/docs/4.0/layout/grid/" target="_blank"
+        >Bootstrap grid system</a
+      >
+      which provides a flexible, device-agnostic layout system.
+    </p>
 
-    <p> According to <a href="https://getbootstrap.com/docs/4.0/layout/grid/" target="_blank">Bootstrap</a>, the grid system "uses a series of containers, rows, and columns to layout and align content. It’s built with flexbox and is
-    fully responsive. Below is an example and an in-depth look at how the grid comes together." </p>
-
-    </div>  <!-- row ends here -->
-</div> <!-- Section one ends here -->
+    <p>
+      According to
+      <a href="https://getbootstrap.com/docs/4.0/layout/grid/" target="_blank"
+        >Bootstrap</a
+      >, the grid system "uses a series of containers, rows, and columns to
+      layout and align content. It’s built with flexbox and is fully responsive.
+      Below is an example and an in-depth look at how the grid comes together."
+    </p>
+  </div>
+  <!-- row ends here -->
+</div>
+<!-- Section one ends here -->
 
 <div #section2 class="section2">
-
   <div class="row section-top ml-0">
-    <h2 class="pb-2 pt-3"> Responsive Breakpoints  </h2>
-    <p> Breakpoints are the point at which your sites content will respond to provide the user with the best
-      possible layout to consume the information. They are the media query values that will mark the transition
-      to a new class of devices.</p>
-      </div>
+    <h2 class="pb-2 pt-3">Responsive Breakpoints</h2>
+    <p>
+      Breakpoints are the point at which your sites content will respond to
+      provide the user with the best possible layout to consume the information.
+      They are the media query values that will mark the transition to a new
+      class of devices.
+    </p>
+  </div>
 
-    <div class="row responsive-design mt-4 ml-0 mr-0">
+  <div class="row responsive-design mt-4 ml-0 mr-0">
+    <div class="col-md-4 responsive-design-image"></div>
 
-        <div class="col-md-4 responsive-design-image">   </div>
+    <div class="col-md-8">
+      <h3>Media query usage:</h3>
+      <ul>
+        <li>We use breakpoints for tablets and desktop devices.</li>
+        <li>
+          Our defined media queries start from 768px to 991px for tablet devices
+          in portrait mode.
+        </li>
+        <li>Desktop layout starts at 992px and up.</li>
+      </ul>
+    </div>
+  </div>
+  <!-- row ends here -->
 
-        <div class="col-md-8">
-          <h3> Media query usage: </h3>
-          <ul>
-            <li> We use breakpoints for tablets and desktop devices. </li>
-            <li> Our defined media queries start from 768px to 991px for tablet devices in portrait mode. </li>
-            <li> Desktop layout starts at 992px and up. </li>
-          </ul>
-          </div>
-
-
-        </div>  <!-- row ends here -->
-
-        <div class="row ml-0 mt-5">
-          <h3 class="col-md-12 pb-2"> Tips </h3> 
-          <ul>
-              <li> When designing for specific breakpoints, design for the amount of screen space actually available to your site </li>
-              <li> Use Fluid Images. </li>
-              <li> Pay Attention to Font Sizes. </li>
-              <li> Test the application using a real device. </li>
-              <li> Avoid the use of large graphics. </li>
-            </ul>
-        </div> <!-- row ends here -->
-
+  <div class="row ml-0 mt-5">
+    <h3 class="col-md-12 pb-2">Tips</h3>
+    <ul>
+      <li>
+        When designing for specific breakpoints, design for the amount of screen
+        space actually available to your site
+      </li>
+      <li>Use Fluid Images.</li>
+      <li>Pay Attention to Font Sizes.</li>
+      <li>Test the application using a real device.</li>
+      <li>Avoid the use of large graphics.</li>
+    </ul>
+  </div>
+  <!-- row ends here -->
 </div>
 
 <!-- SECTION 3 STARTS HERE -->
 <div #section3 class="section3">
-    <div class="row section-top ml-0">
-  <h2 class="pb-2 pt-3"> Page Layouts  </h2>
+  <div class="row section-top ml-0">
+    <h2 class="pb-2 pt-3">Page Layouts</h2>
   </div>
 
   <div class="row ml-0">
+    <p class="pb-3">
+      EQRS Design System uses two different page layouts. One is a full width
+      responsive layout, and the other layout is a left sidebar based responsive
+      layout.
+    </p>
 
-  <p class="pb-3"> EQRS Design System uses two different page layouts. One is a full width responsive layout, and
-    the other layout is a left sidebar based responsive layout.  </p>
-
-  <div class="col-md-7">
-    <h4 class="pb-3"> Full width layout</h4>
-    <img src="/assets/images/full-width-hi.png" class="img-fluid">
-  </div>
-    <div class="col-md-5">
-        <h4 class="pb-3"> Tablet portrait layout</h4>
-        <img src="/assets/images/full-width-tablet.png" class="img-fluid">
+    <div class="col-md-7">
+      <h4 class="pb-3">Full width layout</h4>
+      <img src="assets/images/full-width-hi.png" class="img-fluid" />
     </div>
+    <div class="col-md-5">
+      <h4 class="pb-3">Tablet portrait layout</h4>
+      <img src="assets/images/full-width-tablet.png" class="img-fluid" />
+    </div>
+  </div>
+  <!-- row ends here -->
 
-   </div> <!-- row ends here -->
-
-   <div class="row ml-0">
-      <div class="col-md-7">
-          <h4 class="pb-3"> 1/3 layout</h4>
-          <img src="/assets/images/3-layout-hi.png" class="img-fluid">
-      </div>
-     <div class="col-md-5">
-              <h4 class="pb-3"> Tablet 1/3 portrait layout</h4>
-              <img src="/assets/images/3-layout-tablet.png" class="img-fluid">
-     </div>
-   </div> <!-- row ends here -->
-
-</div>  <!-- section 3 ends here-->
-
-
+  <div class="row ml-0">
+    <div class="col-md-7">
+      <h4 class="pb-3">1/3 layout</h4>
+      <img src="assets/images/3-layout-hi.png" class="img-fluid" />
+    </div>
+    <div class="col-md-5">
+      <h4 class="pb-3">Tablet 1/3 portrait layout</h4>
+      <img src="assets/images/3-layout-tablet.png" class="img-fluid" />
+    </div>
+  </div>
+  <!-- row ends here -->
+</div>
+<!-- section 3 ends here-->
 
 <!-- PREVIOUS NEXT -->
 
-
 <div class="row row-previous-next responsive-pagination ml-0">
-
   <div class="col-lg-9">
-    <span [routerLink] = "['/accessibility']"> <i class="fa fa-chevron-left"></i> Previous: <b>Accessibility</b> </span>
-    <span [routerLink] = "['/colors']" class="pull-right"> Next: <b>Colors</b> <i class="fa fa-chevron-right"></i> </span>.
+    <span [routerLink]="['/accessibility']">
+      <i class="fa fa-chevron-left"></i> Previous: <b>Accessibility</b>
+    </span>
+    <span [routerLink]="['/colors']" class="pull-right">
+      Next: <b>Colors</b> <i class="fa fa-chevron-right"></i> </span
+    >.
   </div>
 
   <div class="col-lg-3 pull-right">
-    <button class="ml-5 scroll-to-top" (click)="scroll.scrollIntoView({behavior: 'smooth'})"> <span id="toTop" class="fa fa-chevron-circle-up fa-3x"></span> </button>
+    <button
+      class="ml-5 scroll-to-top"
+      (click)="scroll.scrollIntoView({ behavior: 'smooth' })"
+    >
+      <span id="toTop" class="fa fa-chevron-circle-up fa-3x"></span>
+    </button>
   </div>
 </div>

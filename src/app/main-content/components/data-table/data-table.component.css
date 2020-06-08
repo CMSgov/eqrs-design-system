@@ -1,4 +1,3 @@
-<style>
 * { color: #323a45;
 	background-color: smokewhite;
   font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
@@ -9,7 +8,7 @@
   background-color:#205493;
   padding-top: 12px;
   padding-bottom: 12px;
-  overflow: visible
+  overflow: visible;
   width: 100%;
   color: whitesmoke;
 }
@@ -23,7 +22,3 @@
 
 tr:nth-child(odd) {background:  #f1f1f1 }
 tr:nth-child(even) {background: smokewhite}
-
-
-
-</style>

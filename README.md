@@ -1,7 +1,7 @@
 # EQRSDesignSystemUI
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
-View the [Live Demo](https://git.hcqis.org/pages/thomaszheng/EQRS-DesignSystem/home)
+View the [Live Demo](https://thomaszhengeqrs.github.io/eqrs-design-system/)
 
 ## Installation
 1. Git Clone or download 

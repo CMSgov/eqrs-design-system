@@ -1,0 +1,214 @@
+$eqrs-primary-color: #0071bc;
+$eqrs-alert-darker: #981B1E;
+
+.eqrs-button-dropdown {
+  cursor: pointer;
+  background: #205493;
+  color: #fff;
+  border: 2px solid #fff;
+  margin-top: 0.6rem
+}
+
+
+.eqrs-button-dropdown::after {
+  display: none;
+}
+
+.eqrs-button-dropdown:hover, .eqrs-button-dropdown:focus {
+  color: #205493 !important;
+  background-color: #fff !important;
+  border: 2px solid #205493 !important;
+}
+
+.eqrs-button-dropdown-menu {
+  background: #f1f1f1;
+}
+
+.eqrs-button-dropdown-menu a {
+  color: #205493;
+}
+
+.eqrs-button-dropdown-menu a:hover {
+  background: #f1f1f1;
+}
+
+.responsive-only {
+  display: none;
+}
+
+.desktop-only {
+  display: block;
+}
+
+
+/* TOOLTIP MENU STYLES */
+
+.fa-ellipsis-v {
+  color: red;
+  cursor:pointer;
+}
+
+.dropdown-arrow {
+  border-color: transparent;
+  border-bottom-color: #000;
+  border-style: dashed dashed solid;
+  border-width: 0 8.5px 8.5px;
+  /* display: none; */
+  position: absolute;
+  left: 12.5px;
+  top: -10px;
+  z-index: 1;
+  height: 0;
+  width: 0;
+  -webkit-animation: gb__a .2s;
+  animation: gb__a .2s;
+}
+
+.eqrs-button-dropdown-menu2 {
+  background: #000;
+}
+
+.eqrs-button-dropdown-menu2 a {
+  color: #fff;
+}
+
+
+/* TOOLTIP MENU STYLES END HERE */
+
+
+/* UPDATE DEADLINES STYLES START HERE*/
+
+#deadlinesrow {
+  margin: 0;
+}
+
+#deadlinesrow:first-child {
+  margin-top: 2rem;
+}
+
+#deadlinesrow .fa.fa-plus-square {
+  color: $eqrs-primary-color;
+  cursor: pointer;
+}
+
+#deadlinesrow .fa.fa-minus-square {
+  color: $eqrs-alert-darker;
+  cursor: pointer;
+}
+
+
+#deadlinesrow .btn-add, #deadlinesrow .btn-remove {
+  margin-top: 2.1rem;
+  margin-left: 0.5rem;
+  padding: 0;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.deadlines-button {
+  margin-right: 1.5rem;
+}
+
+.deadlines-button .eqrs-button-primary {
+  width: auto;
+  padding: 0 2.5rem;
+}
+
+body p {
+  max-width: 100%;
+}
+
+.small-font {
+  font-size: 0.8em;
+}
+
+/* UPDATE DEADLINES STYLES END HERE*/
+
+
+
+
+
+/* RESPONSIVE STYLES START HERE */
+
+/*Small devices (landscape phones, less than 768px) */
+
+@media (max-width: 768px) {
+
+  .fa-bars {
+    color: #fff;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .collapse.show {
+    background: #f1f1f1;
+    height: 100vh;
+  }
+
+  .nav-active {
+    background: #f1f1f1;
+    border-bottom: none;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .responsive-only {
+    background: #f1f1f1;
+    padding: 0.2rem 0;
+    display: block;
+  }
+
+  .responsive-only h3 {
+    text-align: center;
+    border-bottom: 1px solid #205493;
+    padding: 0.5rem 0;
+    color: #205493;
+    margin-bottom: 0;
+  }
+
+  .mobile-add-new .eqrs-button-dropdown  {
+    width: 100%;
+    background: #5b616b;
+    margin-top: -5px;
+    border: none;
+    padding: 0.8rem;
+  }
+
+  .navbar-toggleable-md>.container {
+    width: 100%;
+  }
+
+  .nav-item {
+    border-bottom: 1px solid #205493;
+    padding: 0;
+  }
+
+  .navbar-nav {
+    margin-right: 0 !important;
+  }
+
+  .navbar-eqrs a.nav-link {
+    color: #205493;
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-item .dropdown-menu {
+    background: #205493;
+    border-radius: 0;
+  }
+
+  a.dropdown-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    padding-top: 0.6rem;
+  }
+
+  a.dropdown-item {
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 0.6rem;
+  }
+}

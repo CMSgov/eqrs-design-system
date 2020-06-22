@@ -1,0 +1,13 @@
+*:focus {
+    outline: none;
+}
+
+$font-sans: 'Source Sans Pro' !default;
+
+.usa-alert-text {
+    font-family: $font-sans;
+    margin-bottom: 0;
+    margin-top: 0;
+    max-width: 50em;
+  }
+  

@@ -1,0 +1,92 @@
+<div class="search-filter-wrap" *ngIf="searchFilter && !externalSearch">
+    <label id="search-filter-label" for="search-filter" [attr.aria-label]="'Search ' + caption">Search: </label>
+    <input id="search-filter" [ngModel]="searchFilterText" (ngModelChange)="filterResults($event)" />
+</div>
+<table class="dynamic-table" id="discharge-table">
+    <caption id="table-caption" [ngClass]="{'hide':!showCaption}">{{caption}}</caption>
+    <div style="clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px"
+        aria-live="polite" aria-atomic="true" aria-relevant="text" [innerHTML]="displayCaption"></div>
+    <thead>
+        <tr >
+            <th *ngFor="let column of columns; let colIndex = index" id="{{column.id}}" scope="col"
+                [ngStyle]="column.style" [ngClass]="{'sortable' : column.sortable, 'keepHeader': column.keepHeader}">
+                <div tabindex="0" *ngIf="column.sortable" (click)="sortBy(column)" (keyup.Enter)="sortBy(column)"
+                    class="column-sortable" [attr.aria-label]="'Sort By' + column.header" role="button">
+                    <template-loader *ngIf="column.hasHeaderTemplate()" [template]="column.headerTemplate"
+                        [context]="{column: column, colIndex: colIndex}"></template-loader>
+                    <span *ngIf="!column.hasHeaderTemplate()">{{column.header}}</span>
+                    <i class="fa fa-sort"
+                        [ngClass]="{'fa-sort-asc' : (isSorted(column) == ASCENDING), 'fa-sort-desc' : (isSorted(column) == DESCENDING)}"
+                        aria-hidden="true"></i>
+                </div>
+                <div *ngIf="!column.sortable">
+                    <template-loader *ngIf="column.hasHeaderTemplate()" [template]="column.cellTemplate"
+                        [context]="{column: column, colIndex: colIndex}"></template-loader>
+                    <span *ngIf="!column.hasHeaderTemplate()">{{column.header}}</span>
+                </div>
+            </th>
+        </tr>
+    </thead>
+    <tbody id="table-body">
+        <tr *ngFor="let row of displayData; let rowIndex = index">
+            <td *ngFor="let column of columns; let cellIndex = index" [ngStyle]="column.style">
+                <template-loader *ngIf="column.hasCellTemplate()" [template]="column.cellTemplate"
+                    [context]="{column: column, data: row, cellIndex: cellIndex, rowIndex: rowIndex}"></template-loader>
+                <div *ngIf="!column.hasCellTemplate()" class="field">{{column.header}}:</div>
+                <div *ngIf="!column.hasCellTemplate()" class="value">{{row[column.field]}}</div>
+            </td>
+        </tr>
+        <tr *ngIf="displayData.length == 0" aria-live="polite" aria-atomic="true">
+            <td id="empty-message" class="empty-message" [attr.colspan]="columns.length" [innerHTML]="emptyMessage">
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="table-footer">
+    <div class="row">
+        <div id="results-description" class="col-lg-7 results-description">
+            <div *ngIf="pagination != null" class="description" aria-live="polite" aria-atomic="true"
+                aria-relevant="text" [innerHTML]="getPaginationDescription()"></div>
+            <div *ngIf="pagination != null" class="page-size-select inline">
+                <label id="page-size-select-label" for="page-size-select">Page Size</label>
+                <select id="page-size-select" name="page-size-select" class="" [ngModel]="currentPageSize"
+                    (ngModelChange)="changePageSize($event)">
+                    <option class="page-size-option" *ngFor="let pageSize of pagination.pageSizes" [ngValue]="pageSize">
+                        {{pageSize}}</option>
+                </select>
+            </div>
+        </div>
+        <div *ngIf="pagination != null" id="pagination" class="col-lg-5 pagination-wrap">
+            <button id="prev-page" role="button" class="increment-button inline"
+                [ngClass]="{'disabled' : isPrevDisabled()}" (click)="goToPreviousPage()"
+                [attr.aria-disabled]="isPrevDisabled()" [disabled]="isPrevDisabled()">
+                <i class="fa fa-backward"></i> Prev
+            </button>
+            <div class="first-page inline">
+                <button *ngIf="currentPage != 0" class="page-button-first page-selection"
+                    (click)="selectPage(0)">1</button>
+                <div *ngIf="currentPage == 0" class="current-page">1</div>
+            </div>
+            <div class="dot-dot-dot inline" *ngIf="showFirstDotDotDot()">...</div>
+
+            <div class="page inline" *ngFor="let pageNum of getPageOptionsArray(); let pageOptionIndex = index">
+                <button *ngIf="pageNum != currentPage+1" class="page-selection inline"
+                    (click)="selectPage(pageNum-1)">{{pageNum}}</button>
+                <div *ngIf="pageNum == currentPage+1" class="current-page inline">{{pageNum}}</div>
+            </div>
+
+            <div class="dot-dot-dot inline" *ngIf="showLastDotDotDot()">...</div>
+            <div class="last-page inline" *ngIf="getNumberOfPages() > 1" (click)="selectPage(getNumberOfPages()-1)">
+                <button *ngIf="currentPage != (getNumberOfPages() - 1)"
+                    class="page-button-last page-selection">{{getNumberOfPages()}}</button>
+                <div *ngIf="currentPage == (getNumberOfPages() - 1)" class="current-page inline">{{getNumberOfPages()}}
+                </div>
+            </div>
+            <button id="next-page" role="button" (click)="goToNextPage()" class="increment-button inline"
+                [ngClass]="{'disabled' : isNextDisabled()}" [attr.aria-disabled]="isNextDisabled()"
+                [disabled]="isNextDisabled()">
+                Next <i class="fa fa-forward"></i>
+            </button>
+        </div>
+    </div>
+</div>

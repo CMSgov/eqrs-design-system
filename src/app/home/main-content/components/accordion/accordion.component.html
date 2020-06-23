@@ -1,0 +1,43 @@
+<h1 #scroll> Accordion</h1>
+<hr>
+
+
+<!-- Accordion Example -->
+<div class="card col-md-9">
+  <div class="card-body">   
+ 
+
+  <app-eqrs-accordion>
+  </app-eqrs-accordion>
+
+    <button class="btn code-button mt-3 pull-right" (click) = "showCode()"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+    <div class="col-md-12 code-block">
+      <div>
+      <div *ngIf="accordionShow">
+        <!-- <ngx-prism [language]="cssLanguage">
+          {{accordionContent}}
+        </ngx-prism> -->
+        <pre>
+          <code [highlight]="accordionContent" [lineNumbers]="true" [languages]="cssLanguage" ></code>
+        </pre>
+      </div>
+      </div>
+    </div>
+
+  </div>
+</div>  <!-- card ends here -->
+
+
+<!-- PREVIOUS NEXT -->
+
+<div class="row row-previous-next ml-0 mt-5">
+    <div class="col-lg-9">
+      <span [routerLink] = "['/eqrs-design-system/typography']"> <i class="fa fa-chevron-left"></i> Previous: <b>Typographyn</b> </span>
+      <span [routerLink] = "['/eqrs-design-system/alerts']" class="pull-right"> Next: <b>Alerts</b> <i class="fa fa-chevron-right"></i> </span>
+    </div>
+  
+    <div class="col-lg-3 pull-right">
+      <button class="ml-5 scroll-to-top" (click)="scroll.scrollIntoView({behavior: 'smooth'})"> <span id="toTop" class="fa fa-chevron-circle-up fa-3x"></span> </button>
+    </div>
+  
+  </div>

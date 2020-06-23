@@ -1,0 +1,169 @@
+$eqrs-tertiary-color: #d6d7d9;
+$eqrs-primary-color: #0071bc;
+$eqrs-secondary-color: #5b616b;
+$eqrs-box-shadow: 0 0 3px #3e94cf, 0 0 7px #3e94cf;
+
+h4 {
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.3em;
+  color: #323a45;
+}
+
+[type=checkbox]:focus + label::before {
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #0071bc, 0 0 3px 4px #3e94cf, 0 0 7px 4px #3e94cf;
+}
+
+
+[type=radio]:disabled:checked + label::before {
+  background: $eqrs-tertiary-color;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px $eqrs-tertiary-color;
+  cursor: not-allowed;
+}
+
+[type=checkbox]:disabled:checked + label::before {
+  background: $eqrs-tertiary-color;
+  box-shadow: 0 0 0 1px $eqrs-tertiary-color;
+  cursor: not-allowed;
+}
+
+
+[type=checkbox]:disabled:not(:checked) + label::before, {
+  background: $eqrs-tertiary-color;
+  box-shadow: 0 0 0 1px $eqrs-tertiary-color;
+  cursor: not-allowed;
+}
+
+[type=radio]:disabled:not(:checked) + label::before {
+  background: #fff;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px $eqrs-tertiary-color;
+  cursor: not-allowed;
+}
+
+
+input[type="radio"]:disabled + label {
+  cursor: not-allowed;
+}
+
+input[type="checkbox"]:disabled + label {
+  cursor: not-allowed;
+}
+
+
+[type=checkbox] + label::before {
+  background: #ffffff;
+  border-radius: 0.1rem;
+  box-shadow: 0 0 0 1px #757575;
+  content: '';
+  display: inline-block;
+  height: 1.2rem;
+  width: 1.2rem;
+  line-height: 1.8rem;
+  margin-right: 0.6em;
+  text-indent: 0.15em;
+  vertical-align: middle\0;
+}
+
+[type=checkbox]:checked + label::before,
+[type=checkbox]:checked:disabled + label::before {
+  background-image: url("http://www.craigmertan.com/EQRS/checked@3x.png");
+  background-image: url("http://www.craigmertan.com/EQRS/checked.svg");
+  background-position: center;
+  background-size: 1rem;
+  background-repeat: no-repeat;
+}
+
+.checkbox-container {
+  margin: auto;
+}
+
+[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+}
+
+[type=checkbox] + label {
+  cursor: pointer;
+  font-weight: 400;
+  // margin-top: .5rem;
+  // margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+}
+
+[type=checkbox] + label::before {
+  background: #ffffff;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 0 1px #757575;
+  content: '';
+  display: inline-block;
+  height: 1.8rem;
+  width: 1.8rem;
+  line-height: 1.8rem;
+  margin-right: 0.6em;
+  text-indent: 0.15em;
+  vertical-align: middle\0;
+}
+
+[type=checkbox]:checked + label::before {
+  background-color: $eqrs-primary-color;
+  box-shadow: 0 0 0 1px $eqrs-primary-color;
+}
+
+/*------------------------------------*\
+  #INPUT: DATE
+\*------------------------------------*/
+
+.eqrs-date {
+  display: inline-flex;
+}
+
+.eqrs-date label {
+  font-size: .777rem;
+  margin-bottom: auto;
+}
+
+.eqrs-month, .eqrs-day {
+  max-width: 5rem;
+}
+
+.eqrs-year {
+  max-width: 7rem;
+}
+
+
+input[type=text], select {
+  width: 100%;
+  padding: 10px 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+
+  &::-webkit-input-placeholder {
+    font-weight: 200;
+    color: $eqrs-secondary-color;
+  }
+
+  &::-moz-placeholder {
+    font-weight: 200;
+    color: $eqrs-secondary-color;
+  }
+
+  &::-ms-input-placeholder {
+    font-weight: 200;
+    color: $eqrs-secondary-color;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: $eqrs-box-shadow;
+  }
+}
+
+ul li {
+  list-style-type: none;
+}
+
+

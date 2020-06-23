@@ -1,12 +1,34 @@
-import {RouterModule, Routes} from "@angular/router";
-import {ModuleWithProviders} from "@angular/compiler/src/core";
-import {MainContentComponent} from "./main-content/main-content.component";
+import { NgModule } from '@angular/core';
+import { MainContentComponent } from './home/main-content/main-content.component';
+import { RouterModule, Routes} from '@angular/router';
+
 
 const appRoutes: Routes = [
-  { path: '', component: MainContentComponent, outlet: 'home' },
-  { path: '**', component: MainContentComponent }
-  ];
-
-export const appRoutingProviders: any[] = [];
-
-export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
+  {
+    path: 'home', component: MainContentComponent
+  },
+  {
+    path: 'eqrs-design-system',
+    loadChildren: () => import('./home/main.module').then(m => m.MainModule)
+  },
+  {
+    path:'',
+    redirectTo:'/home',
+    pathMatch:'full'
+  },
+  {
+    path: '**', component: MainContentComponent
+  },
+]
+@NgModule({
+  declarations: [],
+  imports: [
+    RouterModule.forRoot(
+      appRoutes
+    )
+  ],
+  exports:[
+    RouterModule
+  ]
+})
+export class AppRoutingModule { }

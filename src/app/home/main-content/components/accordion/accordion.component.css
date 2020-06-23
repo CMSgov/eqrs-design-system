@@ -1,0 +1,98 @@
+.eqrs-accordion {
+    background-position: left 1.3rem top 2rem;
+    background-repeat: no-repeat;
+    background-size: 2.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1em;
+    background-color: #e7f4e4;
+}
+
+.required {
+    color:red;
+}
+.form2728-font{
+    font-size:16px;
+}
+.form2728-font-header{
+    font-size: 18px;
+}
+
+.border-all{
+    border: 1px solid black;
+}
+ .padding-bottom-eqrs{
+     padding-bottom:10px;
+ }
+
+ .padding-top-eqrs{
+     padding-top:10px;
+ }
+
+ .border-left-right-bottom{
+     border-left: 1px solid black;
+     border-right: 1px solid black;
+     border-bottom: 1px solid black;
+ }
+
+ .border-right-dark{
+     border-right: 1px solid black;
+ }
+
+ .contact-div{
+     padding-left:15px; margin-left:15px;
+ }
+
+ .esrd-coverage-select{
+     width:80px;
+     height:35px;
+     font-size:14px;
+     margin-top:10px;
+     padding: 5px 10px;
+ }
+
+ .unit-of-measurement-width{
+     width: 120px;
+ }
+
+ .font-weight{
+     font-weight:400;
+ }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.fa-chevron-down{
+    position: absolute;
+    color: #0071bc;
+    pointer-events: none;
+    right: 0px;
+    top: 13px;
+    margin-right: 10px;
+}
+
+.eqrs-background-color {
+    background-color: #f6fbf9;
+}
+.center{    
+    text-align: center;
+}
+
+.mat-expansion-panel-header {
+    background-color: #f6fbf9;
+}
+
+.mat-expansion-panel-header-title {
+    font-size: 20px;
+}
+
+.bottomRow {
+    border-color: whitesmoke;
+}
+
+.panel {
+    margin-top: 20px;    
+}

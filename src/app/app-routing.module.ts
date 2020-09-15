@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { MainContentComponent } from './home/main-content/main-content.component';
+import { HomepageComponent } from './home/homepage/homepage.component';
 import { RouterModule, Routes} from '@angular/router';
 
 
 const appRoutes: Routes = [
   {
-    path: 'home', component: MainContentComponent
+    path: 'home', component: HomepageComponent
   },
   {
     path: 'eqrs-design-system',
@@ -17,7 +17,7 @@ const appRoutes: Routes = [
     pathMatch:'full'
   },
   {
-    path: '**', component: MainContentComponent
+    path: '**', component: HomepageComponent
   },
 ]
 @NgModule({

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SideNavComponent } from './side-nav/side-nav.component';
+import { HomepageComponent } from './homepage/homepage.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { StyleComponent } from './main-content/style/style.component';
 import { RouterModule } from '@angular/router';
@@ -13,7 +14,7 @@ import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
-  declarations: [SideNavComponent, MainContentComponent, StyleComponent],
+  declarations: [SideNavComponent, HomepageComponent, MainContentComponent, StyleComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -24,10 +25,11 @@ import { SharedModule } from '../shared/shared.module';
     SharedModule
   ],
   exports:[
+    HomepageComponent,
     MainContentComponent,
     SideNavComponent,
   ]
-  
-  
+
+
 })
 export class MainModule { }

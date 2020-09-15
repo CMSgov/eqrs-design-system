@@ -1,0 +1,20 @@
+<div class="row" [id]="id">
+  <div class="eqrs-month col-xs-1 col-sm-4 col-md-3">
+      <label [class.eqrs-label-error]="setErrorStyle && !isDisabled" for="{{id}}month"> Month </label>
+      <input id="{{id}}month" type="text" placeholder="MM" #month maxlength="2" (blur)="onBlur()"
+          [attr.aria-label]="monthLabel" [class.eqrs-input-error-border]="setErrorStyle && !isDisabled"
+          [attr.aria-required]="required">
+  </div>
+  <div class="eqrs-day col-xs-1 col-sm-4 col-md-3">
+      <label [class.eqrs-label-error]="setErrorStyle && !isDisabled" for="{{id}}day"> Day </label>
+      <input id="{{id}}day" type="text" placeholder="DD" #day maxlength="2" (blur)="onBlur()"
+          [class.eqrs-input-error-border]="setErrorStyle && !isDisabled" [attr.aria-label]="dayLabel"
+          [attr.aria-required]="required">
+  </div>
+  <div class="eqrs-year col-xs-3 col-sm-4 col-md-6">
+      <label [class.eqrs-label-error]="setErrorStyle && !isDisabled" for="{{id}}year"> Year </label>
+      <input id="{{id}}year" type="text" placeholder="YYYY" #year maxlength="4" (blur)="onBlur()"
+          [class.eqrs-input-error-border]="setErrorStyle && !isDisabled" [attr.aria-label]="yearLabel"
+          [attr.aria-required]="required">
+  </div>
+</div>

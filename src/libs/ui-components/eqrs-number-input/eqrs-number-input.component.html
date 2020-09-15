@@ -1,0 +1,7 @@
+<form *ngIf="inputForm" [formGroup]="inputForm" novalidate>
+    <input [id]="id" [name]="name" formControlName="valueControl" (blur)="onBlur()" type="text"
+        [class.eqrs-input-error-border]="eqrsInputErrorBorder" [attr.aria-invalid]="ariaInvalid"
+        style="max-width: 120px;" />
+</form>
+
+<!-- <h1>Number Input</h1> -->

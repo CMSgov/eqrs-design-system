@@ -1,8 +1,0 @@
-<form *ngIf="inputForm" [formGroup]="inputForm" novalidate>
-  <div *ngFor="let option of options; let i = index;">
-      <input class="checkbox-container" type="checkbox" formControlName="valueControl" [name]="name" [id]="id + '_' + i" [value]="option[valueProperty]" 
-          [checked]="option[valueProperty] | includedIn : value" (change)="addOrRemoveValue(option[valueProperty])" #checkbox>
-      <label [for]="id + '_' + i"> {{option[descriptionProperty]}} </label>
-  </div> 
-</form>
-

@@ -1,6 +1,11 @@
 # ESRD Design System
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
+View the [Live Demo](https://thomaszhengeqrs.github.io/eqrs-design-system/)
+
+## Installation
+1. Git Clone or download 
+2. `npm install`
 
 ## Development server
 
@@ -12,7 +17,9 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+Run `npm run build:lib` to Transpile the libraries to Angular Package Format via [ng-packagr](https://github.com/ng-packagr/ng-packagr)
 
 ## Running unit tests
 

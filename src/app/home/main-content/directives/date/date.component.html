@@ -1,0 +1,51 @@
+<h1 #scroll> Date </h1>
+<hr>
+
+<p> Date Pipe is used to format isoDateStringNoTime 'yyyy-MM-dd' to default 'MM/DD/YYYY' or a specified format.</p>
+
+<div>
+  <b>[required]="true"</b> <br>
+  will trigger required validation and will throw 'required' error <br><br>
+  <b>[minValue]="'1973-01-01'"</b> <br> will trigger minimum date validation if the user provided date is before '1973-01-01'
+  and will throw 'minDate' error <br><br>
+  <b>[maxValue]="'2010-01-01'"</b> <br> will trigger maximum date validation if the user provided date is after '2000-01-01'
+  and will throw 'maxDate' error <br><br>
+  <b>[setErrorStyle]="form.controls['dateControl'].touched && form.controls['dateControl'].invalid" </b><br>
+  The setErroStyle attribute accepts the condition when the error styling needs to be applied. <br><br>
+  <b>[id]="'myControl'"</b><br> will set element id's to myControl_month, myControl_day and myControl_year
+  respectively. <br><br>
+  <b>[label]="'Effective Date'"</b><br> will update the aria-label for month input tag as 'Effective Date Month' <br>
+  will update the aria-label for day input tag as 'Effective Date Day'<br>
+  will update the aria-label for year input tag as 'Effective Date Year'<br><br>
+</div>
+
+<div>
+  <button class="btn code-button mt-2" (click) = "dateShow = !dateShow">
+    View code <i class="fa fa-code" aria-hidden="true"></i>
+  </button>
+</div>
+
+<div class="col-md-12 code-block">
+  <div>
+    <div *ngIf="dateShow">
+      <!-- <ngx-prism [language]="cssLanguage">
+        {{dateContent}}
+      </ngx-prism> -->
+      <pre>
+          <code [highlight]="dateContent" [lineNumbers]="true" [languages]="cssLanguage" ></code>
+      </pre>
+    </div>
+  </div>
+</div>
+
+<div class="row row-previous-next ml-0">
+  <div class="col-lg-10">
+    <!-- <span [routerLink] = "['/tooltips']"> <i class="fa fa-chevron-left"></i> Previous: <b> Tooltips </b> </span> -->
+    <span [routerLink] = "['/eqrs-design-system/addremovefield']"> <i class="fa fa-chevron-left"></i> Previous: <b> Add/Remove  </b> </span>
+    <span [routerLink] = "['/eqrs-design-system/dropdownkeynav']" class="pull-right"> Next: <b>Dropdown Keyboard Nav</b> <i class="fa fa-chevron-right"></i> </span>
+  </div>
+
+  <div class="col-lg-2">
+    <button class="ml-5 scroll-to-top" (click)="scroll.scrollIntoView({behavior: 'smooth'})"> <span id="toTop" class="fa fa-chevron-circle-up fa-3x"></span> </button>
+  </div>
+</div>

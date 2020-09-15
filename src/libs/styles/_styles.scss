@@ -1,0 +1,516 @@
+/* You can add global styles to this file, and also import other style files */
+/*
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~prismjs/plugins/toolbar/prism-toolbar.css";
+@import "~prismjs/themes/prism.css";
+@import '~prismjs/themes/prism-coy.css';
+*/
+
+//Old Bootstrap
+// required
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+// optional
+@import "../../../node_modules/bootstrap/scss/grid";
+@import "../../../node_modules/bootstrap/scss/reboot";
+@import "../../../node_modules/bootstrap/scss/transitions";
+@import "../../../node_modules/bootstrap/scss/utilities";
+@import "../../../node_modules/bootstrap/scss/nav";
+@import "../../../node_modules/bootstrap/scss/navbar";
+@import "../../../node_modules/bootstrap/scss/dropdown";
+@import "../../../node_modules/bootstrap/scss/buttons";
+
+//New Bootstrap
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "../../../node_modules/bootstrap/scss/bootstrap-grid";
+@import "../../../node_modules/bootstrap/scss/bootstrap-reboot";
+
+
+/*------------------------------------*\
+  #VARIABLES
+\*------------------------------------*/
+$eqrs-primary-color: #0071bc;
+$eqrs-primary-darker: #205493;
+$eqrs-primary-darkest: #112e51;
+$eqrs-secondary-color: #5b616b;
+$eqrs-secondary-darker: #323a45;
+$eqrs-tertiary-color: #d6d7d9;
+$eqrs-accent-color: #fdb81e;
+$eqrs-accent-darker: #d99502;
+$eqrs-accent-darkest: #bb8002;
+$eqrs-success-color: #009e51;
+$eqrs-alert-color: #cd2026;
+$eqrs-alert-darker: #981b1e;
+$eqrs-text-color: #323a45;
+$eqrs-background-color: #f1f1f1;
+$eqrs-background-alt: #f3fafe;
+$eqrs-focus-color: #3e94cf;
+$eqrs-focus-alt: #e7e7e7;
+$eqrs-visited-color: #4c2c92;
+$eqrs-alert-information: #e1f3f8;
+$eqrs-alert-error: #f9dede;
+$eqrs-alert-warning: #fff1d2;
+$eqrs-alert-success: #e7f4e4;
+
+$eqrs-box-shadow: 0 0 3px #3e94cf, 0 0 7px #3e94cf;
+
+$eqrs-border-radius: 3px;
+$eqrs-serif-font-family: "Merriweather", "Georgia", "Cambria", "Times New Roman", "Times", serif;
+$eqrs-sans-serif-font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+
+h1, h2, h3, h4, h5 {
+    font-family: "Merriweather", "Georgia", "Cambria", "Times New Roman", "Times", serif;
+    margin-bottom: .5rem;
+    line-height: 1.3rem;
+    font-weight: 700;
+}
+
+h1 {
+    color: #112e51;
+}
+
+a {
+    color: #0071bc;
+}
+
+h1.sidebar-heading {
+    color: #fff;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.container-fluid {
+    background: #fff;
+}
+
+main.col-md-9.ml-sm-auto.col-lg-10.pt-3.px-4 {
+    padding-left: 5rem !important;
+    padding-top: 3rem !important;
+}
+
+.dark-blue {
+    color: #112e51;
+}
+
+.row-no-flex {
+	display: inline;
+}
+
+.eqrs-label-bold {
+    font-weight: 700;
+}
+
+h4 {
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.3em;
+    text-transform: uppercase;
+    color: #323a45;
+    padding-top: 15px;
+}
+
+.row-previous-next {
+    background: #fff;
+    padding: 1rem;
+    border-top: 1px solid #d6d7d9;
+}
+
+.row-previous-next span {
+    color: #0071bc;
+    cursor: pointer;
+}
+
+.row-previous-next span:hover {
+    color: #112e51;
+    cursor: pointer;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.eqrs-button-primary {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+    min-height: 44px;
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease;
+    color: #fff;
+    background-color: #0071bc;
+    border: 1px solid #0071bc;
+}
+
+.notes {
+    font-size: 12px;
+    color: gray;
+}
+
+
+.eqrs-button-secondary {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+    min-height: 44px;
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease;
+    color: #5b616b;
+    background-color: #fff;
+    border: 1px solid #5b616b;
+}
+
+
+.primary-hover {
+    background-color: #205493;
+    pointer-events: none;
+}
+
+
+.primary-active {
+    background-color: #112e51;
+    pointer-events: none;
+}
+
+.eqrs-button-secondary-hover {
+    background-color: #5b616b;
+    border: #5b616b;
+    color: #fff;
+    pointer-events: none;
+}
+
+.eqrs-button-secondary-active {
+    background-color: #323a45;
+    border: 1px solid #323a45;
+    color: #fff;
+    pointer-events: none;
+}
+
+.eqrs-button-accent {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+    min-height: 44px;
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease;
+    color: #000;
+    background-color: #fdb81e;
+    border: 1px solid #fdb81e;
+}
+
+.accent-hover {
+    background-color: #d99502;
+    color: #fff;
+    pointer-events: none;
+}
+
+.accent-active {
+    background-color: #bb8002;
+    color: #fff;
+    pointer-events: none;
+}
+
+.eqrs-button-destructive {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+    min-height: 44px;
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease;
+    color: #cd2026;
+    background-color: #fff;
+    border: 1px solid #cd2026;
+}
+
+.eqrs-button-destructive-hover {
+    color: #fff;
+    background-color: #cd2026;
+    pointer-events: none;
+}
+
+.eqrs-button-destructive-active {
+    color: #fff;
+    background-color: #981b1e;
+    pointer-events: none;
+}
+
+.eqrs-button-primary:disabled {
+    color: #fff;
+    background-color: #d6d7d9;
+    border: 1px solid #d6d7d9;
+}
+
+.eqrs-button-destructive:hover {
+    color: #fff;
+    background-color: #cd2026;
+}
+
+.eqrs-button-secondary:hover {
+    color: #fff;
+    background-color: #5b616b;
+}
+
+.eqrs-button-primary:hover {
+    background-color: #205493;
+    border: 1px solid #205493;
+}
+
+.eqrs-button-accent:disabled {
+    color: #fff;
+    background-color: #d6d7d9;
+    border: 1px solid #d6d7d9;
+}
+
+.eqrs-edit-link {
+    border: none;
+    background: none;
+    color: #0071bc;
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 1.125em;
+}
+
+.focus {
+    box-shadow: 0 0 3px 2px rgba(62, 148, 207, 0.5);
+    border-radius: 3px;
+}
+
+.btn.code-button {
+    color: #fff;
+    background: #28a745;
+    text-decoration: none;
+    padding: 0.3rem;
+    font-size: 0.8rem;
+}
+
+.code-block {
+    margin-top: 4rem;
+}
+
+
+.scroll-to-top {
+    border: none;
+    background: inherit;
+    margin-top: -0.6rem;
+}
+
+#toTop {
+    color: #d6d7d9;
+}
+
+#toTop:hover {
+    color: #5b616b;
+}
+/*------------------------------------*\
+  #LABELS
+\*------------------------------------*/
+
+@mixin eqrs-label-special {
+  padding: 2px 5px 2px 5px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.eqrs-label {
+  font-family: $eqrs-sans-serif-font-family;
+  padding-left: inherit;
+  font-size: 1rem;
+  margin-bottom: auto;
+  white-space: nowrap;
+}
+
+.eqrs-label-error {
+  padding-left: 0;
+  color: $eqrs-alert-color;
+}
+
+
+
+.eqrs-input-error-border {
+  border: 1px solid $eqrs-alert-color !important;
+}
+
+
+.eqrs-input-error-message {
+  color: $eqrs-alert-color;
+  padding-bottom: 10px;
+  margin-left: -15px;
+  padding-left: 45px;
+  font-weight: 700;
+  max-width: 35em;
+  margin-top: auto;
+  /*   margin-bottom: auto; */
+
+  // background-image: url("../assets/images/error-red@3x.png");
+  // background-image: url("../assets/images/error-red.svg");
+  background-position: left 1.3rem center;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+}
+
+
+.eqrs-label-bold { /* view mode for labels */
+  font-weight: 700;
+}
+
+
+.eqrs-label-warning {
+  @include eqrs-label-special;
+  background-color: $eqrs-accent-color;
+  color: #000;
+  font-family: $eqrs-sans-serif-font-family;
+}
+
+/*------------------------------------*\
+  #INPUT: SELECT
+\*------------------------------------*/
+
+
+@mixin select {
+  border: 1px solid $eqrs-tertiary-color;
+  border-radius: $eqrs-border-radius;
+  height: 44px;
+  background-color: #fff;
+  // background-image: url("../assets/images/chevron-down@3x.png");
+  // background-image: url("../assets/images/chevron-down.svg");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 0.6rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  padding-right: 30px;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: $eqrs-box-shadow;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    background-color: $eqrs-tertiary-color;
+    color: $eqrs-text-color;
+    cursor: not-allowed;
+
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+}
+
+
+.eqrs-select {
+  @include select;
+}
+/*------------------------------------*\
+  #INPUTS
+\*------------------------------------*/
+
+@mixin input {
+  height: 44px !important;
+  font-family: $eqrs-sans-serif-font-family;
+  font-size: 1rem;
+  border-radius: $eqrs-border-radius;
+  border: 1px solid $eqrs-tertiary-color !important;
+  width: 100%;
+
+  &::-ms-clear { //specific for IE 11 styling
+    display: none;
+  }
+
+  &::-webkit-input-placeholder {
+    font-weight: 200;
+    color: $eqrs-secondary-color;
+  }
+
+  &::-moz-placeholder {
+    font-weight: 200;
+    color: $eqrs-secondary-color;
+  }
+
+  &::-ms-input-placeholder {
+    font-weight: 200;
+    color: $eqrs-secondary-color;
+  }
+
+  &:focus{
+    outline: 0px;
+    box-shadow: $eqrs-box-shadow;
+  }
+
+  &:disabled {
+    background-color: $eqrs-tertiary-color;
+    color: $eqrs-text-color;
+  }
+
+  &:disabled:hover {
+    cursor: not-allowed;
+  }
+}
+
+
+.eqrs-input {
+  @include input;
+}
+
+input[type="text"] {
+  height: 44px !important;
+}
+
+
+.eqrs-input-container {
+  margin-left: auto;
+}
+
+
+.eqrs-input-wrapper {
+  margin-left: auto;
+  margin-bottom: 20px;
+
+  label {
+    padding-left: inherit;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

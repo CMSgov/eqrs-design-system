@@ -1,0 +1,27 @@
+header {
+  background-color: #112e51;
+
+  h1, h2, h3, p {
+    color: white;
+  }
+
+  nav {
+    background-color: #F3FAFE;
+    color: #112e51;
+    font-weight: bold; // what is the established weight?
+
+    ul {
+
+      display: flex;
+
+
+      li {
+        text-align: center;
+        flex-grow: 1;
+        display: inline-block;
+        list-style: none;
+
+      }
+    }
+  }
+}

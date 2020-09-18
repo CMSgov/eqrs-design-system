@@ -27,11 +27,9 @@
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 
-
 /* Import from libs/assets/styles/_styles */
 @import '../src/libs/styles/styles';
 @import '../src/libs/styles/styles-new';
-
 
 @import '~highlight.js/styles/rainbow.css';
 
@@ -62,16 +60,20 @@ $eqrs-alert-information: #e1f3f8;
 $eqrs-alert-error: #f9dede;
 $eqrs-alert-warning: #fff1d2;
 $eqrs-alert-success: #e7f4e4;
-
 $eqrs-box-shadow: 0 0 3px #3e94cf, 0 0 7px #3e94cf;
-
 $eqrs-border-radius: 3px;
 $eqrs-serif-font-family: "Merriweather", "Georgia", "Cambria", "Times New Roman", "Times", serif;
 $eqrs-sans-serif-font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 
+/*------------------------------------*\
+  #GLOBAL DS - These pertain to the
+  system's UI, not to the components
+\*------------------------------------*/
 
-
-
+.esrd-ds-container {
+  margin: 0 auto;
+  width: 95%;
+}
 
 /*------------------------------------*\
   #BASE STYLES
@@ -83,7 +85,6 @@ html { /*Increase default font size to 18px*/
     font-size: 1.125rem;
 }
 
-
 body {
     font-family: $eqrs-sans-serif-font-family;
     color: #323a45;
@@ -93,11 +94,9 @@ body p {
     max-width: 35em;
 }
 
-
 .eqrs-detail-copy {
     font-size: .77rem;
 }
-
 
 .eqrs-lead-paragraph {
     font-family: $eqrs-serif-font-family;
@@ -105,7 +104,6 @@ body p {
     font-size: 20px;
     line-height: 1.7em;
 }
-
 
 .eqrs-display-text {
     font-family: $eqrs-serif-font-family;

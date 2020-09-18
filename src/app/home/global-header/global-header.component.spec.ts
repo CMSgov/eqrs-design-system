@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { HomepageComponent } from './main-content.component';
+import { GlobalHeaderComponent } from './global-header.component';
 
-describe('HomepageComponent', () => {
-  let component: HomepageComponent;
-  let fixture: ComponentFixture<HomepageComponent>;
+describe('GlobalHeaderComponent', () => {
+  let component: GlobalHeaderComponent;
+  let fixture: ComponentFixture<GlobalHeaderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomepageComponent ]
+      declarations: [ GlobalHeaderComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomepageComponent);
+    fixture = TestBed.createComponent(GlobalHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

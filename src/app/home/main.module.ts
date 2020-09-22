@@ -18,9 +18,11 @@ import { SharedModule } from '../shared/shared.module';
 import { ComponentsComponent } from './main-content/components/components.component';
 import { GovernanceComponent } from './main-content/governance/governance.component';
 import { AboutComponent } from './main-content/about/about.component';
+import { ComponentSidenavComponent } from './component-sidenav/component-sidenav.component';
+
 
 @NgModule({
-  declarations: [SideNavComponent, GlobalHeaderComponent, GlobalFooterComponent, HomepageComponent, MainContentComponent, StyleComponent, ComponentsComponent, AboutComponent, GovernanceComponent],
+  declarations: [SideNavComponent, GlobalHeaderComponent, GlobalFooterComponent, HomepageComponent, MainContentComponent, StyleComponent, ComponentsComponent, AboutComponent, GovernanceComponent, ComponentSidenavComponent],
   imports: [
     CommonModule,
     RouterModule,

@@ -1,0 +1,50 @@
+
+<nav class="col-md-2 d-none d-md-block eqrs-primary-darkest sidebar">
+  <div class="sidebar-sticky">
+    <div class="nav flex-column">
+      <div class="nav-item collapse-li">
+        <div (click)="isMenuOpen = !isMenuOpen; isMenu1Open = false; isMenu2Open = false; isMenu3Open= false;" class="nav-link" data-toggle="collapse" aria-expanded="false">
+          <span> Getting started</span> <i class="fa pull-right" [ngClass]="(isMenuOpen) ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+        </div>
+        <div *ngIf="isMenuOpen">
+          <div *ngFor="let menuItem of menuItems[0]" class="child-nav-items">
+          <div routerLink="/eqrs-design-system/{{menuItem.path}}" routerLinkActive="nav-item-active"> {{menuItem.title}} </div>
+          </div>
+        </div>
+      </div>
+
+       <div class="nav-item collapse-li">
+        <div (click)="isMenu1Open = !isMenu1Open; isMenuOpen = false; isMenu2Open = false; isMenu3Open= false;" class="nav-link" data-toggle="collapse" aria-expanded="false">
+          <span>Style </span> <i class="fa pull-right" [ngClass]="(isMenu1Open) ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+        </div>
+         <div *ngIf="isMenu1Open">
+           <div *ngFor="let menuItem of menuItems[1]" class="child-nav-items">
+              <div routerLink="/eqrs-design-system/{{menuItem.path}}" routerLinkActive="nav-item-active"> {{menuItem.title}} </div>
+           </div>
+         </div>
+      </div>
+
+      <div class="nav-item collapse-li">
+        <div (click)="isMenu2Open = !isMenu2Open; isMenuOpen = false; isMenu1Open = false; isMenu3Open= false;" class="nav-link" data-toggle="collapse" aria-expanded="false">
+          <span> Components</span>  <i class="fa pull-right" [ngClass]="(isMenu2Open) ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+        </div>
+        <div *ngIf="isMenu2Open">
+          <div *ngFor="let menuItem of menuItems[2]" class="child-nav-items">
+            <div routerLink="/eqrs-design-system/{{menuItem.path}}" routerLinkActive="nav-item-active"> {{menuItem.title}} </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-item collapse-li">
+        <div (click)="isMenu3Open = !isMenu3Open; isMenuOpen = false; isMenu1Open = false; isMenu2Open = false;" class="nav-link" data-toggle="collapse" aria-expanded="false">
+          <span> Directives</span>  <i class="fa pull-right" [ngClass]="(isMenu3Open) ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+        </div>
+        <div *ngIf="isMenu3Open">
+          <div *ngFor="let menuItem of menuItems[3]" class="child-nav-items">
+            <div routerLink="/eqrs-design-system/{{menuItem.path}}" routerLinkActive="nav-item-active"> {{menuItem.title}} </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

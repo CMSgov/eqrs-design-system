@@ -13,10 +13,14 @@ import { ComponentsModule } from './main-content/components/components.module';
 import { DirectivesModule } from './main-content/directives/directives.module';
 import { SharedModule } from '../shared/shared.module';
 
-
+//newbies
+//import { PrinciplesComponent } from './main-content/getting-started/principles/principles.component';
+import { ComponentsComponent } from './main-content/components/components.component';
+import { GovernanceComponent } from './main-content/governance/governance.component';
+import { AboutComponent } from './main-content/about/about.component';
 
 @NgModule({
-  declarations: [SideNavComponent, GlobalHeaderComponent, GlobalFooterComponent, HomepageComponent, MainContentComponent, StyleComponent],
+  declarations: [SideNavComponent, GlobalHeaderComponent, GlobalFooterComponent, HomepageComponent, MainContentComponent, StyleComponent, ComponentsComponent, AboutComponent, GovernanceComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -24,7 +28,8 @@ import { SharedModule } from '../shared/shared.module';
     StyleModule,
     ComponentsModule,
     DirectivesModule,
-    SharedModule
+    SharedModule,
+
   ],
   exports:[
     HomepageComponent,

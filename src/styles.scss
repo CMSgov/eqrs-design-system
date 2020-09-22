@@ -75,6 +75,19 @@ $eqrs-sans-serif-font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", 
   width: 90%;
 }
 
+.esrd-ds-header-link {
+  color: white;
+
+  &:hover {
+    color: rgba(white, 80%);
+  }
+
+  &:visited {
+    color: white;
+  }
+}
+
+
 /*------------------------------------*\
   #BASE STYLES
 \*------------------------------------*/

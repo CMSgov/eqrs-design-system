@@ -1,12 +1,20 @@
 import { NgModule } from '@angular/core';
 import { HomepageComponent } from './home/homepage/homepage.component';
+import { PrinciplesComponent } from './home/main-content/getting-started/principles/principles.component';
+import { StyleComponent } from './home/main-content/style/style.component';
+import { ComponentsComponent } from './home/main-content/components/components.component';
+import { GovernanceComponent } from './home/main-content/governance/governance.component';
+import { AboutComponent } from './home/main-content/about/about.component';
 import { RouterModule, Routes} from '@angular/router';
 
 
 const appRoutes: Routes = [
-  {
-    path: 'home', component: HomepageComponent
-  },
+  { path: 'home', component: HomepageComponent },
+  { path: 'principles', component: PrinciplesComponent },
+  { path: 'style-guide', component: StyleComponent },
+  { path: 'components', component: ComponentsComponent },
+  { path: 'governance', component: GovernanceComponent },
+  { path: 'about', component: AboutComponent },
   {
     path: 'eqrs-design-system',
     loadChildren: () => import('./home/main.module').then(m => m.MainModule)

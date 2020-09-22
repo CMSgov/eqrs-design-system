@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 
 @Component({
   selector: 'app-global-header',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GlobalHeaderComponent implements OnInit {
 
-  constructor() { }
+  menuItems: any;
 
-  ngOnInit() {
+  constructor(
+    private http: HttpClient
+  ) { }
+
+  ngOnInit(): void {
+    this.http.get('assets/data/global-nav.json').subscribe(
+      data => {
+        this.menuItems = data as string [];
+      },
+      (err: HttpErrorResponse) => {
+        console.log (err.message);
+      }
+    );
   }
 
 }

@@ -8,10 +8,6 @@ import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 })
 export class ComponentSidenavComponent implements OnInit {
 
-  isMenuOpen: boolean=false;
-  isMenu1Open: boolean=false;
-  isMenu2Open: boolean=false;
-  isMenu3Open: boolean=false;
   menuItems: any;
 
   constructor(

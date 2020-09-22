@@ -15,7 +15,7 @@ export class ComponentSidenavComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.http.get('assets/data/menu-items.json').subscribe(
+    this.http.get('assets/data/sidenav-components.json').subscribe(
       data => {
         this.menuItems = data as string [];
       },

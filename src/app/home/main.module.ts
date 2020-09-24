@@ -14,7 +14,7 @@ import { DirectivesModule } from './main-content/directives/directives.module';
 import { SharedModule } from '../shared/shared.module';
 
 //newbies
-//import { PrinciplesComponent } from './main-content/getting-started/principles/principles.component';
+import { GettingStartedComponent } from './main-content/getting-started/getting-started.component';
 import { ComponentsComponent } from './main-content/components/components.component';
 import { GovernanceComponent } from './main-content/governance/governance.component';
 import { AboutComponent } from './main-content/about/about.component';
@@ -22,7 +22,7 @@ import { ComponentSidenavComponent } from './component-sidenav/component-sidenav
 
 
 @NgModule({
-  declarations: [SideNavComponent, GlobalHeaderComponent, GlobalFooterComponent, HomepageComponent, MainContentComponent, StyleComponent, ComponentsComponent, AboutComponent, GovernanceComponent, ComponentSidenavComponent],
+  declarations: [SideNavComponent, GettingStartedComponent, GlobalHeaderComponent, GlobalFooterComponent, HomepageComponent, MainContentComponent, StyleComponent, ComponentsComponent, AboutComponent, GovernanceComponent, ComponentSidenavComponent],
   imports: [
     CommonModule,
     RouterModule,

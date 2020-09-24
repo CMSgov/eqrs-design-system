@@ -1,0 +1,70 @@
+<!-- this file uses USWDS classes -- see designsystem.digital.gov -->
+
+<div class="esrd-ds-container padding-top-2 grid-row">
+
+  <div class="tablet:grid-col-2 padding-right-4 padding-bottom-4">
+    side navigation coming soon!
+  </div>
+
+  <div class="tablet:grid-col-10 padding-top-105 padding-bottom-4">
+    <h2>Governance</h2>
+
+    <h3>Who should use the design system?</h3>
+    <p>ESRD-DS is primarily intended to help facilitate design and development, so the primary users are ESRD designers and engineers. However, it can also be used by testers to validate visual and code implementation.</p>
+
+    <h3>Who should contribute to the design system?</h3>
+    <p>ESRD-DS is open for pull requests from the broader Github community, per guidelines laid out in this document. We expect contributions primarily from the ESX team and EQRS developers. Suggestions, requests, and feedback should be <a href="https://github.com/CMSgov/eqrs-design-system/issues">submitted as Github issues</a>.</p>
+
+    <h3>Who’s responsible for maintenance?</h3>
+    <p>ESRD-DS is maintained by the Shared Excellence team at ManTech.</p>
+
+    <h3>Adding new patterns</h3>
+    <p>People working on the EQRS UI should be conscious of not building “snowflake” patterns. The design system contains all the common patterns that are already in use on production, and their accepted variations.</p>
+    <p>If a designer or developer thinks they need to deviate from the design system and develop a new visual pattern, they should consider the following:</p>
+    <ul>
+      <li>Does the design system have a pattern that could satisfy the need with minor modifications?</li>
+      <li>Is there another way to solve the problem to hand in the UI?</li>
+    </ul>
+
+    <p>Developers should not develop new visual patterns without consulting a designer or the ESX team. If everyone decides that a new pattern is actually required, they should then work to develop the pattern to meet the acceptance criteria.</p>
+
+    <h4>Acceptance criteria for new patterns:</h4>
+    <ul>
+      <li>An ESX-approved visual design</li>
+      <li>HTML and CSS to support the pattern, which have passed accessibility tests</li>
+      <li>If required, Angular code to support the pattern, which has passed accessibility tests</li>
+      <li>Appropriate documentation for when a pattern should be used and when it shouldn’t, plus how to use it (if it’s an Angular pattern)</li>
+    </ul>
+
+    <p>See the Workflow below for how to submit a new pattern, once these acceptance criteria are met.</p>
+
+    <h3>Deprecating old patterns</h3>
+    <p>Any well-maintained, continuously worked-on UI will eventually no longer need certain patterns. It should periodically evaluate the patterns it contains and ensure that anything obsolete is removed.</p>
+    <p>Because ESRD-DS serves government products, and potentially multiple teams external to the core design system team, the DS team should consider whether deprecating a pattern represents a breaking change to products using the design system. As such, all efforts should be made to communicate any upcoming deprecations with a minimum of six months’ notice, before the pattern, its code and documentation are removed from the system.</p>
+
+    <h3>Workflow</h3>
+    <p>The Design System is housed on a public Github repository. While the repo is public-facing, it’s managed by a small team who are responsible for code review, merging to master, updating the UI and publishing to NPM. The master branch is protected, meaning that teammates cannot push directly to master and must submit pull requests in order to update the design system.<p>
+
+    <h4>Submitting pull requests</h4>
+    <p>Anyone with valid Github credentials can fork the repository, make changes, and submit a pull request to the DS repository for review. EQRS-DS teammates with the correct permissions can create their own branches on the repo in order to submit pull requests.</p>
+    <p>Pull requests should be code-reviewed for accessibility, compliance and other standards before approving the PR.</p>
+
+    <h4>Merging to master</h4>
+    <p>Once a PR has been appropriately reviewed and approved by at least one teammate other than the author, either that person or the author can merge the new branch to master.</p>
+
+    <h4>Deploying to Pages</h4>
+    <p>The Github repository is configured to automatically deploy the design system to Pages whenever the master branch is updated.</p>
+
+    <h4>Releasing to NPM</h4>
+    <p>This workflow is TBD.</p>
+
+    <h4>What’s included in a release</h4>
+    <ul>
+      <li>A changelog detailing what’s new or different</li>
+      <li>Complete code to support the pattern</li>
+      <li>An update to the Sketch file to reflect any changes</li>
+    </ul>
+
+  </div>
+
+</div>

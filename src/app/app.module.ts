@@ -5,9 +5,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule} from "@angular/common/http";
 import { MainModule } from './home/main.module';
- 
-
-
 
 import { RouterModule } from '@angular/router';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';

@@ -1,0 +1,28 @@
+[
+  [
+    {
+      "title": "How to use ESRD:DS",
+      "path": "/principles"
+    },
+    {
+      "title": "Design Principles",
+      "path": "/principles"
+    },
+    {
+      "title": "Style Guide",
+      "path": "/style-guide"
+    },
+    {
+      "title": "Components",
+      "path": "/components"
+    },
+    {
+      "title": "Governance",
+      "path": "/governance"
+    },
+    {
+      "title": "About",
+      "path": "/about"
+    }
+  ]
+]

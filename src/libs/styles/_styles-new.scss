@@ -1,30 +1,3 @@
-$eqrs-sans-serif-font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-
-body {
-    font-family: $eqrs-sans-serif-font-family;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.5em/26px;
-}
-
-.header-padding{
-    padding-bottom: 35px;
-}
-
-p {
-    word-wrap:break-word;
-}
-
-.eqrs-complaint-title-h2 {
-    font-size: 1.7rem;
-}
-
-.eqrs-complaint-title-h3 {
-    font-size: 1.22rem;
-    line-height: 1.3em;
-    padding-top: 15px;
-}
-
 .eqrs-blue-border {
     border: 1px solid $eqrs-primary-color !important;
 }

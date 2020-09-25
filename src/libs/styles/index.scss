@@ -3,8 +3,11 @@
 @import 'fonts';
 @import 'variables';
 
+
 @import 'eqrs-style';
 @import 'eqrs-material-styles';
 
-@import 'styles';
+@import 'styles'; // trying to kill this file altogether
 @import 'styles-new';
+
+@import 'typography'; // temporarily at the bottom so that it overrides bootstrap

@@ -1,306 +1,172 @@
+<!-- this file uses USWDS classes -- see designsystem.digital.gov -->
+<div class="esrd-ds-container padding-top-2 padding-bottom-4 grid-row">
 
-<h1 #scroll> Buttons </h1>
-<hr>
+  <div class="tablet:grid-col-2 padding-right-4">
+    <!-- <app-component-sidenav></app-component-sidenav>-->
+    sidenav goes here
+  </div>
 
-<p> Use descriptive words that clearly state the action of the button, avoiding vague wording like <i>yes</i> or <i>no</i>. </p>
+  <div class="tablet:grid-col-10 padding-top-105">
 
+    <h2>Buttons</h2>
+    <p>Use descriptive words that clearly state the action of the button, avoiding vague wording like <i>yes</i> or <i>no</i>.</p>
 
-<!-- Custom Buttons -->
+    <section class="padding-bottom-2 tablet:grid-col-9">
 
-<div class="card col-md-12">
-  <div class="card-body">
-    <h4 class="pt-0 pb-3">Primary button</h4>
-  	  <div class="row">
-        <div class="col-md-4">
+      <h3>Primary buttons</h3>
+
+      <div class="grid-row padding-bottom-4">
+        <div class="tablet:grid-col-4 padding-right-2">
           <p>Default</p>
-            <app-eqrs-buttons [eqrsType]="EqrsButtonTypes.Primary">Submit</app-eqrs-buttons>
-          <p class="notes">eqrs-button-primary</p>
+          <button class="eqrs-button-primary">Submit</button>
         </div>
-        <div class="col-md-4">
+
+        <div class="tablet:grid-col-4 padding-right-2">
           <p>Hover</p>
           <button class="eqrs-button-primary primary-hover">Submit</button>
         </div>
-        <div class="col-md-4">
+
+        <div class="tablet:grid-col-4 padding-right-2">
           <p>Active</p>
           <button class="eqrs-button-primary primary-active">Submit</button>
         </div>
-  </div>  
-<!-- row ends here -->
 
+        <button class="usa-button bg-mint" (click) = "primaryButtonShow = !primaryButtonShow">
+          View code <i class="fa fa-code" aria-hidden="true"></i>
+        </button>
 
-  <button class="btn code-button mt-2 pull-right" (click) = "primaryButtonShow = !primaryButtonShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+        <div *ngIf="primaryButtonShow">
+          <pre>
+            <code [highlight]="primaryButtonContent" [lineNumbers]="true" [languages]="cssLanguage" ></code>
+          </pre>
+        </div>
 
-     <div class="col-md-12 code-block">
-          <div>
-          <div *ngIf="primaryButtonShow">
-            <!-- <ngx-prism [language]="cssLanguage">
-             {{primaryButtonContent}}
-            </ngx-prism> -->
-            <pre>
-                <code [highlight]="primaryButtonContent" [lineNumbers]="true" [languages]="cssLanguage" ></code>
-            </pre>
-          </div>
-         </div>
       </div>
 
-  </div>
-</div> 
-<!-- card ends here -->
+      <h3>Secondary buttons</h3>
+      <div class="grid-row padding-bottom-4">
 
-<div class="card col-md-12">
-  <div class="card-body">
-    <h4 class="pt-0 pb-3">Secondary button</h4>
-  	  <div class="row">
-        <div class="col-md-4">
+        <div class="tablet:grid-col-4 padding-right-2">
           <p>Default</p>
-            <app-eqrs-buttons [eqrsType]="EqrsButtonTypes.Secondary">Submit</app-eqrs-buttons>
-          <p class="notes">eqrs-button-secondary</p>
+          <button class="eqrs-button-secondary">Submit</button>
         </div>
-        <div class="col-md-4">
+
+        <div class="tablet:grid-col-4 padding-right-2">
           <p>Hover</p>
           <button class="eqrs-button-secondary secondary-hover">Submit</button>
         </div>
-        <div class="col-md-4">
+
+        <div class="tablet:grid-col-4 padding-right-2">
           <p>Active</p>
           <button class="eqrs-button-secondary secondary-active">Submit</button>
         </div>
-  </div>  
-<!-- row ends here -->
 
+        <button class="usa-button bg-mint" (click) = "secondaryButtonShow = !secondaryButtonShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
 
-  <button class="btn code-button mt-2 pull-right" (click) = "secondaryButtonShow = !secondaryButtonShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
-
-     <div class="col-md-12 code-block">
-          <div>
-          <div *ngIf="secondaryButtonShow">
-            <!-- <ngx-prism [language]="cssLanguage">
-             {{primaryButtonContent}}
-            </ngx-prism> -->
-            <pre>
-                <code [highlight]="secondaryButtonContent" [lineNumbers]="true" [languages]="cssLanguage" ></code>
-            </pre>
-          </div>
-         </div>
-      </div>
-
-  </div>
-</div> 
-<!-- card ends here -->
-
-
-
-<div class="card col-md-12">
-  <div class="card-body">
-    <h4 class="pt-0 pb-3">Accent button</h4>
-<div class="row">
-    <div class="col-md-4">
-      <p>Default</p>
-      <app-eqrs-buttons [eqrsType]="EqrsButtonTypes.Accent">Submit</app-eqrs-buttons>
-      <p class="notes">eqrs-button-accent</p>
-    </div>
-    <div class="col-md-4">
-      <p>Hover</p>
-      <button class="eqrs-button-accent accent-hover">Submit</button>
-    </div>
-    <div class="col-md-4">
-      <p>Active</p>
-      <button class="eqrs-button-accent accent-active">Submit</button>
-    </div>
-  </div>
-
-<button class="btn code-button mt-2 pull-right" (click) = "accentButtonShow = !accentButtonShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
-
-<div class="col-md-12 code-block">
-          <div>
-          <div *ngIf="accentButtonShow">
-            <!-- <ngx-prism [language]="cssLanguage">
-             {{accentButtonContent}}
-            </ngx-prism> -->
-            <pre>
-                <code [highlight]="accentButtonContent" [lineNumbers]="true" [languages]="cssLanguage" ></code>
-            </pre>
-          </div>
-         </div>
+        <div *ngIf="secondaryButtonShow">
+          <pre>
+            <code [highlight]="secondaryButtonContent" [lineNumbers]="true" [languages]="cssLanguage" ></code>
+          </pre>
         </div>
 
-</div>
-</div>
-
-
-
-<div class="card col-md-12">
-  <div class="card-body">
-    <h4 class="pt-0 pb-3">Destructive action (non-recoverable)</h4>
-    <div class="row">
-      <div class="col-md-4">
-        <p>Default</p>
-          <app-eqrs-buttons [eqrsType]="EqrsButtonTypes.Destructive">Delete</app-eqrs-buttons>
-        <p class="notes">eqrs-button-destructive</p>
-      </div>
-      <div class="col-md-4">
-        <p>Hover</p>
-          <button class="eqrs-button-destructive eqrs-button-destructive-hover">Delete</button>
-      </div>
-      <div class="col-md-4">
-        <p>Active</p>
-          <button class="eqrs-button-destructive eqrs-button-destructive-active">Delete</button>
-      </div>
-    </div>
-
-    <button class="btn code-button mt-2 pull-right" (click) = "destructiveButtonShow = !destructiveButtonShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
-
-    <div class="col-md-12 code-block">
-          <div>
-          <div *ngIf="destructiveButtonShow">
-            <!-- <ngx-prism [language]="cssLanguage">
-             {{destructiveButtonContent}}
-            </ngx-prism> -->
-            <pre>
-                <code [highlight]="destructiveButtonContent" [lineNumbers]="true" [languages]="cssLanguage" ></code>
-            </pre>
-          </div>
-         </div>
-    </div>
-  </div>
-</div>
-
-
-
-<div class="card col-md-12">
-  <div class="card-body">
-      <h4 class="pt-0 pb-3">Disabled button</h4>
-      <div>
-        <button class="eqrs-button-primary col-xs-12 col-md-3 col-lg-3" disabled="">Disabled button</button>
-        <sup>*Note hover state</sup>
       </div>
 
-      <button class="btn code-button mt-2 pull-right" (click) = "disabledButtonShow = !disabledButtonShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+      <h3>Accent Buttons</h3>
+      <div class="grid-row padding-bottom-4">
 
-      <div class="col-md-12 code-block">
-        <div>
-          <div *ngIf="disabledButtonShow">
-            <!-- <ngx-prism [language]="cssLanguage">
-             {{disabledButtonContent}}
-            </ngx-prism> -->
-            <pre>
-                <code [highlight]="disabledButtonContent" [lineNumbers]="true" [languages]="cssLanguage" ></code>
-            </pre>
-          </div>
+        <div class="tablet:grid-col-4 padding-right-2">
+          <p>Default</p>
+          <button class="eqrs-button-accent">Submit</button>
+        </div>
+
+        <div class="tablet:grid-col-4 padding-right-2">
+          <p>Hover</p>
+          <button class="eqrs-button-accent accent-hover">Submit</button>
+        </div>
+
+        <div class="tablet:grid-col-4 padding-right-2">
+          <p>Active</p>
+          <button class="eqrs-button-accent accent-active">Submit</button>
+        </div>
+
+        <button class="usa-button bg-mint" (click) = "accentButtonShow = !accentButtonShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+
+        <div *ngIf="accentButtonShow">
+          <pre>
+            <code [highlight]="accentButtonContent" [lineNumbers]="true" [languages]="cssLanguage" ></code>
+          </pre>
         </div>
       </div>
-  </div>
-</div>
 
+      <h3>Destructive Buttons</h3>
+      <p>These are for non-recoverable actions</p>
+      <div class="grid-row padding-bottom-4">
 
-<div class="card col-md-12">
-  <div class="card-body">
-    <h4 class="pt-0 pb-3">Example layout 1</h4>
-      <div class="row">
-        <div class="col-12 col-sm-3 col-md-3 col-lg-2">
+        <div class="tablet:grid-col-4 padding-right-2">
+          <p>Default</p>
           <button class="eqrs-button-destructive">Delete</button>
         </div>
-        <div class="col-12 col-sm-3 col-md-3  col-lg-2 offset-lg-2">
-          <button class="eqrs-button-secondary">Cancel</button>
-        </div> 
-        <span class="button-layout-submit-line"></span>
-        <div class="col-12 col-sm-3 col-md-3 col-lg-2">
-          <button class="eqrs-button-primary">Save</button>
+
+        <div class="tablet:grid-col-4 padding-right-2">
+          <p>Hover</p>
+          <button class="eqrs-button-destructive destructive-hover">Delete</button>
         </div>
-          <span class="button-vertical-line"></span>
-        <div class="col-12 col-sm-3 col-md-3 col-lg-2">
-          <button class="eqrs-button-accent" disabled="">Submit</button>
+
+        <div class="tablet:grid-col-4 padding-right-2">
+          <p>Active</p>
+          <button class="eqrs-button-destructive destructive-active">Delete</button>
+        </div>
+
+        <button class="usa-button bg-mint" (click) = "destructiveButtonShow = !destructiveButtonShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+
+        <div *ngIf="destructiveButtonShow">
+          <pre>
+            <code [highlight]="destructiveButtonContent" [lineNumbers]="true" [languages]="cssLanguage" ></code>
+          </pre>
         </div>
       </div>
-      <div class="row">
-        <p class="notes  offset-md-4">Place primary call to action to the right of other buttons and away from destructive wherever possible.</p>
-      </div>
 
-    <button class="btn code-button mt-2 pull-right" (click) = "exlayout1ButtonShow = !exlayout1ButtonShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+      <h3>Disabled Buttons</h3>
+      <div class="grid-row padding-bottom-4">
 
-      <div class="col-md-12 code-block">
-        <div>
-          <div *ngIf="exlayout1ButtonShow">
-            <!-- <ngx-prism [language]="cssLanguage">
-             {{exlayout1ButtonContent}}
-            </ngx-prism> -->
+        <div class="tablet:grid-col-4 padding-right-2">
+          <p>Default - note lack of hover state</p>
+          <button class="eqrs-button-primary" disabled>Disabled</button>
+        </div>
+
+        <div class="tablet:grid-col-12">
+          <button class="usa-button bg-mint" (click) = "disabledButtonShow = !disabledButtonShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+
+          <div *ngIf="disabledButtonShow">
             <pre>
-                <code [highlight]="exlayout1ButtonContent" [lineNumbers]="true" [languages]="cssLanguage" ></code>
+              <code [highlight]="disabledButtonContent" [lineNumbers]="true" [languages]="cssLanguage" ></code>
             </pre>
           </div>
-         </div>
+        </div>
       </div>
-  </div>
-</div>
 
+      <h3>Unstyled Buttons</h3>
+      <p>Use unstyled buttons for minor interactions, when user remains on page after clicking.</p>
+      <div class="grid-row padding-bottom-4">
 
-<div class="card col-md-12">
-  <div class="card-body">
-    <h4 class="pt-0 pb-3">Example layout 2</h4>
-    <div class="row">
-      <div class="col-12 col-sm-3 col-md-4 col-lg-2">
-        <button class="eqrs-button-secondary focus">Cancel</button>
-      </div>
-      <div class="col-12 col-sm-3 col-md-4 col-lg-2">
-        <button class="eqrs-button-destructive">Delete</button>
-      </div>
-    </div>
-    <p class="notes">Avoid placing initial focus on a destructive action.</p>
+        <div class="tablet:grid-col-4 padding-right-2">
+          <app-eqrs-buttons id="linkUniqueId" name="linkUniqueName" [eqrsType]="EqrsButtonTypes.Link">This is a button not a link</app-eqrs-buttons>
+        </div>
 
-    <button class="btn code-button mt-2 pull-right" (click) = "exlayout2ButtonShow = !exlayout2ButtonShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+        <div class="tablet:grid-col-12">
+          <button class="usa-button bg-mint" (click) = "buttonlinksButtonShow = !buttonlinksButtonShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
 
-      <div class="col-md-12 code-block">
-        <div>
-          <div *ngIf="exlayout2ButtonShow">
-            <!-- <ngx-prism [language]="cssLanguage">
-             {{exlayout2ButtonContent}}
-            </ngx-prism> -->
+          <div *ngIf="buttonlinksButtonShow">
             <pre>
-                <code [highlight]="exlayout2ButtonContent" [lineNumbers]="true" [languages]="cssLanguage" ></code>
+                <code [highlight]="buttonlinksButtonContent" [lineNumbers]="true"  ></code>
             </pre>
           </div>
-         </div>
+        </div>
       </div>
+
+
+    </section>
+
   </div>
-</div>
 
-
-<div class="card col-md-12">
-  <div class="card-body">
-    <h4>Buttons as links</h4>
-    <p>For use as a minor page interaction when user remains on page after clicking.</p>
-    <div class="row">
-      <app-eqrs-buttons id="linkUniqueId" name="linkUniqueName" [eqrsType]="EqrsButtonTypes.Link">This is a button not a link</app-eqrs-buttons>
-    </div>
-    
-
-    <p><button class="btn code-button mt-2 pull-right" (click) = "buttonlinksButtonShow = !buttonlinksButtonShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button></p>
-    
-    <div class="col-md-12 code-block">
-      <div>
-      <div *ngIf="buttonlinksButtonShow">
-        <!-- <ngx-prism [language]="cssLanguage">
-          {{buttonlinksButtonContent}}
-        </ngx-prism> -->
-        <pre>
-            <code [highlight]="buttonlinksButtonContent" [lineNumbers]="true"  ></code>
-        </pre>
-      </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-  <!-- PREVIOUS NEXT -->
-
-<div class="row row-previous-next ml-0 mt-5">
-    <div class="col-lg-9">
-      <span [routerLink] = "['/eqrs-design-system/alerts']"> <i class="fa fa-chevron-left"></i> Previous: <b>Alerts</b> </span>
-      <span [routerLink] = "['/eqrs-design-system/checkbox']" class="pull-right"> Next: <b>CheckBox</b> <i class="fa fa-chevron-right"></i> </span>
-    </div>
-  
-    <div class="col-lg-3 pull-right">
-      <button class="ml-5 scroll-to-top" (click)="scroll.scrollIntoView({behavior: 'smooth'})"> <span id="toTop" class="fa fa-chevron-circle-up fa-3x"></span> </button>
-    </div>
-  
-</div>
+</div> <!-- end of page -->

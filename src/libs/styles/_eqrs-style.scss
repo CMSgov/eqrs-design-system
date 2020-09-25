@@ -20,6 +20,41 @@ hr {
     background-color: $eqrs-tertiary-color !important;
 }
 
+/*------------------------------------*\
+  #utlities we should try to remove
+  by using USWDS
+\*------------------------------------*/
+
+.container-fluid {
+    background: #fff;
+}
+
+// this has got to be bootstrap's grid, thumbs down
+main.col-md-9.ml-sm-auto.col-lg-10.pt-3.px-4 {
+    padding-left: 5rem !important;
+    padding-top: 3rem !important;
+}
+
+.row-no-flex {
+	display: inline;
+}
+
+.row-previous-next {
+    background: #fff;
+    padding: 1rem;
+    border-top: 1px solid #d6d7d9;
+}
+
+.row-previous-next span {
+    color: #0071bc;
+    cursor: pointer;
+}
+
+.row-previous-next span:hover {
+    color: #112e51;
+    cursor: pointer;
+}
+
 
 /*------------------------------------*\
   #BUTTONS
@@ -81,6 +116,17 @@ hr {
     }
 }
 
+// for showing off in the DSUI
+.primary-hover {
+    background-color: #205493;
+    pointer-events: none;
+}
+
+
+.primary-active {
+    background-color: #112e51;
+    pointer-events: none;
+}
 
 .eqrs-button-secondary {
     @include button;
@@ -104,6 +150,20 @@ hr {
     }
 }
 
+// for showing off in the DSUI
+.eqrs-button-secondary-hover {
+    background-color: #5b616b;
+    border: #5b616b;
+    color: #fff;
+    pointer-events: none;
+}
+
+.eqrs-button-secondary-active {
+    background-color: #323a45;
+    border: 1px solid #323a45;
+    color: #fff;
+    pointer-events: none;
+}
 
 .eqrs-button-accent {
     @include button;
@@ -130,6 +190,18 @@ hr {
     }
 }
 
+.accent-hover {
+    background-color: #d99502;
+    color: #fff;
+    pointer-events: none;
+}
+
+.accent-active {
+    background-color: #bb8002;
+    color: #fff;
+    pointer-events: none;
+}
+
 
 .eqrs-button-destructive {
     @include button;
@@ -151,6 +223,18 @@ hr {
         background-color: $eqrs-tertiary-color;
         border: 1px solid $eqrs-tertiary-color;
     }
+}
+
+.eqrs-button-destructive-hover {
+    color: #fff;
+    background-color: #cd2026;
+    pointer-events: none;
+}
+
+.eqrs-button-destructive-active {
+    color: #fff;
+    background-color: #981b1e;
+    pointer-events: none;
 }
 
 
@@ -207,6 +291,37 @@ hr {
         color: $eqrs-primary-darker;
         outline: none;
     }
+}
+
+.focus {
+    box-shadow: 0 0 3px 2px rgba(62, 148, 207, 0.5);
+    border-radius: 3px;
+}
+
+.btn.code-button {
+  color: #fff;
+  background: #28a745;
+  text-decoration: none;
+  padding: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.code-block {
+  margin-top: 4rem;
+}
+
+.scroll-to-top {
+  border: none;
+  background: inherit;
+  margin-top: -0.6rem;
+}
+
+#toTop {
+    color: #d6d7d9;
+}
+
+#toTop:hover {
+    color: #5b616b;
 }
 
 
@@ -335,9 +450,11 @@ input[type="text"] {
 
 
 .eqrs-input-wrapper {
-    label {
-        padding-left: inherit;
-    }
+  margin-left: auto;
+  margin-bottom: 20px;
+  label {
+      padding-left: inherit;
+  }
 }
 
 
@@ -1327,4 +1444,128 @@ margin-top: auto;
     height:auto;
     padding-left:10px;
     padding-right:10px;
+}
+
+
+// randos
+.eqrs-blue-border {
+    border: 1px solid $eqrs-primary-color !important;
+}
+
+
+
+.services-accordion > .row {
+    border: 1px solid $eqrs-tertiary-color ;
+    padding: 1rem;
+    margin-left: -15px;
+    margin-right: 0;
+    border-radius: 4px;
+}
+
+.eqrs-error-border > .services-accordion > .row {
+    @extend .eqrs-input-error-border;
+}
+
+.eqrs-dialog-close {
+    border: none;
+    background: none;
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    float: right;
+    cursor: pointer;
+}
+
+.eqrs-dialog-button-spacing {
+    justify-content: space-around;
+}
+$verticalSwitch: 0px;
+#search-results-table .dynamic-table {
+    @media (min-width: $verticalSwitch) {
+        table-layout: auto;
+    }
+    thead {
+        tr {
+            th {
+                &.sortable {
+                    @media (min-width: $verticalSwitch) {
+                        display: table-cell;
+                    }
+                }
+            }
+        }
+        // Accessibly hide <thead> on narrow viewports
+        @media (min-width: $verticalSwitch) {
+            display: table-header-group;
+            tr {
+                display: table-row;
+
+                th {
+                    display: table-cell;
+                    border: none;
+                }
+            }
+        }
+    }
+    tr {
+        @media (min-width: $verticalSwitch) {
+            display: table-row;
+        }
+    }
+
+    td {
+        @media (min-width: $verticalSwitch) {
+            display: table-cell;
+            padding: .5em;
+            width: auto !important;
+
+            .value {
+                width: auto;
+            }
+            .field {
+                display: none;
+            }
+        }
+    }
+
+    th {
+        @media (max-width: $verticalSwitch - 1) {
+            display: inline-block;
+            width: auto !important
+        };
+    }
+
+    tbody {
+        @media (min-width: $verticalSwitch) {
+            display: table-row-group;
+        }
+
+        tr {
+            @media (min-width: $verticalSwitch) {
+                border: 1px solid #5b616b;
+                display: table-row;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;
+            }
+
+            &:nth-of-type(even) {
+                @media (min-width: $verticalSwitch) {
+                    background-color: #efefee;
+                }
+            }
+        }
+
+        th[scope="row"] {
+            @media (min-width: $verticalSwitch) {
+                background-color: transparent;
+                color: rgba(94, 93, 82, 1);
+                text-align: left;
+            }
+        }
+
+        td[data-title]:before {
+            @media (min-width: $verticalSwitch) {
+                content: none;
+            }
+        }
+    }
 }

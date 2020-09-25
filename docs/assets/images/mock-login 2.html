@@ -1,0 +1,185 @@
+<html>
+<head>
+  <base href="/">
+  <title>EQRS With Angular 2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+    .form-signin
+    {
+      max-width: 330px;
+      padding: 15px;
+      margin: 0 auto;
+    }
+    .form-signin .form-signin-heading, .form-signin .checkbox
+    {
+      margin-bottom: 10px;
+    }
+
+    .form-signin .form-control
+    {
+      position: relative;
+      font-size: 16px;
+      height: auto;
+      padding: 10px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    .form-signin .form-control:focus
+    {
+      z-index: 2;
+    }
+    .form-signin input[type="text"]
+    {
+      margin-bottom: -1px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .login-title
+    {
+      color: #555;
+      font-size: 18px;
+      font-weight: 400;
+      display: block;
+    }
+  </style>
+
+  <script>
+    function submitForm(){
+      var usernameOrgRole = concatFormValues();
+      window.location.href = "/hcqisApps/eqrs/index.html";
+      sessionStorage.setItem('username', usernameOrgRole);
+    }
+
+    function concatFormValues()
+    {
+      var form = document.getElementById('loginForm');
+      var concatString = '';
+      concatString += encodeURIComponent(form.elements["username"].value);
+      if(form.elements["orgType"].value != ""){
+        concatString += ':' + form.elements["orgType"].value;
+      }
+      if(form.elements["orgId"].value != ""){
+        concatString += ':' + form.elements["orgId"].value;
+      }
+
+      var multiSelectValues = getRoleValues();
+      if(multiSelectValues) {
+        concatString += ':';
+        concatString += multiSelectValues;
+      }
+      return concatString;
+    }
+
+
+
+
+    function getRoleValues() {
+
+      var roleSelect = document.getElementById("roleId");
+
+      var values = "";
+      for (var i = 0; i < roleSelect.length; i++) {
+        if (roleSelect.options[i].selected) {
+          values += roleSelect.options[i].value + ",";
+        }
+      }
+      return values.substr(0,values.length-1);
+    }
+
+
+  </script>
+</head>
+
+<body>
+<div class="container">
+  <div class="col-sm-8">
+    <h1 class="text-center login-title">Login to EQRS Dashboard</h1>
+    <p>
+      <strong>NOTE : </strong>Please enter your username and select an organization where your user has an assocation in the <strong>USER_ROLE_ORG</strong> table.
+      There is NO filtering of the username and organizations you can select on this page and there are NO security checks to verify that the organization you select has an assocation with your user in the database.
+      The organization Id is the surrogate key in the database. For organization type &quot;CMS&quot; enter any number into organization Id.
+    </p>
+
+    <div class="form-signin">
+      <form id="loginForm">
+        <div class="row">
+          <div>
+						<span class="login-title"><label for="username">Username :</label>
+						</span>
+          </div>
+
+          <div>
+            <input type="text" id="username" class="form-control" value="" required autofocus>
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <br/>
+            <span class="login-title"><label for="orgType">Organization Type :</label>
+						</span>
+          </div>
+
+          <div>
+            <select id="orgType" name="orgType" class="form-control">
+              <option value=""></option>
+              <option value="EQRS_CW_CMS">CMS</option>
+              <option value="EQRS_CW_CMS_Support">CMS Support</option>
+              <option value="EQRS_CW_FACILITY">Facility</option>
+              <option value="EQRS_CW_NETWORK">Network</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <br/>
+            <span class="login-title"><label for="username">Organization Id :</label>
+							</span>
+          </div>
+
+          <div>
+            <input type="text" id="orgId" class="form-control" value="" required autofocus>
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <br/>
+            <span class="login-title"><label for="roleId">Role Id :</label>
+							</span>
+          </div>
+          <div>
+            <select id="roleId" name="roleId" class="form-control"  MULTIPLE SIZE=5>
+              <option value="9">CMS Viewer</option>
+              <option value="10">CMS Editor</option>
+              <option value="11">CMS Administrator</option>
+              <option value="12">System Administrator</option>
+              <option value="1">Facility Viewer</option>
+              <option value="2">Facility Editor</option>
+              <option value="4">Facility Administrator</option>
+              <option value="8">Network Administrator</option>
+              <option value="7">Network Facility Editor</option>
+              <option value="6">Network Patient Editor</option>
+              <option value="5">Network Viewer</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <br/>
+          <button type="submit" onClick="submitForm(); return false;" class="btn btn-md btn-primary btn-block" type="submit" name="submit">Sign in
+          </button>
+
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
+</body>
+
+</html>

@@ -1,14 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-
 import {ThemePalette} from '@angular/material/core';
 import {ProgressSpinnerMode} from '@angular/material/progress-spinner';
 
-
-
 @Component({
   selector: 'app-progress-indicator',
-  templateUrl: './progress-indicator.component.html',
-  styleUrls: ['./progress-indicator.component.scss']
+  templateUrl: './progress-indicator.component.html'
 })
 export class ProgressIndicatorComponent implements OnInit {
 

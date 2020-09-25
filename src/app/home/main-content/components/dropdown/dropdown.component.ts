@@ -6,9 +6,9 @@ import {NgbDropdown} from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'app-dropdown',
-  templateUrl: './dropdown.component.html',
-  styleUrls: ['./dropdown.component.scss']
+  templateUrl: './dropdown.component.html'
 })
+
 export class DropdownComponent implements OnInit {
 
   cssLanguage = 'css';
@@ -53,15 +53,15 @@ export class DropdownComponent implements OnInit {
 
       this.selectInputOneContent = `
         <app-eqrs-dropdown id="uniqueId" name="uniqueName" formControlName="selectFormOneControl" [options]="selectOptions">
-        </app-eqrs-dropdown>      
+        </app-eqrs-dropdown>
       `;
 
       this.selectInputTwoContent = `
-        <app-eqrs-dropdown id="uniqueId" name="uniqueName" formControlName="selectFormTwoControl" [options]="selectOptions" 
+        <app-eqrs-dropdown id="uniqueId" name="uniqueName" formControlName="selectFormTwoControl" [options]="selectOptions"
           (change)="onChange()" ariaLabel="Some label">
-        </app-eqrs-dropdown>      
+        </app-eqrs-dropdown>
       `;
-  
+
   }
 
   onChange(){

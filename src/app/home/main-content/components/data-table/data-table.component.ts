@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-data-table',
-  templateUrl: './data-table.component.html',
-  styleUrls: ['./data-table.component.scss']
+  templateUrl: './data-table.component.html'
 })
 export class DataTableComponent implements OnInit {
 
@@ -11,7 +10,7 @@ export class DataTableComponent implements OnInit {
   public dynamicTableContent: string;
   public showDynamicTable: boolean;
 
-  
+
 
   public fakeData = [
     { id: 1, name: 'Appa' },

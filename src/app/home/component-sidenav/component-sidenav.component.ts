@@ -3,8 +3,7 @@ import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 
 @Component({
   selector: 'app-component-sidenav',
-  templateUrl: './component-sidenav.component.html',
-  styleUrls: ['./component-sidenav.component.scss']
+  templateUrl: './component-sidenav.component.html'
 })
 export class ComponentSidenavComponent implements OnInit {
 

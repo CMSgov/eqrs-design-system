@@ -3,8 +3,7 @@ import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-accordion',
-  templateUrl: './accordion.component.html',
-  styleUrls: ['./accordion.component.css']
+  templateUrl: './accordion.component.html'
 })
 export class AccordionComponent implements OnInit {
 
@@ -17,7 +16,7 @@ export class AccordionComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.accordionContent= 
+    this.accordionContent=
     '<mat-expansion-panel>\n' +
     ' <mat-expansion-panel-header>\n' +
     '  <mat-panel-title>SAMPLE ACCORDION</mat-panel-title>\n' +
@@ -28,12 +27,12 @@ export class AccordionComponent implements OnInit {
     ' <mat-action-row><button>Sample</button></mat-action-row>\n' +
     '</mat-expansion-panel>';
 
-    
+
   }
 
   showCode(){
     this.accordionShow = !this.accordionShow;
     console.log(this.accordionShow)
   }
-  
+
 }

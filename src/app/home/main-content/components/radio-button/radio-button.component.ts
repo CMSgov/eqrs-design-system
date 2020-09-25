@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-radio-button',
-  templateUrl: './radio-button.component.html',
-  styleUrls: ['./radio-button.component.scss']
+  templateUrl: './radio-button.component.html'
 })
 export class RadioButtonComponent implements OnInit {
 
@@ -12,27 +11,27 @@ export class RadioButtonComponent implements OnInit {
   radioShowContent: any;
   radioDisabledShow: boolean =false;
   radioDisabledContent: any;
-  
+
   constructor() { }
 
   ngOnInit(): void {
     this.radioShowContent =
 
       '<legend class="eqrs-label">Radio label (legend)</legend>\n' +
-      '         <ul class="eqrs-list">\n' +
-      '           <li>\n' +
-      '             <input id="stanton" type="radio" name="historical-figures-2" value="stanton">\n' +
-      '             <label for="stanton">Elizabeth Cady Stanton</label>\n' +
-      '           </li>\n' +
-      '           <li>\n' +
-      '             <input id="anthony" type="radio" name="historical-figures-2" value="anthony">\n' +
-      '             <label for="anthony">Susan B. Anthony</label>\n' +
-      '           </li>\n' +
-      '           <li>\n' +
-      '             <input id="tubman" type="radio" name="historical-figures-2" value="tubman">\n' +
-      '             <label for="tubman">Harriet Tubman</label>\n' +
-      '           </li>\n' +
-      '         </ul>';
+      '  <ul class="eqrs-list">\n' +
+      '    <li>\n' +
+      '      <input id="stanton" type="radio" name="historical-figures-2" value="stanton">\n' +
+      '      <label for="stanton">Elizabeth Cady Stanton</label>\n' +
+      '    </li>\n' +
+      '    <li>\n' +
+      '      <input id="anthony" type="radio" name="historical-figures-2" value="anthony">\n' +
+      '      <label for="anthony">Susan B. Anthony</label>\n' +
+      '    </li>\n' +
+      '    <li>\n' +
+      '      <input id="tubman" type="radio" name="historical-figures-2" value="tubman">\n' +
+      '      <label for="tubman">Harriet Tubman</label>\n' +
+      '    </li>\n' +
+      '  </ul>';
 
     this.radioDisabledContent = ' \n' +
     '<legend class="eqrs-label">Radio label (legend)</legend>\n' +

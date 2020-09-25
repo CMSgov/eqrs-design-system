@@ -1259,16 +1259,7 @@ h2-with-h3-styles {
     color: $eqrs-primary-color !important;
     cursor:pointer;
 }
-//#reviewAndSubmitHelp .dropdown-menu {
-//  left: -450% !important;
-//}
-//#addNetworkHelp .eqrs-dropdown-arrow-box, #addEditProfitStatusHistoryHelp .eqrs-dropdown-arrow-box,
-//#addEditPriOwnerHistoryHelp .eqrs-dropdown-arrow-box {
-//  left: -50% !important;
-//}
-//#addContactHelp .eqrs-dropdown-arrow-box {
-//  left: -100% !important;
-//}
+
 #facilitySearchHelp .dropdown-menu, #reviewAndSubmitHelp .dropdown-menu {
     margin: 2rem 0 0 0 !important;
 }
@@ -1294,20 +1285,4 @@ h2-with-h3-styles {
 .align-center{
     display: flex;
     justify-content: center;
-}
-.qip-background-color{
-    background-color:$eqrs-background-color;
-}
-
-.qip-btnfont{
-    font-weight:400;
-    margin-right:40px;
-}
-
-.qip-header-font{
-    font-size:30px;
-    font-weight:400;
-}
-.para-width{
-    max-width: 100%!important;
 }

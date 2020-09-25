@@ -191,134 +191,6 @@ hr {
   #BUTTONS
 \*------------------------------------*/
 
-@mixin button {
-    width: 100%;
-    margin-bottom: 1rem;
-    border-radius: $eqrs-border-radius;
-    min-height: 44px !important;
-    font-family: $eqrs-sans-serif-font-family;
-    font-size: 1.1rem;
-    font-weight: 700;
-    border: none;
-    cursor: pointer;
-    transition: all .2s ease;
-
-    &:focus {
-        outline: none;
-        box-shadow: $eqrs-box-shadow;
-    }
-
-    &:disabled {
-        color: #fff;
-        background-color: $eqrs-tertiary-color;
-        border: 1px solid $eqrs-tertiary-color;
-    }
-
-    &:disabled:hover {
-        background-color: $eqrs-tertiary-color;
-        border: 1px solid $eqrs-tertiary-color;
-        cursor: not-allowed;
-    }
-}
-
-.eqrs-button-primary {
-    @include button;
-    color: #fff;
-    background-color: $eqrs-primary-color;
-    border: 1px solid $eqrs-primary-color;
-
-    &:hover {
-        background-color: $eqrs-primary-darker;
-        border: 1px solid $eqrs-primary-darker;
-    }
-
-    &:active {
-        background-color: $eqrs-primary-darkest;
-        border: 1px solid $eqrs-primary-darkest;
-    }
-
-    &:disabled:hover {
-        background-color: $eqrs-tertiary-color;
-        border: 1px solid $eqrs-tertiary-color;
-    }
-
-    &:disabled {
-        color: $eqrs-text-color;
-    }
-}
-
-
-.eqrs-button-secondary {
-    @include button;
-    color: $eqrs-secondary-color;
-    background-color: #fff;
-    border: 1px solid $eqrs-secondary-color;
-
-    &:hover {
-        color: #fff;
-        background-color: $eqrs-secondary-color;
-    }
-
-    &:active {
-        background-color: $eqrs-secondary-darker;
-        border: 1px solid $eqrs-secondary-darker;
-    }
-
-    &:disabled:hover {
-        background-color: $eqrs-tertiary-color;
-        border: 1px solid $eqrs-tertiary-color;
-    }
-}
-
-
-.eqrs-button-accent {
-    @include button;
-    color: #000;
-    background-color: $eqrs-accent-color;
-    border: 1px solid $eqrs-accent-color;
-
-    &:hover {
-        background-color: $eqrs-accent-darker;
-        color: #fff;
-    }
-
-    &:active {
-        background-color: $eqrs-accent-darkest;
-        color: #fff;
-    }
-
-    &:disabled:hover {
-        background-color: $eqrs-tertiary-color;
-        border: 1px solid $eqrs-tertiary-color;
-    }
-    &:disabled {
-        color: $eqrs-text-color;
-    }
-}
-
-
-.eqrs-button-destructive {
-    @include button;
-    color: $eqrs-alert-color;
-    background-color: #fff;
-    border: 1px solid $eqrs-alert-color;
-
-    &:hover {
-        color: #fff;
-        background-color: $eqrs-alert-color;
-    }
-
-    &:active {
-        color: #fff;
-        background-color: $eqrs-alert-darker;
-    }
-
-    &:disabled:hover {
-        background-color: $eqrs-tertiary-color;
-        border: 1px solid $eqrs-tertiary-color;
-    }
-}
-
 
 .eqrs-edit-link, .eqrs-add-link{
     border: none;
@@ -341,41 +213,6 @@ hr {
         outline: none;
     }
 }
-
-.eqrs-trash-link {
-    // color: $eqrs-primary-color;
-    font-size: 20px;
-    /* &:hover {
-       cursor: pointer;
-       text-decoration: underline;
-     }
-     &:focus {
-       text-decoration: underline;
-       outline: none;
-     }
-     &:active {
-       color: $eqrs-primary-darker;
-       outline: none;
-     }*/
-}
-
-.eqrs-temp-close-link {
-    color: $eqrs-primary-color;
-    &:hover {
-        cursor: pointer;
-        text-decoration: underline;
-    }
-    &:focus {
-        text-decoration: underline;
-        outline: none;
-    }
-    &:active {
-        color: $eqrs-primary-darker;
-        outline: none;
-    }
-}
-
-
 
 /*------------------------------------*\
   #ALERTS TO DO:
@@ -475,13 +312,6 @@ input[type="text"] {
   #LABELS
 \*------------------------------------*/
 
-@mixin eqrs-label-special {
-    padding: 2px 5px 2px 5px;
-    border-radius: 3px;
-    font-size: 14px;
-    font-weight: 600;
-}
-
 .eqrs-label {
     font-family: $eqrs-sans-serif-font-family;
     padding-left: inherit;
@@ -495,12 +325,9 @@ input[type="text"] {
     color: $eqrs-alert-color;
 }
 
-
-
 .eqrs-input-error-border {
     border: 1px solid $eqrs-alert-color !important;
 }
-
 
 .eqrs-input-error-message {
     color: $eqrs-alert-color;
@@ -518,25 +345,9 @@ input[type="text"] {
     background-size: 1rem;
 }
 
-
-.eqrs-label-bold { /* view mode for labels */
-    font-weight: 700;
-}
-
-
-.eqrs-label-warning {
-    @include eqrs-label-special;
-    background-color: $eqrs-accent-color;
-    color: #000;
-    font-family: $eqrs-sans-serif-font-family;
-}
-
-
-
 /*------------------------------------*\
   #INPUT: SELECT
 \*------------------------------------*/
-
 
 @mixin select {
     border: 1px solid $eqrs-tertiary-color;
@@ -582,10 +393,6 @@ input[type="text"] {
 .eqrs-select {
     @include select;
 }
-
-
-
-
 
 /*------------------------------------*\
   #INPUT: SEARCH
@@ -702,6 +509,7 @@ input[type="text"] {
 
 /*------------------------------------*\
   #INPUT: CHECKBOX
+  the system's components ARE using these
 \*------------------------------------*/
 
 [type=checkbox]:focus + label::before {
@@ -775,10 +583,6 @@ input[type="checkbox"]:disabled + label {
 [type=checkbox] + label.eqrs-label-error::before{
     border: 1px solid $eqrs-alert-color !important;
 }
-
-
-
-
 
 /*------------------------------------*\
   #INPUT: DATE
@@ -953,115 +757,6 @@ input[type=text]:disabled {
     user-select: none;
     padding-left: 15px;
 }
-
-
-
-
-/*------------------------------------*\
-  #HISTORY STYLES AND CARDS
-\*------------------------------------*/
-
-.section-title-border h3 {
-    border-bottom: 1px solid #ccc;
-}
-
-.section-edit a {
-    float: right;
-    font-size: 0.7em;
-    font-weight: 100;
-    margin: 8px 15px 0 0;
-    text-decoration: none;
-}
-
-.history-edit a {
-    float: right;
-    font-size: 0.7em;
-    font-weight: 100;
-    margin: 8px 0 0 0;
-    text-decoration: none;
-}
-
-.card-bottom {
-    margin-top: 20px;
-    margin-bottom: 40px;
-}
-
-.card-header {
-    background-color: transparent;
-}
-
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    //height: 30rem;
-}
-
-.no-underline {
-    text-decoration: none;
-}
-
-.icon-blue {
-    color: #0071bc;
-}
-
-.current-header {
-    background-color: #f1f1f1;
-}
-
-.current-header span {
-    font-weight: 600;
-}
-
-.card-header:first-child{
-    border-radius:0px;
-}
-
-/*------------------------------------*\
-  #PREVIOUS AND NEXT STYLES
-\*------------------------------------*/
-
-.eqrs-navigation-container {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 0 !important;
-    margin-top: 1rem;
-}
-
-
-.icon-blue {
-    color: $eqrs-primary-color;
-}
-
-.eqrs-navigation-button {
-    display: flex;
-}
-
-a.eqrs-navigation-button {
-    font-size: .9rem;
-}
-
-/*------------------------------------*\
-  # END PREVIOUS AND NEXT STYLES
-\*------------------------------------*/
-
-
-.fa-minus-circle {
-    color: $eqrs-accent-color ;
-}
-
-.fa-circle-thin {
-    color: $eqrs-tertiary-color ;
-}
-
-.fa-check-circle {
-    color: $eqrs-notification-color ;
-}
-
-.fa-circle {
-    color: $eqrs-tertiary-color ;
-}
-
-
-
 
 /*---------------------*\
   # TABLE STYLES

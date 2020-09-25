@@ -1,17 +1,4 @@
-
-@import "eqrs-style.scss";
-//@import "eqrs-material-styles.scss";
-//@import '~bootstrap/dist/css/bootstrap.css';
-@import "variables";
-// @import "fonts";
-
-//$navbar-inverse-toggler-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"), "#", "%23") !default;
-//$image-path:'../node_modules/uswds/src/img';
-//@import '../node_modules/uswds/src/stylesheets/_all.scss';
-
-
 $eqrs-sans-serif-font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-
 
 body {
     font-family: $eqrs-sans-serif-font-family;
@@ -24,75 +11,9 @@ body {
     padding-bottom: 35px;
 }
 
-
 p {
     word-wrap:break-word;
 }
-
-/*
-
-@mixin button {
-  border-radius: $eqrs-border-radius;
-  min-width: 120px;
-  min-height: 44px;
-  //margin: 4px;
-  font-family: $eqrs-sans-serif-font-family;
-  font-size: 1.1em;
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
-  transition: background-color .2s ease;
-
-  &:focus {
-    outline: none;
-    box-shadow: $eqrs-box-shadow;
-  }
-
-  @media (max-width: 667px){
-    width: 100%;
-  }
-}
-
-
-.eqrs-button-secondary {
-  @include button;
-  color: $eqrs-secondary-color;
-  background-color: #fff;
-  border: 1px solid $eqrs-secondary-color !important;
-  transition: all .2s ease;
-  &:hover {
-    color: #fff;
-    background-color: $eqrs-secondary-color;
-  }
-
-  &:active {
-    background-color: $eqrs-secondary-darker;
-  }
-
-  &:disabled {
-    background-color: $eqrs-tertiary-color;
-  }
-}
-
-.eqrs-button-primary {
-  @include button;
-  color: #fff;
-  background-color: $eqrs-primary-color;
-  border: 1px solid $eqrs-primary-color !important;
-
-  &:hover {
-    background-color: $eqrs-primary-darker;
-  }
-
-  &:active {
-    background-color: $eqrs-primary-darkest;
-  }
-
-  &:disabled {
-    background-color: $eqrs-tertiary-color;
-  }
-}
-*/
 
 .eqrs-complaint-title-h2 {
     font-size: 1.7rem;

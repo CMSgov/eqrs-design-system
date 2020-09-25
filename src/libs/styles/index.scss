@@ -1,7 +1,10 @@
-    
+// the order here is important!
+
 @import 'fonts';
-@import 'eqrs-material-styles';
-@import 'eqrs-style';
 @import 'variables';
+
+@import 'eqrs-style';
+@import 'eqrs-material-styles';
+
 @import 'styles';
 @import 'styles-new';

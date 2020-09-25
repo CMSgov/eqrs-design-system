@@ -505,10 +505,6 @@ input[type=text], select {
     }
 }
 
-
-
-
-
 /*------------------------------------*\
   #INPUT: AUTOSUGGEST
 \*------------------------------------*/
@@ -623,60 +619,13 @@ input[type=text]:disabled {
   # TABLE STYLES
 \*---------------------*/
 
-th#facility-name-column {
-    width: 30%;
-}
 .eqrs-table-row-height thead th, .eqrs-table-row-height tbody td {
     padding: 0.30rem;
 }
 
-/*-----------------------------------*\
-  # Dropdown menu top arrow on border
-\*-----------------------------------*/
 
-.eqrs-dropdown-arrow-box {
-    z-index: 10000;
-    right: 0;
-    position: absolute;
-    background: white;
-    border-radius: 10px;
-    border: 0.5px solid lightgray;
-    padding: 10px !important;
-    top: 80% !important;
-    width: 350px;
-    left: auto !important;
-}
-.eqrs-dropdown-arrow-box:after, .eqrs-dropdown-arrow-box:before {
-    bottom: 100%;
-    left: 90%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    position: absolute;
-    pointer-events: none;
-}
-
-.eqrs-dropdown-arrow-box a {
-    color: #0275d8 !important;
-}
-.eqrs-dropdown-arrow-box:after {
-    border-color: rgba(0,0,0, 0);
-    border-bottom-color: white;
-    border-width: 10px;
-    margin-left: -10px;
-}
-.eqrs-dropdown-arrow-box:before {
-    border-color: rgba(0,0,0, 0);
-    border-bottom-color: grey;
-    border-width: 11px;
-    margin-left: -11px;
-}
 .dropdown-toggle::after {
     content: initial !important;
-}
-
-#facilitySearchHelp .dropdown-menu, #reviewAndSubmitHelp .dropdown-menu {
-    margin: 2rem 0 0 0 !important;
 }
 
 .required {

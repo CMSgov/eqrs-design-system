@@ -4,8 +4,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 View the [Live Demo](https://thomaszhengeqrs.github.io/eqrs-design-system/)
 
 ## Installation
-1. Git Clone or download 
+1. Git Clone or download
 2. `npm install`
+
+## Deployment
+
+Run `ng build --prod --output-path docs --base-href /eqrs-design-system/`, then commit the changes and push to your branch. Submit a PR to master; once the PR has merged, the public site will update automatically.
 
 ## Development server
 
@@ -18,7 +22,6 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
 Run `npm run build:lib` to Transpile the libraries to Angular Package Format via [ng-packagr](https://github.com/ng-packagr/ng-packagr)
 
 ## Running unit tests

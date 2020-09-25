@@ -96,3 +96,30 @@ a:visited {
 p {
   word-wrap:break-word;
 }
+
+.eqrs-complaint-title-h2 {
+    font-size: 1.7rem;
+}
+
+.eqrs-complaint-title-h3 {
+    font-size: 1.22rem;
+    line-height: 1.3em;
+    padding-top: 15px;
+}
+
+.eqrs-label-bold {
+    font-weight: 700;
+}
+
+.notes {
+    font-size: 12px;
+    color: gray;
+}
+
+.eqrs-edit-link {
+    border: none;
+    background: none;
+    color: #0071bc;
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 1.125em;
+}

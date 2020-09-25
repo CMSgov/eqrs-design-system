@@ -1172,47 +1172,9 @@ h2-with-h3-styles {
 }
 
 
-
-///*---------------------------*\
-//  # help tooltip
-//\*---------------------------*/
-//
-//
-//.eqrs-help-tooltip {
-//  font-size: 18px;
-//  color: $eqrs-primary-color;
-//}
-//
-//.mat-tooltip {
-//  font-size: 16px;
-//}
-//
-
-
-/*---------------------------*\
-  # Remove criteria
-\*---------------------------*/
-
-
-.eqrs-remove-color {
-    color: $eqrs-alert-color;
-}
-
-
-/*-----------------------------------*\
-  # Help - font awesome icon
-\*-----------------------------------*/
-
-
-.eqrs-help-tooltip {
-    color: $eqrs-primary-color;
-}
-
-
 /*-----------------------------------*\
   # Dropdown menu top arrow on border
 \*-----------------------------------*/
-
 
 .eqrs-dropdown-arrow-box {
     z-index: 10000;
@@ -1255,34 +1217,10 @@ h2-with-h3-styles {
     content: initial !important;
 }
 
-.eqrs-link {
-    color: $eqrs-primary-color !important;
-    cursor:pointer;
-}
-
 #facilitySearchHelp .dropdown-menu, #reviewAndSubmitHelp .dropdown-menu {
     margin: 2rem 0 0 0 !important;
 }
 
-.required
-{
+.required {
     color:red;
-}
-//qip-measures-scss
-.measures-card-margin {
-    margin-top: 24px;
-}
-.measure-card-height{
-
-    height: 400px;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-}
-.fontsize50{
-      font-size: 50px;
-}
-.align-center{
-    display: flex;
-    justify-content: center;
 }

@@ -22,9 +22,6 @@
 /* Import USWDS */
 @import '~uswds/dist/css/uswds';
 
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
-
 /* Import from libs/assets/styles/_styles */
 @import '../src/libs/styles/styles';
 @import '../src/libs/styles/styles-new';
@@ -34,7 +31,6 @@
 /*------------------------------------*\
   #VARIABLES
 \*------------------------------------*/
-
 
 $eqrs-serif-font-family: "Merriweather", "Georgia", "Cambria", "Times New Roman", "Times", serif;
 $eqrs-sans-serif-font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
@@ -254,7 +250,6 @@ input[type="text"] {
         }
     }
 }
-
 
 .eqrs-select {
     @include select;

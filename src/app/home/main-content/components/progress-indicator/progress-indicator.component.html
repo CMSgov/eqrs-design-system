@@ -17,9 +17,9 @@
 
       <div class="tablet:grid-col-12 padding-top-2">
 
-        <button class="usa-button bg-mint" (click) = "labelsShow = !labelsShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+        <button class="usa-button bg-mint" (click) = "progressIndicatorShow = !progressIndicatorShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
 
-        <div *ngIf="labelsShow" class="padding-top-2">
+        <div *ngIf="progressIndicatorShow" class="padding-top-2">
           <pre>
             <code [highlight]="progressIndicatorContent" [lineNumbers]="true"  [languages]="cssLanguage"></code>
           </pre>

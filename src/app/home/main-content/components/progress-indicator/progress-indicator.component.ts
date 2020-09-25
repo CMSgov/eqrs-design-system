@@ -13,26 +13,23 @@ import {ProgressSpinnerMode} from '@angular/material/progress-spinner';
 export class ProgressIndicatorComponent implements OnInit {
 
   cssLanguage = 'css';
-
   value: number;
-
   color: ThemePalette = 'primary';
-
   mode: ProgressSpinnerMode = 'indeterminate';
- 
   progressIndicatorContent: any;
+  progressIndicatorShow: boolean;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.progressIndicatorContent = 
+    this.progressIndicatorContent =
     ` <mat-progress-spinner
           class="example-margin"
           [color]="color"
           [mode]="mode"
           [value]="value">
      </mat-progress-spinner> `
-    
+
   }
 
 }

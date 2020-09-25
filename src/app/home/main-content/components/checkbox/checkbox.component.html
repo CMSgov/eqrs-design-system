@@ -1,69 +1,61 @@
-<h1 #scroll> Checkbox </h1>
-<hr>
+<!-- this file uses USWDS classes -- see designsystem.digital.gov -->
+<div class="esrd-ds-container padding-top-2 padding-bottom-4 grid-row">
 
-<div class="card col-md-9">
-    <div class="card-body">
-      <h4 class="pt-0 pb-3">Checkbox Component Basic</h4>
-      
-       <app-eqrs-checkbox id="someUniqueId" name="someUniqueName" formControlName="checkboxFormOneControl" 
-        [options]="checkboxOptions"
-       >
-      </app-eqrs-checkbox>
-        
-      <button class="btn code-button mt-3 pull-right" (click) = "customCheckboxOneShow = !customCheckboxOneShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button> 
-  
-      <div class="col-md-12 code-block">
-        <div>
+  <div class="tablet:grid-col-2 padding-right-4">
+    <!-- <app-component-sidenav></app-component-sidenav>-->
+    sidenav goes here
+  </div>
+
+  <div class="tablet:grid-col-10 padding-top-105">
+
+    <h2>Checkbox</h2>
+    <section class="padding-bottom-2 tablet:grid-col-9">
+
+      <h3>Basic Checkbox</h3>
+      <div class="grid-row padding-bottom-4">
+
+        <div class="tablet:grid-col-4 padding-bottom-2">
+          <app-eqrs-checkbox id="someUniqueId" name="someUniqueName" formControlName="checkboxFormOneControl"
+         [options]="checkboxOptions"></app-eqrs-checkbox>
+        </div>
+
+        <div class="tablet:grid-col-12">
+          <button class="usa-button bg-mint" (click) = "customCheckboxOneShow = !customCheckboxOneShow">
+          View code <i class="fa fa-code" aria-hidden="true"></i>
+          </button>
+
           <div *ngIf="customCheckboxOneShow">
-            <!-- <ngx-prism [language]="cssLanguage">
-              {{customCheckboxOneContent}}
-            </ngx-prism> -->
             <pre>
                 <code [highlight]="customCheckboxOneContent" [lineNumbers]="true"  ></code>
             </pre>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="card col-md-9">
-    <div class="card-body">
-      <h4 class="pt-0 pb-3">Checkbox Component Full</h4>
-  
-      <app-eqrs-checkbox id="someUniqueIdTwo" name="someUniqueNameTwo" formControlName="checkboxFormTwoControl"
-        valueProperty="otherValuePropertyName" descriptionProperty="otherDescriptionPropertyName" 
-        [options]="checkboxOptionsTwo" [required]="true" disableAllSelectedValue="1">
-      </app-eqrs-checkbox>
-      
-      <button class="btn code-button mt-3 pull-right" (click) = "customCheckboxTwoShow = !customCheckboxTwoShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
-  
-      <div class="col-md-12 code-block">
-        <div>
+      </div>
+
+      <h3>Full Checkbox</h3>
+      <p>What's the difference between this and Basic? When would you use something that disables two of the options off the bat?</p>
+      <div class="grid-row padding-bottom-4">
+
+        <div class="tablet:grid-col-4 padding-bottom-2">
+          <app-eqrs-checkbox id="someUniqueIdTwo" name="someUniqueNameTwo" formControlName="checkboxFormTwoControl"
+            valueProperty="otherValuePropertyName" descriptionProperty="otherDescriptionPropertyName"
+            [options]="checkboxOptionsTwo" [required]="true" disableAllSelectedValue="1">
+          </app-eqrs-checkbox>
+        </div>
+
+        <div class="tablet:grid-col-12">
+          <button class="usa-button bg-mint" (click) = "customCheckboxTwoShow = !customCheckboxTwoShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+
           <div *ngIf="customCheckboxTwoShow">
-            <!-- <ngx-prism [language]="cssLanguage">
-              {{customCheckboxTwoContent}}
-            </ngx-prism> -->
             <pre>
                 <code [highlight]="customCheckboxTwoContent" [lineNumbers]="true"  ></code>
             </pre>
           </div>
         </div>
+
       </div>
-    </div>
+    </section>
   </div>
 
-
-  <!-- PREVIOUS NEXT -->
-
-<div class="row row-previous-next ml-0 mt-5">
-    <div class="col-lg-9">
-      <span [routerLink] = "['/eqrs-design-system/buttons']"> <i class="fa fa-chevron-left"></i> Previous: <b>Buttons</b> </span>
-      <span [routerLink] = "['/eqrs-design-system/datatable']" class="pull-right"> Next: <b>Data Table</b> <i class="fa fa-chevron-right"></i> </span>
-    </div>
-  
-    <div class="col-lg-3 pull-right">
-      <button class="ml-5 scroll-to-top" (click)="scroll.scrollIntoView({behavior: 'smooth'})"> <span id="toTop" class="fa fa-chevron-circle-up fa-3x"></span> </button>
-    </div>
-  
-</div>
+</div> <!-- end of page -->

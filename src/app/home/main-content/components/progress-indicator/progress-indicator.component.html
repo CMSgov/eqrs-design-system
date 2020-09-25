@@ -1,28 +1,32 @@
-<h1 #scroll> Progress indicator </h1>
-<hr>
+<!-- this file uses USWDS classes -- see designsystem.digital.gov -->
+<div class="esrd-ds-container padding-top-2 padding-bottom-4 grid-row">
 
-<p>Progress Circle Component used to display progress with a fraction in the center. The component uses angular material library.</p>
-
-
-<app-eqrs-progress-indicator [color]="color" [mode]="mode" [value]=60 ></app-eqrs-progress-indicator>
-<div>
-  <div class="col-md-12 pl-0">
-    <!-- <ngx-prism [language]="htmlLanguage">
-      {{progressContent}}
-    </ngx-prism> -->
-    <pre>
-        <code [highlight]="progressIndicatorContent" [lineNumbers]="true"  [languages]="cssLanguage"></code>
-    </pre>
+  <div class="tablet:grid-col-2 padding-right-4">
+    <!-- <app-component-sidenav></app-component-sidenav>-->
+    sidenav goes here
   </div>
-</div>
 
+  <div class="tablet:grid-col-10 padding-top-105">
 
-<!-- PREVIOUS NEXT -->
+    <h2>Progress indicator</h2>
+    <p>Progress Circle Component is used to display progress with a fraction in the center. The component uses the Angular Material library.</p>
 
-<div class="row row-previous-next ml-0 mt-5">
-  <div class="col-lg-12">
-    <span [routerLink] = "['/eqrs-design-system/radiobutton']"> <i class="fa fa-chevron-left"></i> Previous: <b>Radio Button</b> </span>
-    <span [routerLink] = "['/eqrs-design-system/addremovefield']" class="pull-right"> Next: <b>Addr Remove Field</b> <i class="fa fa-chevron-right"></i> </span>
+    <section class="padding-bottom-2 tablet:grid-col-9">
+
+      <app-eqrs-progress-indicator [color]="color" [mode]="mode" [value]=60 ></app-eqrs-progress-indicator>
+
+      <div class="tablet:grid-col-12 padding-top-2">
+
+        <button class="usa-button bg-mint" (click) = "progressIndicatorShow = !progressIndicatorShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+
+        <div *ngIf="progressIndicatorShow" class="padding-top-2">
+          <pre>
+            <code [highlight]="progressIndicatorContent" [lineNumbers]="true"  [languages]="cssLanguage"></code>
+          </pre>
+        </div>
+      </div>
+
+    </section>
   </div>
-</div>
 
+</div> <!-- end of page -->

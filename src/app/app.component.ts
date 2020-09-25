@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'EQRS-DesignSystem-UI';
+  title = 'ESRD Design System';
   router:any;
 
   constructor(private _router:Router){

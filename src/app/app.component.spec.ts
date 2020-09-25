@@ -16,7 +16,7 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'EQRS-DesignSystem-UI'`, () => {
+  it(`should have as title 'ESRD Design System'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('EQRS-DesignSystem-UI');
@@ -26,6 +26,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('EQRS-DesignSystem-UI app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('ESRD Design System app is running!');
   });
 });

@@ -1,189 +1,89 @@
-<h1 #scroll> Inputs </h1>
-<hr>
+<!-- this file uses USWDS classes -- see designsystem.digital.gov -->
+<div class="esrd-ds-container padding-top-2 padding-bottom-4 grid-row">
 
-<div class="card col-md-10">
-  <div class="card-body">
-    <h4 class="pt-0 pb-3">INPUT INACTIVE</h4>
-  	<div class="row ml-0">
-    <div class="eqrs-input-container">
-        <label class="eqrs-label" for="input-inactive">Label</label>
-        <input class="eqrs-input" id="input-inactive" name="input-inactive" type="text" aria-describedby="input-inactive">
-      </div>
-</div> <!-- row ends here -->
-<p class="notes">eqrs-label<br>eqrs-input</p>
+  <div class="tablet:grid-col-2 padding-right-4">
+    <!-- <app-component-sidenav></app-component-sidenav>-->
+    sidenav goes here
+  </div>
 
+  <div class="tablet:grid-col-10 padding-top-105">
 
-<button class="btn code-button mt-2 pull-right" (click) = "inputInactiveShow = !inputInactiveShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+    <h2>Inputs</h2>
+    <section class="padding-bottom-2 tablet:grid-col-9">
 
-     <div class="col-md-12 code-block">
-          <div>
-          <div *ngIf="inputInactiveShow">
-            <!-- <ngx-prism [language]="cssLanguage">
-             {{inputInactiveContent}}
-            </ngx-prism> -->
-            <pre>
-                <code [highlight]="inputInactiveContent" [lineNumbers]="true"  [languages]="cssLanguage"></code>
-            </pre>
-          </div>
-         </div>
+      <div class="padding-bottom-2 tablet:grid-col-12">
+
+        <h3>Default Input</h3>
+        <div class="tablet:grid-col-6">
+          <label class="eqrs-label" for="input-inactive">Label</label>
+          <input class="eqrs-input" id="input-inactive" name="input-inactive" type="text" aria-describedby="input-inactive">
         </div>
 
-  </div>
-</div>  <!-- card ends here -->
+        <button class="usa-button bg-mint" (click) = "inputInactiveShow = !inputInactiveShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
 
-
-<div class="card col-md-10">
-  <div class="card-body">
-    <h4 class="pt-0 pb-3"> INPUT FOCUS </h4>
-  	<div class="row ml-0">
-    <div class="eqrs-input-container">
-        <label class="eqrs-label" for="input-focus">Label</label>
-        <input class="input-focus focus" id="input-focus" name="input-focus" type="text" aria-describedby="input-focus">
-      </div>
-</div> <!-- row ends here -->
-
-
-<button class="btn code-button mt-2 pull-right" (click) = "inputFocusShow = !inputFocusShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
-
-     <div class="col-md-12 code-block">
-          <div>
-          <div *ngIf="inputFocusShow">
-            <!-- <ngx-prism [language]="cssLanguage">
-             {{inputFocusContent}}
-            </ngx-prism> -->
-            <pre>
-                <code [highlight]="inputFocusContent" [lineNumbers]="true"  [languages]="cssLanguage"></code>
-            </pre>
-          </div>
-         </div>
-        </div>
-
-  </div>
-</div>  <!-- card ends here -->
-
-
-
-<div class="card col-md-10">
-  <div class="card-body">
-    <h4 class="pt-0 pb-3"> INPUT SUCCESS </h4>
-  	<div class="row ml-0">
-    <div class="eqrs-input-container">
-        <label class="eqrs-label" for="input-success">Label</label>
-        <input class="eqrs-input" id="input-success" name="input-success" type="text" aria-describedby="input-success">
-      </div>
-</div> <!-- row ends here -->
-
-
-<button class="btn code-button mt-2 pull-right" (click) = "inputSuccessShow = !inputSuccessShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
-
-     <div class="col-md-12 code-block">
-          <div>
-          <div *ngIf="inputSuccessShow">
-            <!-- <ngx-prism [language]="cssLanguage">
-             {{inputSuccessContent}}
-            </ngx-prism> -->
-            <pre>
-                <code [highlight]="inputSuccessContent" [lineNumbers]="true"  [languages]="cssLanguage"></code>
-            </pre>
-          </div>
-         </div>
-        </div>
-
-  </div>
-</div>  <!-- card ends here -->
-
-
-
-<div class="card col-md-10">
-  <div class="card-body">
-    <h4 class="pt-0 pb-3"> INPUT ERROR </h4>
-    <label class="eqrs-label-error" for="input-error">Label</label>
-  	<div class="row">
-    <div class="eqrs-input-container d-flex">
-    	<div class="col-md-6">
-        <input class="eqrs-input-error-border" id="input-error-1" name="input-error-1" type="text" aria-describedby="input-error-message">
-    </div>
-    <div class="col-md-6">
-        <span class="eqrs-input-error-message" id="input-error-message" role="alert">This is a short helpful error message that should be approximately 66 characters per line.</span> </div>
-      </div>
-</div> <!-- row ends here -->
-
-
-<button class="btn code-button mt-2 pull-right" (click) = "inputErrorShow = !inputErrorShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
-
-     <div class="col-md-12 code-block">
-          <div>
-          <div *ngIf="inputErrorShow">
-            <!-- <ngx-prism [language]="cssLanguage">
-             {{inputErrorContent}}
-            </ngx-prism> -->
-            <pre>
-                <code [highlight]="inputErrorContent" [lineNumbers]="true"  [languages]="cssLanguage"></code>
-            </pre>
-          </div>
-         </div>
-        </div>
-
-  </div>
-</div>  <!-- card ends here -->
-
-<!-- Number Input -->
-<div class="card col-md-10">
-  <div class="card-body">
-    <h4 class="pt-0 pb-3">Number Component Basic</h4>
-    <app-eqrs-number-input id="uniqueId" name="uniqueName" formControlName="numberInputOneControl" format="NNNNNNNNN">
-    </app-eqrs-number-input>
-  
-    <button class="btn code-button mt-3 pull-right" (click) = "numberInputOneShow = !numberInputOneShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
-  
-    <div class="col-md-12 code-block">
-      <div>
-        <div *ngIf="numberInputOneShow">
-          <!-- <ngx-prism [language]="cssLanguage">
-            {{numberInputOneContent}}
-          </ngx-prism> -->
+        <div *ngIf="inputInactiveShow">
           <pre>
-              <code [highlight]="numberInputOneContent" [lineNumbers]="true"  [languages]="cssLanguage"></code>
+            <code [highlight]="inputInactiveContent" [lineNumbers]="true"  [languages]="cssLanguage"></code>
           </pre>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="card col-md-10">
-  <div class="card-body">
-    <h4 class="pt-0 pb-3">Number Component Full</h4>
-    <app-eqrs-number-input id="uniqueIdTwo" name="uniqueNameTwo" formControlName="numberInputTwoControl"
-      minValue="100" maxValue="1000" format="NN.NN">
-    </app-eqrs-number-input>
-  
-    <button class="btn code-button mt-3 pull-right" (click) = "numberInputTwoShow = !numberInputTwoShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
-  
-    <div class="col-md-12 code-block">
-      <div *ngIf="numberInputTwoShow">
-        <!-- <ngx-prism [language]="cssLanguage">
-          {{numberInputTwoContent}}
-        </ngx-prism> -->
-        <pre>
+      </div>
+
+      <div class="padding-bottom-2 tablet:grid-col-12">
+        <h3>Input with Focus</h3>
+        <div class="tablet:grid-col-6">
+          <label class="eqrs-label" for="input-focus">Label</label>
+          <input class="input-focus focus" id="input-focus" name="input-focus" type="text" aria-describedby="input-focus">
+        </div>
+
+        <button class="usa-button bg-mint" (click) = "inputFocusShow = !inputFocusShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+
+        <div *ngIf="inputFocusShow">
+          <pre>
+            <code [highlight]="inputFocusContent" [lineNumbers]="true"  [languages]="cssLanguage"></code>
+          </pre>
+        </div>
+
+      </div>
+
+      <div class="padding-bottom-2 tablet:grid-col-12">
+        <h3>Input with Error</h3>
+        <div class="tablet:grid-col-6">
+          <input class="eqrs-input-error-border" id="input-error-1" name="input-error-1" type="text" aria-describedby="input-error-message">
+
+          <p class="eqrs-input-error-message" id="input-error-message" role="alert">This is a short helpful error message that should be approximately 66 characters per line.</p>
+        </div>
+
+        <button class="usa-button bg-mint" (click) = "inputErrorShow = !inputErrorShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+
+        <div *ngIf="inputErrorShow">
+          <pre>
+            <code [highlight]="inputErrorContent" [lineNumbers]="true"  [languages]="cssLanguage"></code>
+          </pre>
+        </div>
+
+      </div>
+
+      <div class="padding-bottom-2 tablet:grid-col-12">
+        <h3>Numerical Input</h3>
+        <p>This is being formatted somewhere inside the component in terms of input field width</p>
+        <div class="tablet:grid-col-6">
+          <app-eqrs-number-input id="uniqueIdTwo" name="uniqueNameTwo" formControlName="numberInputTwoControl"
+            minValue="100" maxValue="1000" format="NN.NN">
+          </app-eqrs-number-input>
+        </div>
+
+        <button class="usa-button bg-mint" (click) = "numberInputTwoShow = !numberInputTwoShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+
+        <div *ngIf="numberInputTwoShow">
+          <pre>
             <code [highlight]="numberInputTwoContent" [lineNumbers]="true"  [languages]="cssLanguage"></code>
-        </pre>
+          </pre>
+        </div>
+
       </div>
-    </div>
-  </div>
-</div>
 
-<!-- PREVIOUS NEXT -->
-
-<div class="row row-previous-next ml-0 mt-5">
-  <div class="col-lg-9">
-    <span [routerLink] = "['/eqrs-design-system/dropdown']"> <i class="fa fa-chevron-left"></i> Previous: <b>Dropdown</b> </span>
-    <!-- <span [routerLink] = "['/labels']" class="pull-right"> Next: <b>Labels</b> <i class="fa fa-chevron-right"></i> </span> -->
-    <span [routerLink] = "['/eqrs-design-system/labels']" class="pull-right"> Next: <b>Labels</b> <i class="fa fa-chevron-right"></i> </span>
+    </section>
   </div>
 
-  <div class="col-lg-3 pull-right">
-    <button class="ml-5 scroll-to-top" (click)="scroll.scrollIntoView({behavior: 'smooth'})"> <span id="toTop" class="fa fa-chevron-circle-up fa-3x"></span> </button>
-  </div>
-</div>
-
+</div> <!-- end of page -->

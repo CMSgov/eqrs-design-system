@@ -1,9 +1,16 @@
-<h1 #scroll>Data Table</h1>
-<!-- <div class="row container-fluid"> -->
+<!-- this file uses USWDS classes -- see designsystem.digital.gov -->
+<div class="esrd-ds-container padding-top-2 padding-bottom-4 grid-row">
 
-<div class="card col-md-10">
-    <div class="card-body">
-      <h4 class="pt-0 pb-3">Dynamic Data Table</h4>
+  <div class="tablet:grid-col-2 padding-right-4">
+    <!-- <app-component-sidenav></app-component-sidenav>-->
+    sidenav goes here
+  </div>
+
+  <div class="tablet:grid-col-10 padding-top-105">
+
+    <h2>Data Table</h2>
+    <section class="padding-bottom-2 tablet:grid-col-9">
+
       <dynamic-datatable [data]="fakeData"
             caption="This table contains a list of names. The data displayed for each position is listed in the following columns: Id, Name"
             [showCaption]="false" emptyMessage="No Results Found" [searchFilter]="false" [externalSearch]="false">
@@ -21,34 +28,16 @@
             </dynamic-column>
                 <pagination [pageSizes]="[10,25,50,100]" [numberOfPageOptions]="4"></pagination>
         </dynamic-datatable>
-    
-      <button class="btn code-button mt-3 pull-right" (click) = "showDynamicTable = !showDynamicTable"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
-    
-      <div class="col-md-12 code-block">
-        <div>
-          <div *ngIf="showDynamicTable">
-            <!-- <ngx-prism [language]="cssLanguage">
-              {{dynamicTableContent}}
-            </ngx-prism> -->
-            <pre>
-                <code [highlight]="dynamicTableContent" [lineNumbers]="true"  ></code>
-            </pre>
-          </div>
+
+        <button class="usa-button bg-mint" (click) = "showDynamicTable = !showDynamicTable"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+
+        <div *ngIf="showDynamicTable">
+          <pre>
+            <code [highlight]="dynamicTableContent" [lineNumbers]="true"  ></code>
+          </pre>
         </div>
-      </div>
-    </div>
+
+    </section>
   </div>
 
-    <!-- PREVIOUS NEXT -->
-
-<div class="row row-previous-next ml-0 mt-5">
-  <div class="col-lg-9">
-    <span [routerLink] = "['/eqrs-design-system/checkbox']"> <i class="fa fa-chevron-left"></i> Previous: <b>CheckBox</b> </span>
-    <span [routerLink] = "['/eqrs-design-system/dropdown']" class="pull-right"> Next: <b>Dropdown</b> <i class="fa fa-chevron-right"></i> </span>
-  </div>
-
-  <div class="col-lg-3 pull-right">
-    <button class="ml-5 scroll-to-top" (click)="scroll.scrollIntoView({behavior: 'smooth'})"> <span id="toTop" class="fa fa-chevron-circle-up fa-3x"></span> </button>
-  </div>
-
-</div>
+</div> <!-- end of page -->

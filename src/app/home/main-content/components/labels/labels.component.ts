@@ -14,9 +14,9 @@ export class LabelsComponent implements OnInit {
 
   cssLanguage = 'css';
   labelsContent: any;
-
   eqrsLabelTypes = EqrsLabelTypes
-
+  labelsShow: boolean;
+  
   constructor() { }
 
   ngOnInit(): void {

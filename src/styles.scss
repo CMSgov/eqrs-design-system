@@ -23,15 +23,9 @@
 @import '~uswds/dist/css/uswds';
 
 /* Import from libs/assets/styles/_styles */
-@import '../src/libs/styles/styles';
-@import '../src/libs/styles/styles-new';
-
+/* This applies styles to the components themselves */
+@import '../src/libs/styles/index';
 @import '~highlight.js/styles/rainbow.css';
-
-/*------------------------------------*\
-  #VARIABLES
-\*------------------------------------*/
-
 
 /*------------------------------------*\
   #GLOBAL DS - These pertain to the

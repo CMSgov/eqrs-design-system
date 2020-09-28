@@ -107,9 +107,8 @@ input[type="text"] {
     font-weight: 700;
     max-width: 35em;
     margin-top: auto;
-    /*   margin-bottom: auto; */
-    // background-image: url("../assets/images/error-red@3x.png");
-    // background-image: url("../assets/images/error-red.svg");
+    background-image: url("../assets/images/error-red@3x.png");
+    background-image: url("../assets/images/error-red.svg");
     background-position: left 1.3rem top;
     background-repeat: no-repeat;
     background-size: 1rem;
@@ -140,8 +139,8 @@ input[type="text"] {
     border-radius: $eqrs-border-radius;
     height: 44px;
     background-color: #fff;
-    // background-image: url("../assets/images/chevron-down@3x.png");
-    // background-image: url("../assets/images/chevron-down.svg");
+    background-image: url("../assets/images/chevron-down@3x.png");
+    background-image: url("../assets/images/chevron-down.svg");
     background-position: right 0.5rem center;
     background-repeat: no-repeat;
     background-size: 0.6rem;
@@ -195,8 +194,6 @@ input[type="text"] {
     justify-content: flex-end;
     padding-left: inherit;
 }
-
-
 
 .search-input-padding{
     padding-right: 40px !important;
@@ -333,8 +330,8 @@ input[type="checkbox"]:disabled + label {
 
 [type=checkbox]:checked + label::before,
 [type=checkbox]:checked:disabled + label::before {
-    // background-image: url("../assets/images/checked@3x.png");
-    // background-image: url("../assets/images/checked.svg");
+    background-image: url("../assets/images/checked@3x.png");
+    background-image: url("../assets/images/checked.svg");
     background-position: center;
     background-size: 1rem;
     background-repeat: no-repeat;

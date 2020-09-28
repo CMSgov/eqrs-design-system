@@ -1,7 +1,9 @@
 <h1> Search </h1>
 <hr>
 
-<p>Coming soon...</p>
+<div class="tablet:grid-col-2 padding-right-4">
+  <app-component-sidenav></app-component-sidenav>
+</div>
 
 
 
@@ -14,9 +16,9 @@
         [facilityFieldValue]="selectedFacility?.orgName" [facilityFormGroup]="formGroup"
         [controlDirectiveToErrorMap]="controlDirectiveToErrorMap">
     </app-facility-lookup>
-  
+
     <button class="btn code-button mt-3 pull-right" (click) = "facilitySearchShow = !facilitySearchShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button> -->
-  
+
     <div class="col-md-12 code-block">
       <div>
         <!-- <div *ngIf="facilitySearchShow">

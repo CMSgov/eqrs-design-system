@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+
 import { AddRemoveFieldComponent } from './add-remove-field/add-remove-field.component';
 import { AlertsComponent } from './alerts/alerts.component';
 import { ButtonsComponent } from './buttons/buttons.component';
@@ -12,64 +13,54 @@ import { ProgressIndicatorComponent } from './progress-indicator/progress-indica
 import { RadioButtonComponent } from './radio-button/radio-button.component';
 import { SearchComponent } from './search/search.component';
 import { TooltipsComponent } from './tooltips/tooltips.component';
+import { AccordionComponent } from './accordion/accordion.component';
+
 import { SharedModule } from 'src/app/shared/shared.module';
 
 import { ComponentsRoutingModule } from './components-routing.module';
-import { AccordionComponent } from './accordion/accordion.component';
+
 import { CommonModule } from '@angular/common';
-
-// import { HighlightModule, HIGHLIGHT_OPTIONS, HighlightOptions } from 'ngx-highlightjs';
-
-
-
-// export function getHighlightLanguages() {
-//   return {
-//     typescript: () => import('node_modules/highlight.js/lib/languages/typescript'),
-//     css: () => import('node_modules/highlight.js/lib/languages/css'),
-//     xml: () => import('node_modules/highlight.js/lib/languages/xml') 
-//   };
-// }
-
-
+import { ComponentSidenavComponent } from '../component-sidenav/component-sidenav.component';
 
 @NgModule({
   imports: [
     ComponentsRoutingModule,
     SharedModule,
     CommonModule,
-  
   ],
   declarations: [
     AccordionComponent,
-    AddRemoveFieldComponent, 
-    AlertsComponent, 
-    ButtonsComponent, 
-    CheckboxComponent, 
-    DataTableComponent, 
-    DropdownComponent, 
-    InputsComponent, 
-    LabelsComponent, 
-    ModalComponent, 
-    ProgressIndicatorComponent, 
-    RadioButtonComponent, 
-    SearchComponent, 
-    TooltipsComponent
+    AddRemoveFieldComponent,
+    AlertsComponent,
+    ButtonsComponent,
+    CheckboxComponent,
+    DataTableComponent,
+    DropdownComponent,
+    InputsComponent,
+    LabelsComponent,
+    ModalComponent,
+    ProgressIndicatorComponent,
+    RadioButtonComponent,
+    SearchComponent,
+    TooltipsComponent,
+    ComponentSidenavComponent
   ],
   exports:[
     AccordionComponent,
-    AddRemoveFieldComponent, 
-    AlertsComponent, 
-    ButtonsComponent, 
-    CheckboxComponent, 
-    DataTableComponent, 
-    DropdownComponent, 
-    InputsComponent, 
-    LabelsComponent, 
-    ModalComponent, 
-    ProgressIndicatorComponent, 
-    RadioButtonComponent, 
-    SearchComponent, 
+    AddRemoveFieldComponent,
+    AlertsComponent,
+    ButtonsComponent,
+    CheckboxComponent,
+    DataTableComponent,
+    DropdownComponent,
+    InputsComponent,
+    LabelsComponent,
+    ModalComponent,
+    ProgressIndicatorComponent,
+    RadioButtonComponent,
+    SearchComponent,
     TooltipsComponent,
+    ComponentSidenavComponent
   ]
 })
 export class ComponentsModule { }

@@ -26,7 +26,19 @@ import { ComponentSidenavComponent } from './component-sidenav/component-sidenav
 
 
 @NgModule({
-  declarations: [SideNavComponent, GettingStartedComponent, GlobalHeaderComponent, GlobalFooterComponent, HomepageComponent, MainContentComponent, StyleComponent, ComponentsComponent, AboutComponent, GovernanceComponent, ComponentSidenavComponent],
+  declarations: [
+    SideNavComponent,
+    GettingStartedComponent,
+    GlobalHeaderComponent,
+    GlobalFooterComponent,
+    HomepageComponent,
+    MainContentComponent,
+    StyleComponent,
+    ComponentsComponent,
+    AboutComponent,
+    GovernanceComponent,
+  //  ComponentSidenavComponent
+  ],
   imports: [
     CommonModule,
     RouterModule,
@@ -43,6 +55,7 @@ import { ComponentSidenavComponent } from './component-sidenav/component-sidenav
     GlobalFooterComponent,
     MainContentComponent,
     SideNavComponent,
+    //ComponentSidenavComponent
   ]
 
 

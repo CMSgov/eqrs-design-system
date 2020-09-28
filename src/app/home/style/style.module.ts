@@ -1,15 +1,29 @@
+import {NgModule} from "@angular/core";
+import { CommonModule } from '@angular/common';
+
 import {ColorsComponent} from "./colors/colors.component";
 import {IconographyComponent} from "./iconography/iconography.component";
 import {TypographyComponent} from "./typography/typography.component";
-import {NgModule} from "@angular/core";
+
+import { StyleSidenavComponent } from '../style-sidenav/style-sidenav.component';
+
+
 import { StyleRoutingModule } from './style-routing.module';
 
 
 @NgModule({
   imports: [
-
-   StyleRoutingModule
+    CommonModule,
+    StyleRoutingModule
   ],
-  declarations: [ColorsComponent, IconographyComponent, TypographyComponent]
+  declarations: [
+    ColorsComponent,
+    IconographyComponent,
+    TypographyComponent,
+    StyleSidenavComponent
+  ],
+  exports: [
+    StyleSidenavComponent
+  ]
 })
 export class StyleModule { }

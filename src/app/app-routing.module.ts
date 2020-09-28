@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { HomepageComponent } from './home/homepage/homepage.component';
 import { PrinciplesComponent } from './home/main-content/getting-started/principles/principles.component';
 import { GettingStartedComponent } from './home/main-content/getting-started/getting-started.component';
-import { StyleComponent } from './home/main-content/style/style.component';
+import { StyleComponent } from './home/style/style.component';
 import { ComponentsComponent } from './home/components/components.component';
 import { GovernanceComponent } from './home/main-content/governance/governance.component';
 import { AboutComponent } from './home/main-content/about/about.component';

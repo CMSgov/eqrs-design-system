@@ -11,7 +11,7 @@ const styleRoutes: Routes = [
   { path: 'colors', component: ColorsComponent},
   { path: 'iconography', component: IconographyComponent},
   { path: 'typography', component: TypographyComponent}
-  
+
 ];
 
 
@@ -21,6 +21,3 @@ const styleRoutes: Routes = [
 })
 
 export class StyleRoutingModule{}
-// export const StyleRoutingProviders: any[] = [];
-
-// export const StyleRouting: ModuleWithProviders = RouterModule.forRoot(styleRoutes);

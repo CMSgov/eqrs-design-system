@@ -5,10 +5,10 @@ import { GlobalHeaderComponent } from './global-header/global-header.component';
 import { GlobalFooterComponent } from './global-footer/global-footer.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { MainContentComponent } from './main-content/main-content.component';
-import { StyleComponent } from './main-content/style/style.component';
+import { StyleComponent } from './style/style.component';
 import { RouterModule } from '@angular/router';
 import { GettingStartedModule } from './main-content/getting-started/getting-started.module';
-import { StyleModule } from './main-content/style/style.module';
+import { StyleModule } from './style/style.module';
 
 import { ComponentsModule } from './components/components.module';
 
@@ -37,7 +37,6 @@ import { ComponentSidenavComponent } from './component-sidenav/component-sidenav
     ComponentsComponent,
     AboutComponent,
     GovernanceComponent,
-  //  ComponentSidenavComponent
   ],
   imports: [
     CommonModule,
@@ -55,7 +54,6 @@ import { ComponentSidenavComponent } from './component-sidenav/component-sidenav
     GlobalFooterComponent,
     MainContentComponent,
     SideNavComponent,
-    //ComponentSidenavComponent
   ]
 
 

@@ -9,13 +9,17 @@ import { StyleComponent } from './main-content/style/style.component';
 import { RouterModule } from '@angular/router';
 import { GettingStartedModule } from './main-content/getting-started/getting-started.module';
 import { StyleModule } from './main-content/style/style.module';
-import { ComponentsModule } from './main-content/components/components.module';
+
+import { ComponentsModule } from './components/components.module';
+
 import { DirectivesModule } from './main-content/directives/directives.module';
 import { SharedModule } from '../shared/shared.module';
 
 //newbies
 import { GettingStartedComponent } from './main-content/getting-started/getting-started.component';
-import { ComponentsComponent } from './main-content/components/components.component';
+
+import { ComponentsComponent } from './components/components.component';
+
 import { GovernanceComponent } from './main-content/governance/governance.component';
 import { AboutComponent } from './main-content/about/about.component';
 import { ComponentSidenavComponent } from './component-sidenav/component-sidenav.component';

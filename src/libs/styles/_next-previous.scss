@@ -1,0 +1,27 @@
+/*------------------------------------*\
+  #PREVIOUS AND NEXT STYLES
+\*------------------------------------*/
+
+.eqrs-navigation-container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0 !important;
+    margin-top: 1rem;
+}
+
+
+.icon-blue {
+    color: $eqrs-primary-color;
+}
+
+.eqrs-navigation-button {
+    display: flex;
+}
+
+a.eqrs-navigation-button {
+    font-size: .9rem;
+}
+
+/*------------------------------------*\
+  # END PREVIOUS AND NEXT STYLES
+\*------------------------------------*/

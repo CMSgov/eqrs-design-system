@@ -4,8 +4,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-checkbox',
-  templateUrl: './checkbox.component.html',
-  styleUrls: ['./checkbox.component.scss']
+  templateUrl: './checkbox.component.html'
 })
 export class CheckboxComponent implements OnInit {
 
@@ -110,7 +109,7 @@ export class CheckboxComponent implements OnInit {
 
       this.customCheckboxTwoContent = `
         <app-eqrs-checkbox id="someUniqueId" name="someUniqueName" formControlName="checkboxFormTwoControl"
-          valueProperty="otherValuePropertyName" descriptionProperty="otherDescriptionPropertyName" 
+          valueProperty="otherValuePropertyName" descriptionProperty="otherDescriptionPropertyName"
           [options]="arrayOfOptions" [required]="expression" disableAllSelectedValue="'3'">
         </app-eqrs-checkbox>
       `

@@ -1,11 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+/* This is the app's base SCSS file */
 /**
  * CONTENTS
  *
  * CSS TO IMPORT
  * Variables............Globally-available variables and config.
  * Base styles..........Global body styles.
- * Headings.............H1â€“H6 styles.
+ * Headings.............H1 - H6 styles.
  * Buttons..............Button styles.
  * Alerts...............Alert styles.
  * Inputs...............Input styles.
@@ -21,46 +22,10 @@
 /* Import USWDS */
 @import '~uswds/dist/css/uswds';
 
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
-
 /* Import from libs/assets/styles/_styles */
-@import '../src/libs/styles/styles';
-@import '../src/libs/styles/styles-new';
-
+/* This applies styles to the components themselves */
+@import '../src/libs/styles/index';
 @import '~highlight.js/styles/rainbow.css';
-
-/*------------------------------------*\
-  #VARIABLES
-\*------------------------------------*/
-
-$eqrs-primary-color: #0071bc;
-$eqrs-primary-darker: #205493;
-$eqrs-primary-darkest: #112e51;
-$eqrs-secondary-color: #5b616b;
-$eqrs-secondary-darker: #323a45;
-$eqrs-tertiary-color:#d6d7d9;
-$eqrs-tertiary-darker: #ebebe4;
-$eqrs-tertiary-darkest: #57575c;
-$eqrs-accent-color:#fdb81e;
-$eqrs-accent-darker: #d99502;
-$eqrs-accent-darkest: #bb8002;
-$eqrs-notification-color:#009e51;
-$eqrs-alert-color: #cd2026;
-$eqrs-alert-darker: #981b1e;
-$eqrs-text-color: #323a45;
-$eqrs-background-color: #f1f1f1;
-$eqrs-focus-color: #3e94cf;
-$eqrs-focus-alt: #e7e7e7;
-$eqrs-visited-color: #4c2c92;
-$eqrs-alert-information: #e1f3f8;
-$eqrs-alert-error: #f9dede;
-$eqrs-alert-warning: #fff1d2;
-$eqrs-alert-success: #e7f4e4;
-$eqrs-box-shadow: 0 0 3px #3e94cf, 0 0 7px #3e94cf;
-$eqrs-border-radius: 3px;
-$eqrs-serif-font-family: "Merriweather", "Georgia", "Cambria", "Times New Roman", "Times", serif;
-$eqrs-sans-serif-font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 
 /*------------------------------------*\
   #GLOBAL DS - These pertain to the
@@ -84,358 +49,49 @@ $eqrs-sans-serif-font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", 
   }
 }
 
-
 /*------------------------------------*\
   #BASE STYLES
 \*------------------------------------*/
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-html { /*Increase default font size to 18px*/
-    font-size: 1.125rem;
-}
 
 body {
-    font-family: $eqrs-sans-serif-font-family;
-    color: #323a45;
-}
-
-body p {
-    max-width: 35em;
+  font-family: $eqrs-sans-serif-font-family;
 }
 
 .eqrs-detail-copy {
-    font-size: .77rem;
-}
-
-.eqrs-lead-paragraph {
-    font-family: $eqrs-serif-font-family;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 1.7em;
+  font-size: .77rem;
 }
 
 .eqrs-display-text {
-    font-family: $eqrs-serif-font-family;
-    font-weight: 400;
-    font-size: 2.88rem;
-    line-height: 1.3em;
+  font-family: $eqrs-serif-font-family;
+  font-weight: 400;
+  font-size: 2.88rem;
+  line-height: 1.3em;
 }
-
-
-
 
 /*------------------------------------*\
-  #HEADINGS
+  #ALERTS TO DO:
+  these images should be set in _eqrs-style.scss
 \*------------------------------------*/
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-    font-family: $eqrs-serif-font-family;
-    margin-bottom: .5em;;
-    line-height: 1.3em;
-    font-weight: 700;
-}
-
-h1 {
-    font-size: 2.2rem;
-    &:focus{
-        outline: inherit !important;
-    }
-}
-
-h2 {
-    font-size: 1.7rem;
-}
-
-
-h3 {
-    font-size: 1.22rem;
-    line-height: 1.3em;
-    padding-top: 15px;
-}
-
-h4 {
-    font-family: $eqrs-sans-serif-font-family ;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 1.3em;
-    text-transform: uppercase;
-    color: $eqrs-text-color;
-    padding-top: 15px;
-}
-
-a {
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: none
-    }
-}
-
-a:visited {
-    color: #0071bc;
-}
-
-hr {
-    color: $eqrs-tertiary-color !important;
-    background-color: $eqrs-tertiary-color !important;
-}
-
-
-/*------------------------------------*\
-  #BUTTONS
-\*------------------------------------*/
-
-@mixin button {
-    width: 100%;
-    margin-bottom: 1rem;
-    border-radius: $eqrs-border-radius;
-    min-height: 44px !important;
-    font-family: $eqrs-sans-serif-font-family;
-    font-size: 1.1rem;
-    font-weight: 700;
-    border: none;
-    cursor: pointer;
-    transition: all .2s ease;
-
-    &:focus {
-        outline: none;
-        box-shadow: $eqrs-box-shadow;
-    }
-
-    &:disabled {
-        color: #fff;
-        background-color: $eqrs-tertiary-color;
-        border: 1px solid $eqrs-tertiary-color;
-    }
-
-    &:disabled:hover {
-        background-color: $eqrs-tertiary-color;
-        border: 1px solid $eqrs-tertiary-color;
-        cursor: not-allowed;
-    }
-}
-
-.eqrs-button-primary {
-    @include button;
-    color: #fff;
-    background-color: $eqrs-primary-color;
-    border: 1px solid $eqrs-primary-color;
-
-    &:hover {
-        background-color: $eqrs-primary-darker;
-        border: 1px solid $eqrs-primary-darker;
-    }
-
-    &:active {
-        background-color: $eqrs-primary-darkest;
-        border: 1px solid $eqrs-primary-darkest;
-    }
-
-    &:disabled:hover {
-        background-color: $eqrs-tertiary-color;
-        border: 1px solid $eqrs-tertiary-color;
-    }
-
-    &:disabled {
-        color: $eqrs-text-color;
-    }
-}
-
-
-.eqrs-button-secondary {
-    @include button;
-    color: $eqrs-secondary-color;
-    background-color: #fff;
-    border: 1px solid $eqrs-secondary-color;
-
-    &:hover {
-        color: #fff;
-        background-color: $eqrs-secondary-color;
-    }
-
-    &:active {
-        background-color: $eqrs-secondary-darker;
-        border: 1px solid $eqrs-secondary-darker;
-    }
-
-    &:disabled:hover {
-        background-color: $eqrs-tertiary-color;
-        border: 1px solid $eqrs-tertiary-color;
-    }
-}
-
-
-.eqrs-button-accent {
-    @include button;
-    color: #000;
-    background-color: $eqrs-accent-color;
-    border: 1px solid $eqrs-accent-color;
-
-    &:hover {
-        background-color: $eqrs-accent-darker;
-        color: #fff;
-    }
-
-    &:active {
-        background-color: $eqrs-accent-darkest;
-        color: #fff;
-    }
-
-    &:disabled:hover {
-        background-color: $eqrs-tertiary-color;
-        border: 1px solid $eqrs-tertiary-color;
-    }
-    &:disabled {
-        color: $eqrs-text-color;
-    }
-}
-
-
-.eqrs-button-destructive {
-    @include button;
-    color: $eqrs-alert-color;
-    background-color: #fff;
-    border: 1px solid $eqrs-alert-color;
-
-    &:hover {
-        color: #fff;
-        background-color: $eqrs-alert-color;
-    }
-
-    &:active {
-        color: #fff;
-        background-color: $eqrs-alert-darker;
-    }
-
-    &:disabled:hover {
-        background-color: $eqrs-tertiary-color;
-        border: 1px solid $eqrs-tertiary-color;
-    }
-}
-
-
-.eqrs-edit-link, .eqrs-add-link{
-    border: none;
-    background: none;
-    color: $eqrs-primary-color;
-    font-family: $eqrs-sans-serif-font-family;
-    float: right;
-    //font-size: 1.125em;
-
-    &:hover {
-        cursor: pointer;
-        text-decoration: underline;
-    }
-    &:focus {
-        text-decoration: underline;
-        outline: none;
-    }
-    &:active {
-        color: $eqrs-primary-darker;
-        outline: none;
-    }
-}
-
-.eqrs-trash-link {
-    // color: $eqrs-primary-color;
-    font-size: 20px;
-    /* &:hover {
-       cursor: pointer;
-       text-decoration: underline;
-     }
-     &:focus {
-       text-decoration: underline;
-       outline: none;
-     }
-     &:active {
-       color: $eqrs-primary-darker;
-       outline: none;
-     }*/
-}
-
-.eqrs-temp-close-link {
-    color: $eqrs-primary-color;
-    &:hover {
-        cursor: pointer;
-        text-decoration: underline;
-    }
-    &:focus {
-        text-decoration: underline;
-        outline: none;
-    }
-    &:active {
-        color: $eqrs-primary-darker;
-        outline: none;
-    }
-}
-
-
-
-/*------------------------------------*\
-  #ALERTS
-\*------------------------------------*/
-
-@mixin alert {
-    background-position: left 1.3rem top 2rem;
-    background-repeat: no-repeat;
-    background-size: 2.2rem;
-    margin-top: 1.5em;
-    margin-bottom: 1.5rem;
-    padding: 1em; }
-
-
-.eqrs-alert-heading {
-    font-family: $eqrs-serif-font-family;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: $eqrs-text-color;
-    text-transform: none;
-    margin-bottom: .3rem;
-    margin-top: 0; }
-
-
-.eqrs-alert-body {
-    padding-left: 3.5rem;
-    vertical-align: top; }
-
 
 .eqrs-alert-success {
-    @include alert;
-    background-color: $eqrs-alert-success;
     background-image: url("./libs/assets/images/success.png");
     background-image: url("./libs/assets/images/success.svg");
 }
 
 .eqrs-alert-warning {
-    @include alert;
-    background-color: $eqrs-alert-warning;
     background-image: url("./libs/assets/images/warning@3x.png");
     background-image: url("./libs/assets/images/warning.svg");
 }
 
 .eqrs-alert-error {
-    @include alert;
-    background-color: $eqrs-alert-error;
     background-image: url("./libs/assets/images/error@3x.png");
     background-image: url("./libs/assets/images/error.svg");
 }
 
 .eqrs-alert-information {
-    @include alert;
-    background-color: $eqrs-alert-information;
     background-image: url("./libs/assets/images/info@3x.png");
     background-image: url("./libs/assets/images/info.svg");
 }
-
-.eqrs-single-list-item {
-    list-style-type: none;
-}
-
 
 
 /*------------------------------------*\
@@ -510,13 +166,6 @@ input[type="text"] {
   #LABELS
 \*------------------------------------*/
 
-@mixin eqrs-label-special {
-    padding: 2px 5px 2px 5px;
-    border-radius: 3px;
-    font-size: 14px;
-    font-weight: 600;
-}
-
 .eqrs-label {
     font-family: $eqrs-sans-serif-font-family;
     padding-left: inherit;
@@ -530,12 +179,9 @@ input[type="text"] {
     color: $eqrs-alert-color;
 }
 
-
-
 .eqrs-input-error-border {
     border: 1px solid $eqrs-alert-color !important;
 }
-
 
 .eqrs-input-error-message {
     color: $eqrs-alert-color;
@@ -553,25 +199,9 @@ input[type="text"] {
     background-size: 1rem;
 }
 
-
-.eqrs-label-bold { /* view mode for labels */
-    font-weight: 700;
-}
-
-
-.eqrs-label-warning {
-    @include eqrs-label-special;
-    background-color: $eqrs-accent-color;
-    color: #000;
-    font-family: $eqrs-sans-serif-font-family;
-}
-
-
-
 /*------------------------------------*\
   #INPUT: SELECT
 \*------------------------------------*/
-
 
 @mixin select {
     border: 1px solid $eqrs-tertiary-color;
@@ -613,14 +243,9 @@ input[type="text"] {
     }
 }
 
-
 .eqrs-select {
     @include select;
 }
-
-
-
-
 
 /*------------------------------------*\
   #INPUT: SEARCH
@@ -737,6 +362,7 @@ input[type="text"] {
 
 /*------------------------------------*\
   #INPUT: CHECKBOX
+  the system's components ARE using these
 \*------------------------------------*/
 
 [type=checkbox]:focus + label::before {
@@ -811,10 +437,6 @@ input[type="checkbox"]:disabled + label {
     border: 1px solid $eqrs-alert-color !important;
 }
 
-
-
-
-
 /*------------------------------------*\
   #INPUT: DATE
 \*------------------------------------*/
@@ -874,10 +496,6 @@ input[type=text], select {
         cursor: not-allowed;
     }
 }
-
-
-
-
 
 /*------------------------------------*\
   #INPUT: AUTOSUGGEST
@@ -989,377 +607,19 @@ input[type=text]:disabled {
     padding-left: 15px;
 }
 
-
-
-
-/*------------------------------------*\
-  #HISTORY STYLES AND CARDS
-\*------------------------------------*/
-
-.section-title-border h3 {
-    border-bottom: 1px solid #ccc;
-}
-
-.section-edit a {
-    float: right;
-    font-size: 0.7em;
-    font-weight: 100;
-    margin: 8px 15px 0 0;
-    text-decoration: none;
-}
-
-.history-edit a {
-    float: right;
-    font-size: 0.7em;
-    font-weight: 100;
-    margin: 8px 0 0 0;
-    text-decoration: none;
-}
-
-.card-bottom {
-    margin-top: 20px;
-    margin-bottom: 40px;
-}
-
-.card-header {
-    background-color: transparent;
-}
-
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    //height: 30rem;
-}
-
-.no-underline {
-    text-decoration: none;
-}
-
-.icon-blue {
-    color: #0071bc;
-}
-
-.current-header {
-    background-color: #f1f1f1;
-}
-
-.current-header span {
-    font-weight: 600;
-}
-
-.card-header:first-child{
-    border-radius:0px;
-}
-
-/*------------------------------------*\
-  #PREVIOUS AND NEXT STYLES
-\*------------------------------------*/
-
-.eqrs-navigation-container {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 0 !important;
-    margin-top: 1rem;
-}
-
-
-.icon-blue {
-    color: $eqrs-primary-color;
-}
-
-.eqrs-navigation-button {
-    display: flex;
-}
-
-a.eqrs-navigation-button {
-    font-size: .9rem;
-}
-
-/*------------------------------------*\
-  # END PREVIOUS AND NEXT STYLES
-\*------------------------------------*/
-
-
-.fa-minus-circle {
-    color: $eqrs-accent-color ;
-}
-
-.fa-circle-thin {
-    color: $eqrs-tertiary-color ;
-}
-
-.fa-check-circle {
-    color: $eqrs-notification-color ;
-}
-
-.fa-circle {
-    color: $eqrs-tertiary-color ;
-}
-
-
-
-
 /*---------------------*\
   # TABLE STYLES
 \*---------------------*/
 
-th#facility-name-column {
-    width: 30%;
-}
 .eqrs-table-row-height thead th, .eqrs-table-row-height tbody td {
     padding: 0.30rem;
 }
 
 
-
-/*---------------------------*\
-  # PROGRESS SPINNER STYLES
-\*---------------------------*/
-.eqrs-progress-background {
-    position: absolute;
-    z-index: -1;
-}
-
-.eqrs-progress-background path {
-    stroke: $eqrs-tertiary-color !important;
-}
-
-.eqrs-progress-fraction{
-    font-family: $eqrs-sans-serif-font-family;
-    color: $eqrs-text-color;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-}
-
-.eqrs-progress-fraction-container{
-    display: flex;
-    //align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.eqrs-no-padding
-{
-    padding:  0px !important;
-}
-
-//Print button--------------------
-
-.print-section {
-    display: flex;
-    justify-content: space-between;
-}
-
-@media print {
-
-    .print-d-block .row{
-        display: block !important;
-    }
-    #global-nav {
-        display: none;
-    }
-    #left-nav {
-        display: none;
-    }
-    #print-button, .review-no-print{
-        display: none;
-    }
-    button{
-        display: none;
-    }
-    .eqrs-navigation-container{
-        display: none;
-    }
-}
-
-
-
-/*---------------------------*\
-  # SCROLL BAR FOR TABLES
-\*---------------------------*/
-.eqrs-datatable-scroll-x {
-    overflow-x: scroll;
-    overflow-y: hidden;
-}
-
-/*--------
-
- */
-h2-with-h3-styles {
-    font-size: 1.22rem;
-    line-height: 1.3em;
-    padding-top: 15px;
-}
-
-/*---------------------------*\
-  # Link groups and containers
-\*---------------------------*/
-
-.link-container {
-    float: right;
-}
-
-.grouped-link {
-    float: left;
-}
-
-
-
-///*---------------------------*\
-//  # help tooltip
-//\*---------------------------*/
-//
-//
-//.eqrs-help-tooltip {
-//  font-size: 18px;
-//  color: $eqrs-primary-color;
-//}
-//
-//.mat-tooltip {
-//  font-size: 16px;
-//}
-//
-
-
-/*---------------------------*\
-  # Remove criteria
-\*---------------------------*/
-
-
-.eqrs-remove-color {
-    color: $eqrs-alert-color;
-}
-
-
-/*-----------------------------------*\
-  # Help - font awesome icon
-\*-----------------------------------*/
-
-
-.eqrs-help-tooltip {
-    color: $eqrs-primary-color;
-}
-
-
-/*-----------------------------------*\
-  # Dropdown menu top arrow on border
-\*-----------------------------------*/
-
-
-.eqrs-dropdown-arrow-box {
-    z-index: 10000;
-    right: 0;
-    position: absolute;
-    background: white;
-    border-radius: 10px;
-    border: 0.5px solid lightgray;
-    padding: 10px !important;
-    top: 80% !important;
-    width: 350px;
-    left: auto !important;
-}
-.eqrs-dropdown-arrow-box:after, .eqrs-dropdown-arrow-box:before {
-    bottom: 100%;
-    left: 90%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    position: absolute;
-    pointer-events: none;
-}
-
-.eqrs-dropdown-arrow-box a {
-    color: #0275d8 !important;
-}
-.eqrs-dropdown-arrow-box:after {
-    border-color: rgba(0,0,0, 0);
-    border-bottom-color: white;
-    border-width: 10px;
-    margin-left: -10px;
-}
-.eqrs-dropdown-arrow-box:before {
-    border-color: rgba(0,0,0, 0);
-    border-bottom-color: grey;
-    border-width: 11px;
-    margin-left: -11px;
-}
 .dropdown-toggle::after {
     content: initial !important;
 }
 
-.eqrs-link {
-    color: $eqrs-primary-color !important;
-    cursor:pointer;
-}
-//#reviewAndSubmitHelp .dropdown-menu {
-//  left: -450% !important;
-//}
-//#addNetworkHelp .eqrs-dropdown-arrow-box, #addEditProfitStatusHistoryHelp .eqrs-dropdown-arrow-box,
-//#addEditPriOwnerHistoryHelp .eqrs-dropdown-arrow-box {
-//  left: -50% !important;
-//}
-//#addContactHelp .eqrs-dropdown-arrow-box {
-//  left: -100% !important;
-//}
-#facilitySearchHelp .dropdown-menu, #reviewAndSubmitHelp .dropdown-menu {
-    margin: 2rem 0 0 0 !important;
-}
-
-.required
-{
+.required {
     color:red;
-}
-//qip-measures-scss
-.measures-card-margin {
-    margin-top: 24px;
-}
-.measure-card-height{
-
-    height: 400px;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-}
-.fontsize50{
-      font-size: 50px;
-}
-.align-center{
-    display: flex;
-    justify-content: center;
-}
-.qip-background-color{
-    background-color:$eqrs-background-color;
-}
-
-.qip-btnfont{
-    font-weight:400;
-    margin-right:40px;
-}
-
-.qip-header-font{
-    font-size:30px;
-    font-weight:400;
-}
-.para-width{
-    max-width: 100%!important;
-}
-
-.error-message {
-color: $eqrs-alert-color;
-padding-bottom: 10px;
-margin-left: -15px;
-padding-left: 15px;
-font-weight: 700;
-max-width: 35em;
-margin-top: auto;
-}
-
-.qipContainer{
-    margin-right:20px;
-    margin-left:20px;
-    padding-top:20px;
-    padding-bottom:20px;
 }

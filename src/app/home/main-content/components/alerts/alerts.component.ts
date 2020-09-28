@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-alerts',
-  templateUrl: './alerts.component.html',
-  styleUrls: ['./alerts.component.scss']
+  templateUrl: './alerts.component.html'
 })
 export class AlertsComponent implements OnInit {
 
@@ -33,7 +32,7 @@ export class AlertsComponent implements OnInit {
       '                 <p>Displays when database change is successful.</p>\n' +
       '               </div>\n' +
       '             </div>';
-    this.successStatusContentAngular = 
+    this.successStatusContentAngular =
     '<app-alert-message [heading]="\'Success status\'"\n' +
     '   [alertMessages]="Displays when database change is successful."\n'+
     '            [alertType]="\'success\'"></app-alert-message>';

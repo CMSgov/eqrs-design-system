@@ -10,8 +10,7 @@ export enum EqrsButtonTypes {
 
 @Component({
   selector: 'app-buttons',
-  templateUrl: './buttons.component.html',
-  styleUrls: ['./buttons.component.scss']
+  templateUrl: './buttons.component.html'
 })
 export class ButtonsComponent implements OnInit {
   cssLanguage = 'css';

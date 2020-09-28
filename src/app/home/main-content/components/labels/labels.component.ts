@@ -7,8 +7,7 @@ export enum EqrsLabelTypes{
 
 @Component({
   selector: 'app-labels',
-  templateUrl: './labels.component.html',
-  styleUrls: ['./labels.component.scss']
+  templateUrl: './labels.component.html'
 })
 export class LabelsComponent implements OnInit {
 
@@ -16,7 +15,7 @@ export class LabelsComponent implements OnInit {
   labelsContent: any;
   eqrsLabelTypes = EqrsLabelTypes
   labelsShow: boolean;
-  
+
   constructor() { }
 
   ngOnInit(): void {

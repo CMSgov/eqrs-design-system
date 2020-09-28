@@ -4,7 +4,7 @@ import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 @Component({
   selector: 'app-global-header',
   templateUrl: './global-header.component.html',
-  styleUrls: ['./global-header.component.scss']
+  styleUrls: ['./global-header.component.scss'] // required
 })
 export class GlobalHeaderComponent implements OnInit {
 

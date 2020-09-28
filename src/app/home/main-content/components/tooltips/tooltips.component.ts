@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-tooltips',
-  templateUrl: './tooltips.component.html',
-  styleUrls: ['./tooltips.component.scss']
+  templateUrl: './tooltips.component.html'
 })
 export class TooltipsComponent implements OnInit {
 

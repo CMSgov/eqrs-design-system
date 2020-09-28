@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-add-remove-field',
-  templateUrl: './add-remove-field.component.html',
-  styleUrls: ['./add-remove-field.component.scss']
+  templateUrl: './add-remove-field.component.html'
 })
 export class AddRemoveFieldComponent implements OnInit {
 

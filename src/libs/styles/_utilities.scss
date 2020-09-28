@@ -1,0 +1,87 @@
+/*------------------------------------*\
+  #utlities we should might like to
+  remove by using USWDS
+\*------------------------------------*/
+
+.container-fluid {
+    background: #fff;
+}
+
+hr {
+    color: $eqrs-tertiary-color !important;
+    background-color: $eqrs-tertiary-color !important;
+}
+
+// this has got to be bootstrap's grid, thumbs down
+main.col-md-9.ml-sm-auto.col-lg-10.pt-3.px-4 {
+    padding-left: 5rem !important;
+    padding-top: 3rem !important;
+}
+
+.row-no-flex {
+	display: inline;
+}
+
+.row-previous-next {
+    background: #fff;
+    padding: 1rem;
+    border-top: 1px solid #d6d7d9;
+}
+
+.row-previous-next span {
+    color: #0071bc;
+    cursor: pointer;
+}
+
+.row-previous-next span:hover {
+    color: #112e51;
+    cursor: pointer;
+}
+
+/*------------------------------------*\
+  spacers we should
+  remove by using USWDS
+\*------------------------------------*/
+
+.vspacer5{
+   margin-top:5px;
+}
+.vspacer10{
+ margin-top:10px;
+}
+
+.vspacer20{
+ margin-top:20px;
+}
+
+.hspacer10{
+   margin-left: 10px;
+}
+.hspacer25{
+ margin-left: 25px;
+}
+
+.vspacerTopBottom{
+ margin-top:10px;
+ margin-bottom:10px;
+}
+
+.pad-top-10 {
+    padding-top: 10px;
+}
+
+.pad-bottom-10 {
+    padding-bottom: 10px;
+}
+
+.pad-bottom-5 {
+    padding-bottom: 10px;
+}
+
+.pad-top-15 {
+    padding-top: 15px;
+}
+
+.eqrs-no-padding {
+  padding:  0px !important;
+}

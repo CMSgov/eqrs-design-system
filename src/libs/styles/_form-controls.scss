@@ -1,0 +1,692 @@
+/*------------------------------------*\
+  #INPUTS
+\*------------------------------------*/
+
+@mixin input {
+    height: 44px !important;
+    font-family: $eqrs-sans-serif-font-family;
+    font-size: 1rem;
+    border-radius: $eqrs-border-radius;
+    border: 1px solid $eqrs-tertiary-color !important;
+    width: 100%;
+
+    &::-ms-clear { //specific for IE 11 styling
+        display: none;
+    }
+
+    &::-webkit-input-placeholder {
+        font-weight: 200;
+        color: $eqrs-secondary-color;
+    }
+
+    &::-moz-placeholder {
+        font-weight: 200;
+        color: $eqrs-secondary-color;
+    }
+
+    &::-ms-input-placeholder {
+        font-weight: 200;
+        color: $eqrs-secondary-color;
+    }
+
+    &:focus{
+        outline: 0px;
+        box-shadow: $eqrs-box-shadow;
+    }
+
+    &:disabled {
+        background-color: $eqrs-tertiary-color;
+        color: $eqrs-text-color;
+    }
+
+    &:disabled:hover {
+        cursor: not-allowed;
+    }
+}
+
+
+.eqrs-input {
+    @include input;
+}
+
+input[type="text"] {
+    height: 44px !important;
+}
+
+
+.eqrs-input-container {
+    margin-left: auto;
+}
+
+
+.eqrs-input-wrapper {
+  margin-left: auto;
+  margin-bottom: 20px;
+  label {
+      padding-left: inherit;
+  }
+}
+
+
+/*------------------------------------*\
+  #LABELS
+\*------------------------------------*/
+
+@mixin eqrs-label-special {
+    padding: 2px 5px 2px 5px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.eqrs-label {
+    font-family: $eqrs-sans-serif-font-family;
+    padding-left: inherit;
+    font-size: 1rem;
+    margin-bottom: auto;
+    white-space: nowrap;
+}
+
+.eqrs-label-error {
+    padding-left: 0;
+    color: $eqrs-alert-color;
+}
+
+
+
+.eqrs-input-error-border {
+    border: 1px solid $eqrs-alert-color !important;
+}
+
+
+.eqrs-input-error-message {
+    color: $eqrs-alert-color;
+    padding-bottom: 10px;
+    margin-left: -15px;
+    padding-left: 45px;
+    font-weight: 700;
+    max-width: 35em;
+    margin-top: auto;
+    /*   margin-bottom: auto; */
+    // background-image: url("../assets/images/error-red@3x.png");
+    // background-image: url("../assets/images/error-red.svg");
+    background-position: left 1.3rem top;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+}
+
+
+.eqrs-label-bold { /* view mode for labels */
+    font-weight: 700;
+}
+
+
+.eqrs-label-warning {
+    @include eqrs-label-special;
+    background-color: $eqrs-accent-color;
+    color: #000;
+    font-family: $eqrs-sans-serif-font-family;
+}
+
+
+
+/*------------------------------------*\
+  #INPUT: SELECT
+\*------------------------------------*/
+
+
+@mixin select {
+    border: 1px solid $eqrs-tertiary-color;
+    border-radius: $eqrs-border-radius;
+    height: 44px;
+    background-color: #fff;
+    // background-image: url("../assets/images/chevron-down@3x.png");
+    // background-image: url("../assets/images/chevron-down.svg");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 0.6rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    padding-right: 30px;
+
+    &::-ms-expand {
+        display: none;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: $eqrs-box-shadow;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:disabled {
+        background-color: $eqrs-tertiary-darker;
+        color: $eqrs-text-color;
+        cursor: not-allowed;
+
+        &:hover {
+            cursor: not-allowed;
+        }
+    }
+}
+
+
+.eqrs-select {
+    @include select;
+}
+
+/*------------------------------------*\
+  #INPUT: SEARCH
+\*------------------------------------*/
+
+.eqrs-search {
+    @include input;
+    background-color: transparent;
+}
+
+.eqrs-search-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: inherit;
+}
+
+
+
+.search-input-padding{
+    padding-right: 40px !important;
+}
+
+
+
+/*------------------------------------*\
+  #INPUT: RADIO
+\*------------------------------------*/
+
+.eqrs-list { /* also used for checkboxes */
+    list-style-type: none;
+    padding-left: 5px;
+}
+
+.eqrs-list li{
+    list-style-type: none;
+    padding-left: 5px;
+}
+
+
+[type=checkbox],
+[type=radio] {
+    opacity: 0;
+    position: absolute;
+}
+
+[type=checkbox] + label,
+[type=radio] + label {
+    cursor: pointer;
+    font-weight: 400;
+    margin-top: .5rem;
+    margin-bottom: 0.5em;
+    display: flex;
+    align-items: center;
+}
+
+[type=checkbox] + label::before,
+[type=radio] + label::before {
+    background: #ffffff;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 0 1px #757575;
+    content: '';
+    display: inline-block;
+    height: 1.8rem;
+    width: 1.8rem;
+    line-height: 1.8rem;
+    margin-right: 0.6em;
+    text-indent: 0.15em;
+    vertical-align: middle\0;
+}
+
+[type=radio] + label::before {
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #757575;
+    height: 1rem;
+    line-height: 1rem;
+    width: 1rem;
+    border-radius: 100%;
+    min-width: 1rem;
+}
+
+[type=checkbox]:checked + label::before,
+[type=radio]:checked + label::before {
+    background-color: $eqrs-primary-color;
+    box-shadow: 0 0 0 1px $eqrs-primary-color;
+}
+
+[type=radio]:checked + label::before {
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px $eqrs-primary-color;
+}
+
+[type=radio]:focus + label::before {
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px $eqrs-primary-color, 0 0 3px 4px #3e94cf, 0 0 7px 4px #3e94cf;
+}
+
+/*------------------------------------*\
+  #INPUT: CHECKBOX
+\*------------------------------------*/
+
+[type=checkbox]:focus + label::before {
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #0071bc, 0 0 3px 4px #3e94cf, 0 0 7px 4px #3e94cf;
+}
+
+
+[type=radio]:disabled:checked + label::before {
+    background: $eqrs-tertiary-color;
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px $eqrs-tertiary-color;
+    cursor: not-allowed;
+}
+
+[type=checkbox]:disabled:checked + label::before {
+    background: $eqrs-tertiary-darkest;
+    box-shadow: 0 0 0 1px $eqrs-tertiary-color;
+    cursor: not-allowed;
+}
+
+
+[type=checkbox]:disabled:not(:checked) + label::before {
+    background: $eqrs-tertiary-darkest;
+    box-shadow: 0 0 0 1px $eqrs-tertiary-color;
+    cursor: not-allowed;
+}
+
+[type=radio]:disabled:not(:checked) + label::before {
+    background: #fff;
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px $eqrs-tertiary-color;
+    cursor: not-allowed;
+}
+
+
+input[type="radio"]:disabled + label {
+    cursor: not-allowed;
+}
+
+input[type="checkbox"]:disabled + label {
+    cursor: not-allowed;
+}
+
+
+[type=checkbox] + label::before {
+    background: #ffffff;
+    border-radius: 0.1rem;
+    box-shadow: 0 0 0 1px #757575;
+    content: '';
+    display: inline-block;
+    height: 1.2rem;
+    width: 1.2rem;
+    line-height: 1.8rem;
+    margin-right: 0.6em;
+    text-indent: 0.15em;
+    vertical-align: middle\0;
+}
+
+[type=checkbox]:checked + label::before,
+[type=checkbox]:checked:disabled + label::before {
+    // background-image: url("../assets/images/checked@3x.png");
+    // background-image: url("../assets/images/checked.svg");
+    background-position: center;
+    background-size: 1rem;
+    background-repeat: no-repeat;
+}
+
+
+.checkbox-container {
+    margin: auto;
+}
+
+[type=checkbox] + label.eqrs-label-error::before{
+    border: 1px solid $eqrs-alert-color !important;
+}
+
+/*------------------------------------*\
+  #INPUT: DATE
+\*------------------------------------*/
+
+.eqrs-date {
+    display: inline-flex;
+}
+
+.eqrs-date label {
+    font-size: .777rem;
+    margin-bottom: auto;
+}
+
+.eqrs-month, .eqrs-day {
+    max-width: 5rem;
+}
+
+.eqrs-year {
+    max-width: 7rem;
+}
+
+
+input[type=text], select {
+    width: 100%;
+    padding: 10px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+
+    &::-webkit-input-placeholder {
+        font-weight: 200;
+        color: $eqrs-secondary-color;
+    }
+
+    &::-moz-placeholder {
+        font-weight: 200;
+        color: $eqrs-secondary-color;
+    }
+
+    &::-ms-input-placeholder {
+        font-weight: 200;
+        color: $eqrs-secondary-color;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: $eqrs-box-shadow;
+    }
+    &:disabled {
+        background-color: $eqrs-tertiary-color;
+        color: $eqrs-text-color;
+    }
+
+    &:disabled:hover {
+        cursor: not-allowed;
+    }
+}
+
+/*------------------------------------*\
+  #INPUT: AUTOSUGGEST
+\*------------------------------------*/
+
+.eqrs-autosuggest {
+    @include input;
+    padding-left: 10px;
+}
+
+.suggestions {
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+    position: absolute; /* use absolute for angular component */
+
+    width: 200%; /*IE Fix*/
+
+    width: max-content;
+    min-width: 100%;
+    max-width: 50vw;
+    background: white;
+    z-index: 2;
+
+
+    @media screen and (max-width: 992px){
+        max-width: 75vw;
+    }
+}
+
+.suggestions ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px
+}
+
+.suggestions ul li {
+    padding:5px;
+    display: block;
+    text-decoration: none;
+}
+
+:-ms-input-placeholder { /*IE 10+*/
+    color: #ccc;
+}
+
+
+.suggestions ul li:hover {
+    background-color: $eqrs-focus-alt;
+}
+
+.highlighted-row {
+    background-color: $eqrs-background-color;
+}
+
+
+input[type=text]:disabled {
+    background-color: $eqrs-tertiary-darker;
+}
+
+
+.scrollbar ul {
+    overflow: hidden;
+    overflow-y:inherit;
+    -webkit-rtl-ordering: logical;
+    //float: left;
+    max-height: 10rem;
+    //margin-bottom: 25px;
+
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+       // background-color: none;
+    }
+    &::-webkit-scrollbar {
+        border-radius: 10px;
+        width: 10px;
+      // background-color: none;
+
+    }&::-webkit-scrollbar-thumb {
+         border-radius: 10px;
+         background-color: #D6D7D9 ;
+     }
+}
+
+
+.scrollbar li {
+    &:focus {
+        background-color: $eqrs-background-color;
+    }
+    cursor:pointer;
+
+}
+
+.show-above {
+    bottom: 34% !important;
+}
+
+.eqrs-autosuggest-focus{
+    background-color: $eqrs-focus-alt;
+}
+
+.eqrs-bottom-message{
+    pointer-events: none;
+    font-style: italic;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-left: 15px;
+}
+
+/*------------------------------------*\
+  #HISTORY STYLES AND CARDS
+\*------------------------------------*/
+
+.section-title-border h3 {
+    border-bottom: 1px solid #ccc;
+}
+
+.section-edit a {
+    float: right;
+    font-size: 0.7em;
+    font-weight: 100;
+    margin: 8px 15px 0 0;
+    text-decoration: none;
+}
+
+.history-edit a {
+    float: right;
+    font-size: 0.7em;
+    font-weight: 100;
+    margin: 8px 0 0 0;
+    text-decoration: none;
+}
+
+.card-bottom {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.card-header {
+    background-color: transparent;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    //height: 30rem;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+.icon-blue {
+    color: #0071bc;
+}
+
+.current-header {
+    background-color: #f1f1f1;
+}
+
+.current-header span {
+    font-weight: 600;
+}
+
+.card-header:first-child{
+    border-radius:0px;
+}
+
+/*---------------------------*\
+  # PROGRESS SPINNER STYLES
+\*---------------------------*/
+.eqrs-progress-background {
+    position: absolute;
+    z-index: -1;
+}
+
+.eqrs-progress-background path {
+    stroke: $eqrs-tertiary-color !important;
+}
+
+.eqrs-progress-fraction{
+    font-family: $eqrs-sans-serif-font-family;
+    color: $eqrs-text-color;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.eqrs-progress-fraction-container{
+    display: flex;
+    //align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+/*---------------------------*\
+  # Link groups and containers
+\*---------------------------*/
+
+.link-container {
+    float: right;
+}
+
+.grouped-link {
+    float: left;
+}
+
+/*---------------------------*\
+  # Remove criteria
+\*---------------------------*/
+
+
+.eqrs-remove-color {
+  color: $eqrs-alert-color;
+}
+
+
+/*-----------------------------------*\
+  # Help - font awesome icon
+\*-----------------------------------*/
+
+
+.eqrs-help-tooltip {
+    color: $eqrs-primary-color;
+}
+
+
+/*-----------------------------------*\
+  # Dropdown menu top arrow on border
+\*-----------------------------------*/
+
+
+.eqrs-dropdown-arrow-box {
+    z-index: 10000;
+    right: 0;
+    position: absolute;
+    background: white;
+    border-radius: 10px;
+    border: 0.5px solid lightgray;
+    padding: 10px !important;
+    top: 80% !important;
+    width: 350px;
+    left: auto !important;
+}
+.eqrs-dropdown-arrow-box:after, .eqrs-dropdown-arrow-box:before {
+    bottom: 100%;
+    left: 90%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.eqrs-dropdown-arrow-box a {
+    color: #0275d8 !important;
+}
+.eqrs-dropdown-arrow-box:after {
+    border-color: rgba(0,0,0, 0);
+    border-bottom-color: white;
+    border-width: 10px;
+    margin-left: -10px;
+}
+.eqrs-dropdown-arrow-box:before {
+    border-color: rgba(0,0,0, 0);
+    border-bottom-color: grey;
+    border-width: 11px;
+    margin-left: -11px;
+}
+.dropdown-toggle::after {
+    content: initial !important;
+}
+
+.eqrs-link {
+    color: $eqrs-primary-color !important;
+    cursor:pointer;
+}

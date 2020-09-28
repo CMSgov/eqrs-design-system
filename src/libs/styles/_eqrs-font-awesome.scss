@@ -1,0 +1,26 @@
+.fa-search {
+    position: absolute;
+    color: $eqrs-primary-color;
+    pointer-events: none;
+
+    // Fix for IE 11
+    right: 0px;
+    top: 13px;
+    margin-right: 10px;
+}
+
+.fa-minus-circle {
+    color: $eqrs-accent-color ;
+}
+
+.fa-circle-thin {
+    color: $eqrs-tertiary-color ;
+}
+
+.fa-check-circle {
+    color: $eqrs-notification-color ;
+}
+
+.fa-circle {
+    color: $eqrs-tertiary-color ;
+}

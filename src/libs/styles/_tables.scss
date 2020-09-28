@@ -1,0 +1,124 @@
+/*---------------------*\
+  # TABLE STYLES
+\*---------------------*/
+
+th#facility-name-column {
+    width: 30%;
+}
+.eqrs-table-row-height thead th, .eqrs-table-row-height tbody td {
+    padding: 0.30rem;
+}
+
+
+/*---------------------------*\
+  # SCROLL BAR FOR TABLES
+\*---------------------------*/
+.eqrs-datatable-scroll-x {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+
+/*---------------------------*\
+  # Remove criteria
+\*---------------------------*/
+
+
+.eqrs-remove-color {
+  color: $eqrs-alert-color;
+}
+
+
+$verticalSwitch: 0px;
+
+#search-results-table .dynamic-table {
+    @media (min-width: $verticalSwitch) {
+        table-layout: auto;
+    }
+    thead {
+        tr {
+            th {
+                &.sortable {
+                    @media (min-width: $verticalSwitch) {
+                        display: table-cell;
+                    }
+                }
+            }
+        }
+        // Accessibly hide <thead> on narrow viewports
+        @media (min-width: $verticalSwitch) {
+            display: table-header-group;
+            tr {
+                display: table-row;
+
+                th {
+                    display: table-cell;
+                    border: none;
+                }
+            }
+        }
+    }
+    tr {
+        @media (min-width: $verticalSwitch) {
+            display: table-row;
+        }
+    }
+
+    td {
+        @media (min-width: $verticalSwitch) {
+            display: table-cell;
+            padding: .5em;
+            width: auto !important;
+
+            .value {
+                width: auto;
+            }
+            .field {
+                display: none;
+            }
+        }
+    }
+
+    th {
+        @media (max-width: $verticalSwitch - 1) {
+            display: inline-block;
+            width: auto !important
+        };
+    }
+
+    tbody {
+        @media (min-width: $verticalSwitch) {
+            display: table-row-group;
+        }
+
+        tr {
+            @media (min-width: $verticalSwitch) {
+                border: 1px solid #5b616b;
+                display: table-row;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;
+            }
+
+            &:nth-of-type(even) {
+                @media (min-width: $verticalSwitch) {
+                    background-color: #efefee;
+                }
+            }
+        }
+
+        th[scope="row"] {
+            @media (min-width: $verticalSwitch) {
+                background-color: transparent;
+                color: rgba(94, 93, 82, 1);
+                text-align: left;
+            }
+        }
+
+        td[data-title]:before {
+            @media (min-width: $verticalSwitch) {
+                content: none;
+            }
+        }
+    }
+}

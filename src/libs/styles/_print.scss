@@ -1,0 +1,28 @@
+//Print button--------------------
+
+.print-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media print {
+
+    .print-d-block .row{
+        display: block !important;
+    }
+    #global-nav {
+        display: none;
+    }
+    #left-nav {
+        display: none;
+    }
+    #print-button, .review-no-print{
+        display: none;
+    }
+    button{
+        display: none;
+    }
+    .eqrs-navigation-container{
+        display: none;
+    }
+}

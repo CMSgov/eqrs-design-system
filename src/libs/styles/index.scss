@@ -1,11 +1,20 @@
 // the order here is important!
 
-@import 'bootstrap-files';
+@import 'bootstrap-files'; // oh please please can we stop using bootstrap
 
 @import 'fonts';
 @import 'variables';
 
-@import 'eqrs-style';
-@import 'eqrs-material-styles';
+@import 'utilities';
+@import 'buttons';
+@import 'alerts';
+@import 'print';
+@import 'eqrs-font-awesome';
+@import 'next-previous';
+@import 'form-controls'; // all inputs & labels
+@import 'tables';
+
+@import 'eqrs-style'; // the shame file -- split this out into its parts
+@import 'eqrs-material-styles'; // for overriding ng material
 
 @import 'typography'; // temporarily at the bottom so that it overrides bootstrap

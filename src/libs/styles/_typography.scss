@@ -63,6 +63,11 @@ h2 {
   font-size: 1.7rem;
 }
 
+h2-with-h3-styles {
+  font-size: 1.22rem;
+  line-height: 1.3em;
+  padding-top: 15px;
+}
 
 h3 {
   font-size: 1.22rem;
@@ -122,4 +127,42 @@ p {
     color: #0071bc;
     font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
     font-size: 1.125em;
+}
+
+/*------------------------------------*\
+  spacers we should
+  remove by using USWDS
+\*------------------------------------*/
+
+.fontsize50{
+      font-size: 50px;
+}
+.fontsize40{
+    font-size: 40px;
+}
+.fontsize15{
+    font-size: 15px;
+}
+.fontsize20{
+    font-size: 20px;
+}
+
+.fontsize30{
+    font-size:30px!important;
+}
+
+.fontsize65{
+    font-size: 65px;
+}
+.align-center{
+    display: flex;
+    justify-content: center;
+}
+
+.font-size25{
+    font-size:25px;
+}
+
+.para-width{
+   max-width: 100%!important;
 }

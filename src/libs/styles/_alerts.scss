@@ -1,0 +1,59 @@
+/*------------------------------------*\
+  #ALERTS
+\*------------------------------------*/
+
+@mixin alert {
+    background-position: left 1.3rem top 2rem;
+    background-repeat: no-repeat;
+    background-size: 2.2rem;
+    margin-top: 1.5em;
+    margin-bottom: 1.5rem;
+    padding: 1em; }
+
+
+.eqrs-alert-heading {
+    font-family: $eqrs-serif-font-family;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $eqrs-text-color;
+    text-transform: none;
+    margin-bottom: .3rem;
+    margin-top: 0; }
+
+
+.eqrs-alert-body {
+    padding-left: 3.5rem;
+    vertical-align: top; }
+
+
+.eqrs-alert-success {
+    @include alert;
+    background-color: $eqrs-alert-success;
+    // background-image: url("../assets/images/success.png");
+    // background-image: url("../assets/images/success.svg");
+}
+
+.eqrs-alert-warning {
+    @include alert;
+    background-color: $eqrs-alert-warning;
+    // background-image: url("../assets/images/warning@3x.png");
+    // background-image: url("../assets/images/warning.svg");
+}
+
+.eqrs-alert-error {
+    @include alert;
+    background-color: $eqrs-alert-error;
+    // background-image: url("../assets/images/error@3x.png");
+    // background-image: url("../assets/images/error.svg");
+}
+
+.eqrs-alert-information {
+    @include alert;
+    background-color: $eqrs-alert-information;
+    // background-image: url("../assets/images/info@3x.png");
+    // background-image: url("../assets/images/info.svg");
+}
+
+.eqrs-single-list-item {
+    list-style-type: none;
+}

@@ -1,0 +1,249 @@
+/*------------------------------------*\
+  #BUTTONS
+\*------------------------------------*/
+
+@mixin button {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: $eqrs-border-radius;
+    min-height: 44px !important;
+    font-family: $eqrs-sans-serif-font-family;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease;
+
+    &:focus {
+        outline: none;
+        box-shadow: $eqrs-box-shadow;
+    }
+
+    &:disabled {
+        color: #fff;
+        background-color: $eqrs-tertiary-color;
+        border: 1px solid $eqrs-tertiary-color;
+    }
+
+    &:disabled:hover {
+        background-color: $eqrs-tertiary-color;
+        border: 1px solid $eqrs-tertiary-color;
+        cursor: not-allowed;
+    }
+}
+
+.eqrs-button-primary {
+    @include button;
+    color: #fff;
+    background-color: $eqrs-primary-color;
+    border: 1px solid $eqrs-primary-color;
+
+    &:hover {
+        background-color: $eqrs-primary-darker;
+        border: 1px solid $eqrs-primary-darker;
+    }
+
+    &:active {
+        background-color: $eqrs-primary-darkest;
+        border: 1px solid $eqrs-primary-darkest;
+    }
+
+    &:disabled:hover {
+        background-color: $eqrs-tertiary-color;
+        border: 1px solid $eqrs-tertiary-color;
+    }
+
+    &:disabled {
+        color: $eqrs-text-color;
+    }
+}
+
+// for showing off in the DSUI
+.primary-hover {
+    background-color: #205493;
+    pointer-events: none;
+}
+
+
+.primary-active {
+    background-color: #112e51;
+    pointer-events: none;
+}
+
+.eqrs-button-secondary {
+    @include button;
+    color: $eqrs-secondary-color;
+    background-color: #fff;
+    border: 1px solid $eqrs-secondary-color;
+
+    &:hover {
+        color: #fff;
+        background-color: $eqrs-secondary-color;
+    }
+
+    &:active {
+        background-color: $eqrs-secondary-darker;
+        border: 1px solid $eqrs-secondary-darker;
+    }
+
+    &:disabled:hover {
+        background-color: $eqrs-tertiary-color;
+        border: 1px solid $eqrs-tertiary-color;
+    }
+}
+
+// for showing off in the DSUI
+.eqrs-button-secondary-hover {
+    background-color: #5b616b;
+    border: #5b616b;
+    color: #fff;
+    pointer-events: none;
+}
+
+.eqrs-button-secondary-active {
+    background-color: #323a45;
+    border: 1px solid #323a45;
+    color: #fff;
+    pointer-events: none;
+}
+
+.eqrs-button-accent {
+    @include button;
+    color: #000;
+    background-color: $eqrs-accent-color;
+    border: 1px solid $eqrs-accent-color;
+
+    &:hover {
+        background-color: $eqrs-accent-darker;
+        color: #fff;
+    }
+
+    &:active {
+        background-color: $eqrs-accent-darkest;
+        color: #fff;
+    }
+
+    &:disabled:hover {
+        background-color: $eqrs-tertiary-color;
+        border: 1px solid $eqrs-tertiary-color;
+    }
+    &:disabled {
+        color: $eqrs-text-color;
+    }
+}
+
+.accent-hover {
+    background-color: #d99502;
+    color: #fff;
+    pointer-events: none;
+}
+
+.accent-active {
+    background-color: #bb8002;
+    color: #fff;
+    pointer-events: none;
+}
+
+
+.eqrs-button-destructive {
+    @include button;
+    color: $eqrs-alert-color;
+    background-color: #fff;
+    border: 1px solid $eqrs-alert-color;
+
+    &:hover {
+        color: #fff;
+        background-color: $eqrs-alert-color;
+    }
+
+    &:active {
+        color: #fff;
+        background-color: $eqrs-alert-darker;
+    }
+
+    &:disabled:hover {
+        background-color: $eqrs-tertiary-color;
+        border: 1px solid $eqrs-tertiary-color;
+    }
+}
+
+.eqrs-button-destructive-hover {
+    color: #fff;
+    background-color: #cd2026;
+    pointer-events: none;
+}
+
+.eqrs-button-destructive-active {
+    color: #fff;
+    background-color: #981b1e;
+    pointer-events: none;
+}
+
+
+.eqrs-edit-link, .eqrs-add-link{
+    border: none;
+    background: none;
+    color: $eqrs-primary-color;
+    font-family: $eqrs-sans-serif-font-family;
+    float: right;
+    //font-size: 1.125em;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    &:focus {
+        text-decoration: underline;
+        outline: none;
+    }
+    &:active {
+        color: $eqrs-primary-darker;
+        outline: none;
+    }
+}
+
+.eqrs-trash-link {
+    // color: $eqrs-primary-color;
+    font-size: 20px;
+    /* &:hover {
+       cursor: pointer;
+       text-decoration: underline;
+     }
+     &:focus {
+       text-decoration: underline;
+       outline: none;
+     }
+     &:active {
+       color: $eqrs-primary-darker;
+       outline: none;
+     }*/
+}
+
+.eqrs-temp-close-link {
+    color: $eqrs-primary-color;
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    &:focus {
+        text-decoration: underline;
+        outline: none;
+    }
+    &:active {
+        color: $eqrs-primary-darker;
+        outline: none;
+    }
+}
+
+.focus {
+    box-shadow: 0 0 3px 2px rgba(62, 148, 207, 0.5);
+    border-radius: 3px;
+}
+
+.btn.code-button {
+  color: #fff;
+  background: #28a745;
+  text-decoration: none;
+  padding: 0.3rem;
+  font-size: 0.8rem;
+}

@@ -1,0 +1,140 @@
+<!-- this file uses USWDS classes -- see designsystem.digital.gov -->
+
+<div class="esrd-ds-container padding-top-2 grid-row">
+
+  <div class="tablet:grid-col-2 padding-right-4 padding-bottom-4">
+    <app-style-sidenav></app-style-sidenav>
+  </div>
+
+  <div class="tablet:grid-col-8 padding-top-105 padding-bottom-4">
+
+    <h2>Typography</h2>
+    <p>EQRS uses two font families. Merriweather, $eqrs-serif-font-family , is used for most of the headers. Source Sans Pro, $eqrs-sans-serif-font-family, is used mainly for the body and detail copy because of its legibility at smaller font sizes.</p>
+
+    <p>We use rem for all font sizing to allow for greater accessibility. One rem is equal to 18 pixels within EQRS. </p>
+
+    <p> Ensure headings are in a logical order. For example, check that all headings are marked with &#60;h1&#62;-&#60;h2&#62; elements and that these are ordered hierarchically. For example, the heading level following an &#60;h1&#62; should be an &#60;h2&#62;, not an &#60;h3&#62;. Heading elements must be properly nested on the page. Heading elements that are properly nested help users of assistive technologies understand the structure of the information on the web page. Finally, don't use heading mark up on text that isn't actually a heading.</p>
+
+    <img class="img-fluid pt-3" src="assets/images/508-image.png">
+
+    <section class="padding-top-4">
+
+      <p class="eqrs-display-text">Display</p>
+      <p class="text-bold">Use CSS class <span class="utility-text">eqrs-display-text</span>, defined as:</p>
+      <ul>
+        <li>font-family: ‘Merriweather’</li>
+        <li>font-weight: 400</li>
+        <li>font-size: 52px</li>
+        <li>line-height: 4.25em/68px</li>
+      </ul>
+
+      <hr>
+
+      <div class="grid-row">
+        <div class="tablet:grid-col-4">
+          <h1>Heading 1</h1>
+          <p class="text-bold">CSS for <span class="utility-text">h1</span> defined as:</p>
+          <ul>
+            <li>font-family: ‘Merriweather’</li>
+            <li>font-weight: 700</li>
+            <li>font-size: 40px</li>
+            <li>line-height: 3.25em/52px</li>
+          </ul>
+        </div>
+
+        <div class="tablet:grid-col-4">
+          <h2>Heading 2</h2>
+          <p class="text-bold">CSS for <span class="utility-text">h2</span> defined as:</p>
+          <ul>
+            <li>font-family: ‘Merriweather’</li>
+            <li>font-weight: 700</li>
+            <li>font-size: 30px</li>
+            <li>line-height: 2.44em/39px</li>
+          </ul>
+        </div>
+
+        <div class="tablet:grid-col-4">
+          <h3>Heading 3</h3>
+          <p class="text-bold">CSS for <span class="utility-text">h3</span> defined as:</p>
+          <ul>
+            <li>font-family: ‘Merriweather’</li>
+            <li>font-weight: 700</li>
+            <li>font-size: 22px</li>
+            <li>line-height: 1.63em/26px</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid-row">
+
+        <div class="tablet:grid-col-4">
+          <h4>Heading 4</h4>
+          <p class="text-bold">CSS for <span class="utility-text">h4</span> defined as:</p>
+          <ul>
+            <li>font-family: ‘Source Sans Pro’</li>
+            <li>font-weight: 700</li>
+            <li>font-size: 20px</li>
+            <li>line-height: 1.38em/22px</li>
+            <li>text-transform: uppercase;</li>
+          </ul>
+        </div>
+
+        <div class="tablet:grid-col-4">
+          <p class='padding-top-1'>Body copy</p>
+          <p class="text-bold">CSS for <span class="utility-text">p</span> defined as:</p>
+          <ul>
+            <li>font-family: ‘Source Sans Pro’</li>
+            <li>font-weight: 400</li>
+            <li>font-size: 18px/1rem</li>
+            <li>line-height: 1.63em/26px</li>
+          </ul>
+        </div>
+
+        <div class="tablet:grid-col-4">
+          <p class='padding-top-1 font-sans-3xs'>Detail copy</p>
+          <p class="text-bold">Use CSS class <span class="utility-text">font-sans-3xs</span> defined as:</p>
+          <ul>
+            <li>font-family: ‘Source Sans Pro’</li>
+            <li>font-weight: 300</li>
+            <li>font-size: 14px</li>
+            <li>line-height: 1.38em/22px</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr>
+
+      <div>
+
+        <h3>Alignment</h3>
+        <p>In most cases, align content to the left of its respective container.</p>
+
+        <h4>Example</h4>
+      	<div class="alignment-container example-container">
+          <div class="left-vertical-line">
+           <i class="fa fa-angle-up"></i>
+           <p>I am a title.</p>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis lacinia enim, vitae commodo leo. Quisque ut lobortis augue. Praesent ac diam dignissim, accumsan odio nec, commodo metus.
+             <i class="fa fa-angle-down"></i>
+           </p>
+          </div>
+        </div>
+
+        <div class="tablet:grid-col-8 padding-top-1">
+          <h3>Line length</h3>
+          <p>Keep line length to approximately 66 characters per line (max-width of 35em) and allow for some white space on the page. Anything more can cause eye strain, when reading multiple lines of text.</p>
+        </div>
+
+      </div>
+
+      <h3>Capitalization</h3>
+      <p>Use sentence case for all navigation, headers, labels and buttons.</p>
+
+      <h3>Emphasizing text</h3>
+      <p>For emphasis within text use <em>em</em> or <strong>strong</strong> tags to change the voice of a word or phrase, i.e., to emphasize it. Otherwise, use <b>b</b> tags to change the visual look and feel only. Avoid using italics because it can be difficult to read and to decipher meaning.</p>
+
+    </section>
+
+  </div>
+
+</div>

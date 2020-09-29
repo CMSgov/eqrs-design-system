@@ -1,0 +1,20 @@
+[
+  [
+    {
+      "title": "Color Palette",
+      "path": "/colors"
+    },
+    {
+      "title": "Grid",
+      "path": "/grid"
+    },
+    {
+      "title": "Iconography",
+      "path": "/iconography"
+    },
+    {
+      "title": "Typography",
+      "path": "/typography"
+    }
+  ]
+]

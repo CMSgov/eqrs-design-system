@@ -1,0 +1,88 @@
+<!-- this file uses USWDS classes -- see designsystem.digital.gov -->
+<div class="esrd-ds-container padding-top-2 padding-bottom-4 grid-row">
+
+  <div class="tablet:grid-col-2 padding-right-4">
+    <app-component-sidenav></app-component-sidenav>
+  </div>
+
+  <div class="tablet:grid-col-10 padding-top-105">
+
+    <h2>Inputs</h2>
+    <section class="padding-bottom-2 tablet:grid-col-9">
+
+      <div class="padding-bottom-2 tablet:grid-col-12">
+
+        <h3>Default Input</h3>
+        <div class="tablet:grid-col-6">
+          <label class="eqrs-label" for="input-inactive">Label</label>
+          <input class="eqrs-input" id="input-inactive" name="input-inactive" type="text" aria-describedby="input-inactive">
+        </div>
+
+        <button class="usa-button bg-mint" (click) = "inputInactiveShow = !inputInactiveShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+
+        <div *ngIf="inputInactiveShow">
+          <pre>
+            <code [highlight]="inputInactiveContent" [lineNumbers]="true"  [languages]="cssLanguage"></code>
+          </pre>
+        </div>
+
+      </div>
+
+      <div class="padding-bottom-2 tablet:grid-col-12">
+        <h3>Input with Focus</h3>
+        <div class="tablet:grid-col-6">
+          <label class="eqrs-label" for="input-focus">Label</label>
+          <input class="input-focus focus" id="input-focus" name="input-focus" type="text" aria-describedby="input-focus">
+        </div>
+
+        <button class="usa-button bg-mint" (click) = "inputFocusShow = !inputFocusShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+
+        <div *ngIf="inputFocusShow">
+          <pre>
+            <code [highlight]="inputFocusContent" [lineNumbers]="true"  [languages]="cssLanguage"></code>
+          </pre>
+        </div>
+
+      </div>
+
+      <div class="padding-bottom-2 tablet:grid-col-12">
+        <h3>Input with Error</h3>
+        <div class="tablet:grid-col-6">
+          <input class="eqrs-input-error-border" id="input-error-1" name="input-error-1" type="text" aria-describedby="input-error-message">
+
+          <p class="eqrs-input-error-message" id="input-error-message" role="alert">This is a short helpful error message that should be approximately 66 characters per line.</p>
+        </div>
+
+        <button class="usa-button bg-mint" (click) = "inputErrorShow = !inputErrorShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+
+        <div *ngIf="inputErrorShow">
+          <pre>
+            <code [highlight]="inputErrorContent" [lineNumbers]="true"  [languages]="cssLanguage"></code>
+          </pre>
+        </div>
+
+      </div>
+
+      <div class="padding-bottom-2 tablet:grid-col-12">
+        <h3>Numerical Input</h3>
+        <p>This is being formatted somewhere inside the component in terms of input field width</p>
+        <div class="tablet:grid-col-6">
+          <app-eqrs-number-input id="uniqueIdTwo" name="uniqueNameTwo" formControlName="numberInputTwoControl"
+            minValue="100" maxValue="1000" format="NN.NN">
+          </app-eqrs-number-input>
+        </div>
+
+        <button class="usa-button bg-mint" (click) = "numberInputTwoShow = !numberInputTwoShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+
+        <div *ngIf="numberInputTwoShow">
+          <pre>
+            <code [highlight]="numberInputTwoContent" [lineNumbers]="true"  [languages]="cssLanguage"></code>
+          </pre>
+        </div>
+
+      </div>
+
+    </section>
+  </div>
+
+</div> <!-- end of page -->

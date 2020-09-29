@@ -29,29 +29,29 @@
 .eqrs-alert-success {
     @include alert;
     background-color: $eqrs-alert-success;
-    // background-image: url("../assets/images/success.png");
-    // background-image: url("../assets/images/success.svg");
+    background-image: url("../assets/images/success.png");
+    background-image: url("../assets/images/success.svg");
 }
 
 .eqrs-alert-warning {
     @include alert;
     background-color: $eqrs-alert-warning;
-    // background-image: url("../assets/images/warning@3x.png");
-    // background-image: url("../assets/images/warning.svg");
+    background-image: url("../assets/images/warning@3x.png");
+    background-image: url("../assets/images/warning.svg");
 }
 
 .eqrs-alert-error {
     @include alert;
     background-color: $eqrs-alert-error;
-    // background-image: url("../assets/images/error@3x.png");
-    // background-image: url("../assets/images/error.svg");
+    background-image: url("../assets/images/error@3x.png");
+    background-image: url("../assets/images/error.svg");
 }
 
 .eqrs-alert-information {
     @include alert;
     background-color: $eqrs-alert-information;
-    // background-image: url("../assets/images/info@3x.png");
-    // background-image: url("../assets/images/info.svg");
+    background-image: url("../assets/images/info@3x.png");
+    background-image: url("../assets/images/info.svg");
 }
 
 .eqrs-single-list-item {

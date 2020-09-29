@@ -1,0 +1,149 @@
+<!-- this file uses USWDS classes -- see designsystem.digital.gov -->
+<div class="esrd-ds-container padding-top-2 padding-bottom-4 grid-row">
+
+  <div class="tablet:grid-col-2 padding-right-4">
+    <app-component-sidenav></app-component-sidenav>
+  </div>
+
+  <div class="tablet:grid-col-10 padding-top-105">
+
+    <h2>Alerts</h2>
+
+    <section class="padding-bottom-2 tablet:grid-col-8">
+
+      <div class="padding-bottom-2"> <!-- each alert -->
+
+        <div class="eqrs-alert-success">
+          <div class="eqrs-alert-body">
+            <h4 class="eqrs-alert-heading">Success status</h4>
+            <p>Displays when database change is successful.</p>
+          </div>
+        </div>
+
+        <button class="usa-button bg-mint" (click) = "successShowAngular = !successShowAngular">
+          View code <i class="fa fa-code" aria-hidden="true"></i>
+        </button>
+
+        <div *ngIf="successShowAngular">
+          <pre>
+            <code [highlight]="successStatusContentAngular" [lineNumbers]="true" [languages]="cssLanguage" ></code>
+          </pre>
+        </div>
+
+      </div> <!-- end alert! -->
+
+      <!-- WARNING STATUS -->
+      <div class="padding-bottom-2">
+        <div class="eqrs-alert-warning">
+          <div class="eqrs-alert-body">
+            <h4 class="eqrs-alert-heading">Warning status</h4>
+            <p>Displays when database change results in error but we allow user to temporarily persist the bad data. User action will eventually be needed to correct the bad data.</p>
+          </div>
+        </div>
+
+        <button class="usa-button bg-mint" (click) = "warningShow = !warningShow">
+          View code <i class="fa fa-code" aria-hidden="true"></i>
+        </button>
+
+        <div *ngIf="warningShow">
+          <pre>
+            <code [highlight]="warningStatusContent" [lineNumbers]="true" [languages]="cssLanguage" ></code>
+          </pre>
+        </div>
+
+      </div> <!-- end alert!! -->
+
+      <!-- ERROR STATUS -->
+      <div class="padding-bottom-2">
+        <div class="eqrs-alert-error" role="alert">
+          <div class="eqrs-alert-body">
+            <h4 class="eqrs-alert-heading">Error status</h4>
+            <p>Displays when database change fails. User action needed in order to save.</p>
+          </div>
+        </div>
+
+        <button class="usa-button bg-mint" (click) = "errorShow = !errorShow">
+          View code <i class="fa fa-code" aria-hidden="true"></i>
+        </button>
+
+        <div *ngIf="errorShow">
+          <pre>
+              <code [highlight]="errorStatusContent" [lineNumbers]="true" [languages]="cssLanguage" ></code>
+          </pre>
+        </div>
+      </div>
+
+      <!-- ERROR MULTI-LINE STATUS -->
+      <div class="padding-bottom-2">
+        <div class="eqrs-alert-error">
+          <div class="eqrs-alert-body">
+            <h4 class="eqrs-alert-heading">Error multi-line</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+            <ul>
+              <li>This is item A</li>
+              <li>This is item B</li>
+              <li>This is item C</li>
+            </ul>
+          </div>
+        </div>
+
+        <button class="usa-button bg-mint" (click) = "errorMultilineShow = !errorMultilineShow">
+          View code <i class="fa fa-code" aria-hidden="true"></i>
+        </button>
+
+        <div *ngIf="errorMultilineShow">
+          <pre>
+              <code [highlight]="errorMultilineContent" [lineNumbers]="true" [languages]="cssLanguage" ></code>
+          </pre>
+        </div>
+      </div>
+
+      <!-- ERROR SINGLE-LINE STATUS -->
+      <div class="padding-bottom-2">
+        <div class="eqrs-alert-error">
+          <div class="eqrs-alert-body">
+            <h4 class="eqrs-alert-heading">Error single line</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+            <ul class="eqrs-single-list-item">
+              <li>This is item A</li>
+            </ul>
+          </div>
+        </div>
+
+        <button class="usa-button bg-mint" (click) = "errorSinglelineShow = !errorSinglelineShow">
+          View code <i class="fa fa-code" aria-hidden="true"></i>
+        </button>
+
+        <div *ngIf="errorSinglelineShow">
+          <pre>
+              <code [highlight]="errorSinglelineContent" [lineNumbers]="true" [languages]="cssLanguage" ></code>
+          </pre>
+        </div>
+      </div>
+
+      <!-- INFORMATION STATUS -->
+      <div class="padding-bottom-2">
+
+        <div class="eqrs-alert-information">
+          <div class="eqrs-alert-body">
+            <h4 class="eqrs-alert-heading">Information status</h4>
+            <p>Displays when feedback should be provided to the user. No user action needed.</p>
+          </div>
+        </div>
+
+        <button class="usa-button bg-mint" (click) = "informationShow = !informationShow">
+          View code <i class="fa fa-code" aria-hidden="true"></i>
+        </button>
+
+        <div *ngIf="informationShow">
+          <pre>
+              <code [highlight]="informationStatusContent" [lineNumbers]="true" [languages]="cssLanguage" ></code>
+          </pre>
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+</div> <!-- end of page -->

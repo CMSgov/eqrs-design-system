@@ -1,0 +1,78 @@
+<!-- this file uses USWDS classes -- see designsystem.digital.gov -->
+<div class="esrd-ds-container padding-top-2 padding-bottom-4 grid-row">
+
+  <div class="tablet:grid-col-2 padding-right-4">
+    <app-component-sidenav></app-component-sidenav>
+  </div>
+
+  <div class="tablet:grid-col-10 padding-top-105">
+
+    <h2>Radio buttons</h2>
+    <section class="padding-bottom-2 tablet:grid-col-9">
+
+      <div class="padding-bottom-2 tablet:grid-col-12">
+
+        <h3>Default</h3>
+        <fieldset>
+          <legend class="eqrs-label">Radio label (legend)</legend>
+          <ul class="eqrs-list">
+            <li>
+              <input id="stanton" type="radio" name="historical-figures-2" value="stanton">
+              <label for="stanton">Elizabeth Cady Stanton</label>
+            </li>
+            <li>
+              <input id="anthony" type="radio" name="historical-figures-2" value="anthony">
+              <label for="anthony">Susan B. Anthony</label>
+            </li>
+            <li>
+              <input id="tubman" type="radio" name="historical-figures-2" value="tubman">
+              <label for="tubman">Harriet Tubman</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <button class="usa-button bg-mint" (click) = "radioShow = !radioShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+
+        <div *ngIf="radioShow">
+          <pre>
+            <code [highlight]="radioShowContent" [lineNumbers]="true"  [languages]="cssLanguage"></code>
+          </pre>
+        </div>
+
+      </div>
+
+      <div class="padding-bottom-2 tablet:grid-col-12">
+
+        <h3>Disabled</h3>
+        <fieldset>
+          <legend class="eqrs-label">Radio disabled</legend>
+          <ul class="eqrs-list">
+            <li>
+              <input id="stanton-disabled-2" type="radio" checked name="historical-figures-3" value="stanton-disabled-2" disabled>
+              <label for="stanton-disabled-2">Elizabeth Cady Stanton</label>
+            </li>
+            <li>
+              <input id="anthony-disabled-2" type="radio" name="historical-figures-3" value="anthony-disabled-2" disabled>
+              <label for="anthony-disabled-2">Susan B. Anthony</label>
+            </li>
+            <li>
+              <input id="tubman-disabled-2" type="radio" name="historical-figures-3" value="tubman-disabled-2" disabled>
+              <label for="tubman-disabled-2">Harriet Tubman</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <button class="usa-button bg-mint" (click) = "radioDisabledShow = !radioDisabledShow"> View code <i class="fa fa-code" aria-hidden="true"></i> </button>
+
+        <div *ngIf="radioDisabledShow">
+          <pre>
+            <code [highlight]="radioDisabledContent" [lineNumbers]="true"  [languages]="cssLanguage"></code>
+          </pre>
+        </div>
+
+      </div>
+
+    </section>
+  </div>
+
+</div> <!-- end of page -->
